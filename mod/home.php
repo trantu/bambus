@@ -1,5 +1,4 @@
 <?php
-echo '<h1>bla</h1>'
 # Home index.mặc định khi vào trang
 if(!defined('SECURITY')) exit('404 - Not Access');
 
