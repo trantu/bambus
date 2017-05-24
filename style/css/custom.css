@@ -1,0 +1,228 @@
+
+
+
+
+/*  Phần design của món ăn thêm */
+
+/* Toàn form */
+.beilage-list, .popupeditshis {
+	display: none;
+	position: fixed;
+	top: ;
+	z-index: 999999;
+	width: 500px;
+	min-height: 140px;
+	background-color: #fff;
+	border-radius: 5px;
+	opacity: 1;
+	top: 50%;
+	left: 50%;
+	margin-top: -200px;
+	margin-left: -250px;
+	-webkit-border-radius: 8px;
+}
+
+/* css tieu de */
+.beilage-list h3,.note_ones h3,.popupeditshis h3{
+	text-align:center;
+	font-size:18px;
+	margin-top:5px;
+	font-size: 2em;
+	font-weight: 700;
+	color:#444444;
+	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+	font-family: 'PT Sans Narrow', sans-serif;
+
+	background-image: -webkit-linear-gradient(top, rgb(249, 249, 249), rgb(233, 233, 233));
+	background-image: -moz-linear-gradient(top, rgb(249, 249, 249), rgb(233, 233, 233));
+	background-image: -o-linear-gradient(top, rgb(249, 249, 249), rgb(233, 233, 233));
+	background-image: -ms-linear-gradient(top, rgb(249, 249, 249), rgb(233, 233, 233));
+	background-image: linear-gradient(top, rgb(249, 249, 249), rgb(233, 233, 233));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f9f9f9', EndColorStr='#e9e9e9');
+
+	border-bottom:1px solid #bababa;
+
+	-webkit-box-shadow:
+		inset 0px -1px 0px #fff,
+		0px 1px 3px rgba(0,0,0,.08);
+	-moz-box-shadow:
+		inset 0px -1px 0px #fff,
+		0px 1px 3px rgba(0,0,0,.08);
+	box-shadow:
+		inset 0px -1px 0px #fff,
+		0px 1px 3px rgba(0,0,0,.08);
+
+	-webkit-border-radius:4px 4px 0px 0px;
+	-moz-border-radius:4px 4px 0px 0px;
+	border-radius:4px 4px 0px 0px;
+
+	font-size:22px;
+	font-weight:bold;
+	text-align:center;
+	line-height:50px;
+	
+}
+/* css step  */
+.beilage-list .count_ds,.popupeditshis .count_ds{
+	width: 100%;
+	height: auto;
+	min-height:30px;
+	text-align:center;
+	font-size:17px;
+	font-weight: 700;
+	color:#444444;
+	margin-bottom: 3px;
+	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+	font-family: 'PT Sans Narrow', sans-serif;
+	border-bottom: 1px solid #bababa;
+	margin-bottom: 35px;
+	background-color: #f1f1f1;
+}
+
+/* css step */
+.beilage-list .count_ds p,.popupeditshis .count_ds p{float: left; width:19%; text-align: center;
+				border-right: 1px solid green;height: 100%; line-height:30px;  border-bottom: 1px solid gray;background-color:#f1f1f1; }
+/* css step hiện tại mà ko bắt buộc */
+.beilage-list .count_ds .active,.popupeditshis .count_ds .active{background-color: #2F4F4F;}
+
+/* css step hiện tại bắt buộc */
+.beilage-list .count_ds .require,.popupeditshis .count_ds .require{background-color: #FF0000;color: #fff;}
+/* mon an */
+.beilage-list ul,.popupeditshis ul{ height: 40px; width: 100%}
+/*  dinh dang khong gach chan cho the a  */
+.beilage-list a,.popupeditshis a{text-decoration: none;}
+/* css cho cot check box*/
+.beilage-list .list-1s,.popupeditshis .list-1s{float: left;width: 40%; list-style: none;}
+
+.beilage-list .list-3s,.popupeditshis .list-3s{display: block;float:left;margin-left: 20px; }
+/* tên món ăn thêm và số tiền*/
+.beilage-list .list-2s,.popupeditshis .list-2s{display: block;float:left;margin-left: 20px;list-style: none;}
+/* the a hien thi ten mon an*/
+.beilage-list .list-2s a,.popupeditshis .list-2s a{line-height: 15px;}
+
+
+
+/****BUTTTON MON AN THEM ***/
+
+.button_beilage .button p {line-height: 33px; float: left;}
+.button_beilage .button img { 
+	float:left;
+	width:33px;
+	height:33px;
+}
+
+/* button mau xanh */
+.button_beilage .green {
+	background: -webkit-linear-gradient(top,  rgba(170,212,79,1) 0%,rgba(116,185,49,1) 90%,rgba(106,173,45,1) 95%,rgba(96,157,41,1) 100%);
+	background: -moz-linear-gradient(top,  rgba(170,212,79,1) 0%,rgba(116,185,49,1) 90%,rgba(106,173,45,1) 95%,rgba(96,157,41,1) 100%);
+	background: -o-linear-gradient(top,  rgba(170,212,79,1) 0%,rgba(116,185,49,1) 90%,rgba(106,173,45,1) 95%,rgba(96,157,41,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(170,212,79,1) 0%,rgba(116,185,49,1) 90%,rgba(106,173,45,1) 95%,rgba(96,157,41,1) 100%);
+	background: linear-gradient(top,  rgba(170,212,79,1) 0%,rgba(116,185,49,1) 90%,rgba(106,173,45,1) 95%,rgba(96,157,41,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aad44f', endColorstr='#609d29',GradientType=0 );
+	border:1px solid #5b8821;
+	margin:0 5px 0 35px;
+}
+
+.button_beilage .red {
+	background: -webkit-linear-gradient(top,  rgba(248,114,136,1) 0%,rgba(243,71,85,1) 90%,rgba(225,65,77,1) 95%,rgba(206,59,70,1) 100%);
+	background: -moz-linear-gradient(top,  rgba(248,114,136,1) 0%,rgba(243,71,85,1) 90%,rgba(225,65,77,1) 95%,rgba(206,59,70,1) 100%);
+	background: -o-linear-gradient(top,  rgba(248,114,136,1) 0%,rgba(243,71,85,1) 90%,rgba(225,65,77,1) 95%,rgba(206,59,70,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(248,114,136,1) 0%,rgba(243,71,85,1) 90%,rgba(225,65,77,1) 95%,rgba(206,59,70,1) 100%);
+	background: linear-gradient(top,  rgba(248,114,136,1) 0%,rgba(243,71,85,1) 90%,rgba(225,65,77,1) 95%,rgba(206,59,70,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f87288', endColorstr='#ce3b46',GradientType=0 );
+	border:1px solid #b0333e;
+	margin:0 35px 0 5px;
+}
+
+
+.button_beilage .button {
+	width:100px;
+	height:33px;
+	font-size:13px;
+	font-weight:bold;
+	line-height:33px;
+	/*text-align:left;*/
+	text-align: center;
+	color:#fff;
+	text-shadow:0px 1px 0px rgba(0,0,0,.2);
+
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.5),
+		0px 1px 2px rgba(0,0,0,.3);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.5),
+		0px 1px 2px rgba(0,0,0,.3);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.5),
+		0px 1px 2px rgba(0,0,0,.3);
+
+	float:left;
+}
+
+
+
+
+/**/
+@media (max-width: 420px ) {
+	.beilage-list, .popupeditshis{width: 100%; left: 0%;margin-top: 0; margin-left: 0;  margin-top: -200px;}
+	.button_beilage .button {width: 55px;}
+}
+
+
+
+
+
+
+/* end  mon an them */
+
+
+#header-top > .home:before {
+	content: none;/* url('../images/home_w.png')*/
+	top: -3px;
+	left: -27px;
+}
+#header-top > .map:before {
+	content: url('../images/map2.png');
+	top: -5px;
+	left: -27px;
+}
+
+#header-top > .time:before {
+	content: url('../images/icon_time.png');
+	top: -7px;
+	left: -27px;
+}
+/* css hinh anh  */
+.img-dishis{z-index: 1000; display: none;position: absolute;background-color: #fff; opacity:1;margin-top:-270px; 
+	width: 600px; height: 200px; background-color:#f1f1f1;border: 3px solid #EEEED1;border-radius: 5px;}
+.hover-img a h2:hover .img-dishis{ display: block;}
+.list li:hover{background-color: #f1f1f1; cursor: pointer;}
+
+
+
+
+/************Checkout *********/
+
+#payment-paypal{
+	margin-left: 30%;
+	background-color:#db2e2e;
+	width: 30%;
+	font-size: 1.125em;
+	font-family: "Source Sans Pro", sans-serif;
+	text-transform: uppercase;
+	font-weight: 900;
+	color: #fff;
+	line-height: 50px;
+	cursor: pointer;
+	margin-bottom: 40px;
+	border-radius: 2px;
+}
+
+#menu_active a{background-color: #DCDCDC;}
+
+
+

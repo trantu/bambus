@@ -1,0 +1,61 @@
+.giohang { width:284px;  background:#f1eded;}
+.tt-giohang { width:100%; height:40px; float:left; background:#ffd200;}
+.tt-giohang p { color:#616161; margin-left:10px; font-size:16px; line-height:40px; font-weight:bold; float:left;}
+.tt-giohang a { width:40px; height:40px; float:right;}
+
+.cc-giohang { width:100%; float:left;}
+.cc-giohang > a { color:red; text-align:center; display:block; width:100%; padding:30px 0; font-size:13px; font-weight:bold;}
+
+.sum { width:100%; height:40px; float:left;}
+.sum ul { list-style:none;}
+.sum li.sum-1 { float:left; width:50%;}
+.sum li.sum-1 a { margin-left:10px; display:block; color:red; font-size:14px; font-weight:bold; line-height:40px;}
+.sum li.sum-2 { float:right; width:50%;}
+.sum li.sum-2 a { display:block; color:red; font-size:14px; font-weight:bold; line-height:40px; text-align:right; margin-right:10px;}
+
+.sum-0 { width:264px; height:30px; float:left; background:white; margin:10px;}
+.sum-0 ul { list-style:none;}
+.sum-0 li.sum-1 { float:left; width:50%;}
+.sum-0 li.sum-1 a { margin-left:10px; display:block; color:#333; font-size:12px; line-height:30px;}
+.sum-0 li.sum-2 { float:right; width:50%;}
+.sum-0 li.sum-2 a { display:block; color:#333; font-size:12px; line-height:30px; text-align:right; margin-right:10px;}
+
+
+.sumcont { width:100%; float:left;}
+.sumcont ul { list-style:none;}
+.sumcont > ul > li { width:100%; float:left; padding:10px 0; border-bottom:1px solid #ddd; border-top:1px solid #fff;}
+.sumcont > ul > li > ul > li.sum-11 { width:50%; float:left;}
+.sumcont > ul > li > ul > li.sum-11 a { color:#333; float:left; margin-left:10px;}
+.sumcont > ul > li > ul > li.sum-22 { width:50%; float:right;}
+.sumcont > ul > li > ul > li.sum-22 p { margin-right:10px; text-align:right;}
+ 
+
+.cc-giohang > p { text-align:center; display:block; line-height:26px; font-size:14px; color:#333; padding:30px 0; float:left; width:100%;}
+
+
+/**********************popup cart bottom*****************************/
+
+#popupcart{
+	position: fixed;
+	z-index: 99999999;
+	background-color: #2d2d2d;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+}
+#giohangcart{
+	position: fixed;
+	z-index: 99999999999;
+	bottom: 50px;
+	right: 0;
+	float: right;
+	display: none;
+}
+
+
+#popupcart h3{
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+}

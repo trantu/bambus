@@ -1,0 +1,251 @@
+<h4>Products</h4>
+<h4>
+    <select ng-model="search_p" class="selectpicker" value="All settings" ng-change="change_group(search_p)" >
+        <option value="">All</option>
+        <option ng-repeat="set in groups_product2" value="{{set.Online_Gruppe_ID}}">{{set.Online_Gruppe_Name}}</option>
+
+    </select>
+    <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#addProduct" >
+        Add Product
+    </button>
+</h4>
+
+<div>
+    <table class="table table-bordered table-hover table-condensed">
+        <tr style="font-weight: bold">
+            <td style="width:4%">Index</td>
+            <td style="width:8%">PLU</td>
+            <td style="width:8%">Name</td>
+            <td style="width:8%">Preis1</td>
+            <td style="width:8%">Preis2</td>
+            <td style="width:8%">Preis3</td>
+            <td style="width:8%">Beilage</td>
+            <td style="width:8%">Artikel_Name</td>
+            <td style="width:8%">Artikel_Beschreibung</td>
+            <td style="width:8%">Online_Gruppe</td>
+            <td style="width:8%">Online_Bild</td>
+            <td style="width:8%">Online_Farbe</td>
+            <td style="width:8%">Edit</td>
+        </tr>
+        <tr ng-repeat="user in products track by $index">
+            <td>
+                {{ $index}}
+                </span>
+            </td>
+            <td>
+                <!-- editable username (text with validation) -->
+                <span editable-text="user.PLU" e-name="PLU" e-form="rowform"  e-required>
+          {{ user.PLU || '' }}
+        </span>
+            </td>
+            <td>
+                <!-- editable username (text with validation) -->
+                <span editable-text="user.Name" e-name="Name" e-form="rowform"  e-required>
+          {{ user.Name || '' }}
+        </span>
+            </td>
+            <td>
+                <!-- editable username (text with validation) -->
+                <span editable-text="user.Preis1" e-name="Preis1" e-form="rowform"  e-required>
+          {{ user.Preis1 || '' }}
+        </span>
+            </td>
+            <td>
+                <!-- editable username (text with validation) -->
+                <span editable-text="user.Preis2" e-name="Preis2" e-form="rowform"  e-required>
+          {{ user.Preis2 || '' }}
+        </span>
+            </td>
+            <td>
+                <!-- editable username (text with validation) -->
+                <span editable-text="user.Preis3" e-name="Preis3" e-form="rowform"  e-required>
+          {{ user.Preis3 || '' }}
+        </span>
+            </td>
+            <td>
+                <!-- editable username (text with validation) -->
+                <span editable-text="user.Beilage" e-name="Beilage" e-form="rowform"  e-required>
+          {{ user.Beilage || '' }}
+        </span>
+            </td>
+            <td>
+                <!-- editable username (text with validation) -->
+                <span editable-text="user.Artikel_Name" e-name="Artikel_Name" e-form="rowform"  e-required>
+          {{ user.Artikel_Name || '' }}
+        </span>
+            </td>
+            <td>
+                <!-- editable username (text with validation) -->
+                <span editable-text="user.Artikel_Beschreibung" e-name="Artikel_Beschreibung" e-form="rowform"  e-required>
+          {{ user.Artikel_Beschreibung || '' }}
+        </span>
+            </td>
+            <td>
+                <!-- editable username (text with validation) -->
+                <span editable-text="user.Online_Gruppe" e-name="Online_Gruppe" e-form="rowform"  e-required>
+          {{ user.Online_Gruppe || '' }}
+        </span>
+            </td>
+            <td>
+                <!-- editable username (text with validation) -->
+                <span editable-text="user.Online_Bild" e-name="Online_Bild" e-form="rowform"  e-required>
+          {{ user.Online_Bild || '' }}
+        </span>
+            </td>
+            <td>
+                <!-- editable username (text with validation) -->
+                <span editable-text="user.Online_Farbe" e-name="Online_Farbe" e-form="rowform"  e-required>
+          {{ user.Online_Farbe || '' }}
+        </span>
+            </td>
+            <td style="white-space: nowrap">
+                <!-- form -->
+                <form editable-form name="rowform" onbeforesave="saveGroup($data, user.PLU)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == user">
+                    <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary">
+                        save
+                    </button>
+                    <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default">
+                        cancel
+                    </button>
+                </form>
+                <div class="buttons" >
+                    <button class="btn btn-primary" data-toggle="modal"  ng-click="modalEditProduct(user.PLU,user.PLU,user.Name,user.Preis1,user.Preis2,user.Preis3,user.Beilage,user.Artikel_Name,user.Artikel_Beschreibung,user.Online_Gruppe,user.Online_Bild,user.Online_Farbe)">edit</button>
+                    <button class="btn btn-danger" ng-click="removeProduct(user.PLU)">del</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <!--<button class="btn btn-default" ng-click="addProduct()">Add row</button>-->
+</div>
+
+<div class="modal fade" tabindex="-1" id="addProduct" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Add Product</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="plu">PLU</label>
+                    <input type="text" class="form-control" id="plu" ng-model="p_plu"  value="" placeholder="PLU">
+                </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input  type="text" class="form-control" id="name" ng-model="p_name" value="" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="Preis1">Preis1</label>
+                    <input  type="text" class="form-control" id="Preis1" ng-model="p_preis1" value=""  placeholder="Preis1">
+                </div>
+                <div class="form-group">
+                    <label for="Preis2">Preis2</label>
+                    <input  type="text" class="form-control" id="Preis2" ng-model="p_preis2"  value="" placeholder="Preis2">
+                </div>
+                <div class="form-group">
+                    <label for="Preis3">Preis3</label>
+                    <input  type="text" class="form-control" id="Preis3" ng-model="p_preis3" value="" placeholder="Preis3">
+                </div>
+                <div class="form-group">
+                    <label for="Beilage">Beilage</label>
+                    <input  type="text" class="form-control" id="Beilage" ng-model="p_beilage" value="" placeholder="Beilage">
+                </div>
+                <div class="form-group">
+                    <label for="Artikel_Name">Artikel_Name</label>
+                    <input  type="text" class="form-control" id="Artikel_Name" ng-model="p_artikel_name" value="" placeholder="Artikel_Name">
+                </div>
+                <div class="form-group">
+                    <label for="Artikel_Beschreibung">Artikel_Beschreibung</label>
+                    <input  type="text" class="form-control" id="Artikel_Beschreibung" value="" ng-model="p_artikel_beschreibung" placeholder="Artikel_Beschreibung">
+                </div>
+                <div class="form-group">
+                    <label>Online_Gruppe</label>
+                    <select ng-model="p_online_gruppe" class="selectpicker" value="All settings" >
+                        <option ng-repeat="set in groups_product" value="{{set.Online_Gruppe_ID}}">{{set.Online_Gruppe_Name}}</option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Online_Bild">Online_Bild</label>
+                    <input  type="text" class="form-control" id="Online_Bild" ng-model="p_online_bild" value=""  placeholder="Online_Bild">
+                </div>
+                <div class="form-group">
+                    <label for="Online_Farbe">Online_Farbe</label>
+                    <input  type="text" class="form-control" id="Online_Farbe" ng-model="p_online_farbe" value="" placeholder="Online_Farbe">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" ng-click="saveProduct(p_plu,p_name,p_preis1,p_preis2,p_preis3,p_beilage,p_artikel_name,p_artikel_beschreibung,p_online_gruppe,p_online_bild,p_pnline_farbe)">Save</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div class="modal fade" tabindex="-1" id="editProduct" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Edit Product</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="plu">PLU</label>
+                    <input type="text" class="form-control" id="PLU" ng-model="PLU"  value="" placeholder="PLU">
+                </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input  type="text" class="form-control" id="Name" ng-model="Name" value="" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="Preis1">Preis1</label>
+                    <input  type="text" class="form-control" id="Preis1" ng-model="Preis1" value=""  placeholder="Preis1">
+                </div>
+                <div class="form-group">
+                    <label for="Preis2">Preis2</label>
+                    <input  type="text" class="form-control" id="Preis2" ng-model="Preis2"  value="" placeholder="Preis2">
+                </div>
+                <div class="form-group">
+                    <label for="Preis3">Preis3</label>
+                    <input  type="text" class="form-control" id="Preis3" ng-model="Preis3" value="" placeholder="Preis3">
+                </div>
+                <div class="form-group">
+                    <label for="Beilage">Beilage</label>
+                    <input  type="text" class="form-control" id="Beilage" ng-model="Beilage" value="" placeholder="Beilage">
+                </div>
+                <div class="form-group">
+                    <label for="Artikel_Name">Artikel_Name</label>
+                    <input  type="text" class="form-control" id="Artikel_Name" ng-model="Artikel_Name" value="" placeholder="Artikel_Name">
+                </div>
+                <div class="form-group">
+                    <label for="Artikel_Beschreibung">Artikel_Beschreibung</label>
+                    <input  type="text" class="form-control" id="Artikel_Beschreibung" value="" ng-model="Artikel_Beschreibung" placeholder="Artikel_Beschreibung">
+                </div>
+                <div class="form-group">
+                    <label>Online_Gruppe</label>
+                    <select ng-model="Online_Gruppe" class="selectpicker" value="All settings" >
+                        <option ng-repeat="set in groups_product" value="{{set.Online_Gruppe_ID}}">{{set.Online_Gruppe_Name}}</option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Online_Bild">Online_Bild</label>
+                    <input  type="text" class="form-control" id="Online_Bild" ng-model="Online_Bild" value=""  placeholder="Online_Bild">
+                </div>
+                <div class="form-group">
+                    <label for="Online_Farbe">Online_Farbe</label>
+                    <input  type="text" class="form-control" id="Online_Farbe" ng-model="Online_Farbe" value="" placeholder="Online_Farbe">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" ng-click="editProductSave(old_plu,PLU,Name,Preis1,Preis2,Preis3,Beilage,Artikel_Name,Artikel_Beschreibung,Online_Gruppe,Online_Bild,Online_Farbe)">Save</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+

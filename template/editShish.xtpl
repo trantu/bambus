@@ -1,0 +1,52 @@
+<!-- BEGIN:names -->
+
+         <script type="text/javascript" src="style/js/editdishis_page.js"></script> 
+        <div class="beilage-list abc-list" style="text-align:center;display:block;"  item="{COUNT_DISHIS}">
+    
+            <h3 style="">{SIDEDISH}</h3>
+            <div class="count_ds">
+            <!-- BEGIN:demdishis -->
+                <p class="count_ds{DEM_DS} count_ds_c ">STEP {DEM_DS} </p>
+            <!-- END:demdishis -->
+            </div>
+            <!-- BEGIN:beilage -->
+
+                <ul beilage="{BEILAGE}" style="display:none;" price="{PRICES}" idSP="{BEILAGE}{IDSP}" idSPs="{IDSP}" classCLick="{CLASSDS}" onceclass="{GROUPCLASS}class" class="beilage-click  {GROUPCLASS}class" display="{DISPLAY_DS}"> 
+                    
+                    <li class="list-1s">
+                        <input type="checkbox" {CHECKEDS}  class='{GROUPCLASS}classinputs'  idSPs="{IDSP}" price="{PRICES}" value="{BEILAGE}" />
+                    </li>                                        
+
+                    <li class="list-2s">
+                        <a href="#" style="text-decoration:none;font-weight:bold;font-size:17px;">{BEILAGE}
+                        </a>
+                    </li>
+
+                    <li class="list-2s">
+                        <a href="#" style="text-decoration:none;font-size:17px;">{PRICES}{ICONPRICE}
+                        </a>
+                    </li>
+                    
+                    <br><hr>
+
+                </ul>
+            <!-- END:beilage -->
+            <div style="clear:both;display:block; height:33px;margin-top:10px;margin-bottom:15px;margin-left:17%;">
+                <a href="#" class="button green close backds_1"><img src="style/images/tick.png">Back</a>
+                <button href="#" class="button  green close boquads_1"><img src="style/images/tick.png" ><p>Next</p></button>
+                <!-- <a href="#" class="button green close quitds_1"><img src="style/images/cross.png">Quit</a> -->
+            </div>
+              <p class="error-beilage" style="color:red;width:100%; text-align:center;font-size:14px;margin-bottom:10px;"></p>
+        </div>
+
+        <div class="note_ones">
+            <h3>Note</h3>
+            <p>Nếu quý khách không ăn được thành phần nào trong món ăn này hoặc làm theo cách của quý khách thì quý khách hãy ghi chú cho chúng tôi biết về món ăn này ở dưới.Nếu quý khách ko có ghi chú, quý khách có thể nhấn skip để bỏ qua.Cảm ơn quý khách!Rất hân hạnh được phục vụ quý khách!</p>
+            <textarea class="note-text" placeholder="Note......."> {NOTECUSTOMER}</textarea>
+            <div style=" display:block;text-align:center; height:33px;margin-top:10px;margin-bottom:10px;margin-left: 34%;">
+                <button href="#" idSP="{IDSP}" ids="{ID}" sttss="{STT}" class="button  green close note-ok-beilage_1"><img src="style/images/tick.png">Order</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- END:names -->      

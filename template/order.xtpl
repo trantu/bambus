@@ -1,0 +1,137 @@
+<!-- BEGIN:main -->
+<html>
+ <meta charset="utf8">
+<title> HQTECH </title>	
+<head>
+	<link href="style/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="style/css/order.css" rel="stylesheet" type="text/css" />
+    <link href="style/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="style/js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="style/js/order.js"></script>
+    <script type="text/javascript" src="style/js/jquery-ui.js"></script>
+    
+</head>
+<body>
+	<div class="index-in">
+	
+	    <div class="indexheader-in">
+	    	<div class="header">
+	            <div class="logo"><a href="index.php?mod=main"><img src="style/images/logo.png" alt="" /></a></div>
+	            <div class="login">
+	                <ul>
+	                    <!-- BEGIN:loginsession -->
+	                    <li class="action-logins"><a href="#"><span>{EMAIL}</span></a></li>
+	                    <li class="action-logout"><a href="index.php?mod=logout"><span>{SLOGUOT}</span></a></li>
+	                    <!-- END:loginsession -->
+	                </ul>
+	            </div>
+	            <div class="titin">
+	                <p>Klick ein Gericht an, um es in den Warenkorb zu legen</p>
+	            </div>
+	        </div>
+	    </div>
+    <div class="indexcontent">
+    	<div class="content">
+            <div class="contin">
+                <div class="spei">
+                    <div class="menuleft"  style="width:1000px; height:600px; float:left;">
+                		<div id="pp-register">
+                             <div id="signup-header">
+                                <h2>{ODTITLE}</h2>
+                                <p>{ODTITLEP}</p>
+                            </div>
+
+						    <div id="ip-register">
+						        <form id="fr-register" action="index.php?mod=paypal" method="POST">
+						            <div id="form-left"> 
+                                        <div class="txt-fld">
+                                            <label for="">{IFEMAIL}</label>
+                                            <input type="email" {READONLY_IP} class="inputs" required name="email" id="rg_email"  placeholder="{RPMAIL}" value="{EMAILUSER}" />
+                                        </div> 
+                                        <div class="txt-fld">
+                                             <label for="">{ODNAME}</label>
+                                             <input type="text" required class="inputs" name="name" id="rg_lastname" value="{NAMEUSER}" placeholder="{RPFIRSTNAME}{RPLASTNAME}" />
+                                        </div>
+                                       <div class="txt-fld">
+                                            <label for="">{IFPOSTAL}</label>
+                                            <input type="text" {READONLY_IP} required class="inputs" name="postalcode" id="rg_postalcode" placeholder="{RPPOSTAL}" value="{POSTALCODEUSER}" />
+                                        </div>
+                                        <div class="txt-fld">
+                                            <label for="">{IFOFFICE}</label>
+                                            <input type="text"  required class="inputs" name="office" id="rg_office" placeholder="{RPOFFICE}" value="{OFFICEUSER}" />
+                                        </div>
+                                        <div class="txt-fld">
+                                            <label for="">{IFNUMBERHOUSE}</label> 
+                                            <input type="text" required class="inputs" name="numberhouse" id="rg_numberhouse" placeholder="{RPNUMBERHOUSE}" value="{NUMBERHOUSEUSER}" />
+                                        </div>
+                                        <div class="txt-fld">
+                                            <label for="">{IFNOTEPOSITON}</label>
+                                            <textarea name="noteposition" class="inputs" id="rg_noteposition" placeholder="{RPNOTEPOSITION}"  >{NOTEPOSITIONUSER}</textarea>
+                                        </div>
+                                    </div>
+
+						            <div id="form-right">
+						                <div class="txt-fld">
+                                            <label for="">{IFSTRESS}</label>  
+                                            <input type="text" {READONLY_IP} required class="inputs" name="stress" id="rg_stress" placeholder="{RPSTRESS}" valueold="{STRESSOLD}" value="{STRESSUSER}" />
+                                            <!-- <button type="button" class="getstressold">{BUTTONSTRESS}</button> --> 
+                                        </div>
+                                        <div class="txt-fld">
+                                            <label for="">{IFREGION}</label>
+                                            <input type="text" {READONLY_IP} required class="inputs" name="region" id="rg_region" placeholder="{RPREGION}" value="{REGIONUSER}"/>
+                                        </div>
+                                        <div class="txt-fld">
+                                            <label for="">{IFCOMPANY}</label> <input type="text" required class="inputs" name="company" id="rg_company" placeholder="{RPCOMPANY}" value="{COMPANYUSER}" />
+                                        </div>
+                                        <div class="txt-fld">
+                                            <label for=""> {IFPHONE}</label>
+                                            <input type="number" required class="inputs" name="phone" id="rg_phone" placeholder="{RPPHONE}" value="{PHONEUSER}" />
+                                        </div>
+                                        <div class="txt-fld">
+                                            <label for="">{IFNOTE}</label> 
+                                            <textarea name="note" id="rg_note" class="inputs" placeholder="{RPNOTE}">{NOTEUSER}</textarea>
+                                        </div>
+                                    </div>
+
+						            <input type="submit" value="{IFBUTTONPAY}" class="sm-register" style="width:360px; height:50px; background:url(style/images/icon-8.png) no-repeat; border:none; margin-left:20%; margin-top:50px; color:white; text-transform:uppercase; font-size:18px; cursor:pointer;"/><br><br>
+						            
+						        </form>
+						    </div>
+						</div>
+                    </div>                                       
+                           
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="indextopfoot2">
+    	<div class="topfoot2">
+        	<div class="topfoot2-1">
+            	<ul>
+                	<li> <!-- BEGIN:addressstore -->
+                    	<a href="#">{NAMESTORE}</a></br>
+                        <a href="#">{ADDRESSSTORE}</a></br>
+                        <a href="#">{REGIONSTORE}</a>
+                        <!-- END:addressstore -->
+                    </li>
+                </ul>
+            </div>
+            <div class="topfoot2-2">
+            	<ul>
+                	<li> 
+                    <!-- BEGIN:contactus -->
+                    	<a href="#">{TELEPHONE}</a></br>
+                        <a href="#">{EMAILCONTACT}</a>
+                    <!-- END:contactus -->   
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>    
+
+</body>
+</html>
+<!-- End:main -->

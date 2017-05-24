@@ -1,0 +1,125 @@
+<h4>Groups
+    <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#addGroup" >
+        Add Group
+    </button>
+</h4>
+
+<div>
+    <table class="table table-bordered table-hover table-condensed">
+        <tr style="font-weight: bold">
+            <td style="width:20%">Index</td>
+            <td style="width:20%">Name</td>
+            <td style="width:20%">Bild</td>
+            <td style="width:15%">Frabe</td>
+            <td style="width:25%">Edit</td>
+        </tr>
+        <tr ng-repeat="user in groups track by $index">
+            <td>
+          {{ $index}}
+        </span>
+            </td>
+            <td>
+                <!-- editable username (text with validation) -->
+                <span editable-text="user.Online_Gruppe_Name" e-name="Online_Gruppe_Name" e-form="rowform"  e-required>
+          {{ user.Online_Gruppe_Name || '' }}
+        </span>
+            </td>
+            <td>
+                <img src="../upload/groups/{{user.Online_Gruppe_Bild}}" height="50px" width="80px"/>
+        </span>
+            </td>
+            <td>
+                <!-- editable username (text with validation) -->
+                <span editable-text="user.Online_Gruppe_Farbe" e-name="Online_Gruppe_Farbe" e-form="rowform"  e-required>
+          {{ user.Online_Gruppe_Farbe || '' }}
+        </span>
+            </td>
+
+
+            <td style="white-space: nowrap">
+                <!-- form -->
+                <form editable-form name="rowform" onbeforesave="saveGroup($data, user.Online_Gruppe_ID)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == user">
+                    <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary">
+                        save
+                    </button>
+                    <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default">
+                        cancel
+                    </button>
+                </form>
+                <div class="buttons" >
+                    <button class="btn btn-primary" data-toggle="modal"  ng-click="modalEditGroup(user.Online_Gruppe_ID,user.Online_Gruppe_Name,user.Online_Gruppe_Farbe)">edit</button>
+                    <button class="btn btn-danger" ng-click="removeGroup(user.Online_Gruppe_ID)">del</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <!--<button class="btn btn-default" ng-click="addGroup()">Add row</button>-->
+</div>
+
+
+
+
+<div class="modal fade" tabindex="-1" id="addGroup" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Add Group</h4>
+            </div>
+            <form name="imageform" class="form-horizontal" id="imageform" method="post" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <label for="exampleInputPassword1">Name</label>
+                    <input  type="text" class="form-control" id="exampleInputPassword1" ng-model="name_group" placeholder="Value">
+                </div>
+                <div class="modal-body">
+                    <div class="form-group" style="margin:1px">
+                        <label >Image</label>
+                        <input type="file"  class="form-control" id="file" name="file" multiple ng-required="true">
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <label for="exampleInputPassword2">Frabe</label>
+                    <input  type="text" class="form-control" id="exampleInputPassword2" ng-model="frabe_group" placeholder="Value">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" ng-click="addGroup(name_group,frabe_group)">Save</button>
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<div class="modal fade" tabindex="-1" id="editGroup" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Edit Group</h4>
+            </div>
+            <form name="imageform_edit" class="form-horizontal" id="imageform_edit" method="post" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <label for="exampleInputPassword">Name</label>
+                    <input  type="text" class="form-control" id="exampleInputPassword" ng-model="name_group_edit" placeholder="Value">
+                </div>
+                <div class="modal-body">
+                    <div class="form-group" style="margin:1px">
+                        <label >Image</label>
+                        <input type="file"  class="form-control" id="file_2" name="file_2" multiple ng-required="true">
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <label for="exampleInputPassword3">Frabe</label>
+                    <input  type="text" class="form-control" id="exampleInputPassword3" ng-model="frabe_group_edit" placeholder="Value">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" ng-click="editGroupSave(name_group_edit,frabe_group_edit)">Save</button>
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

@@ -1,0 +1,76 @@
+#mobile_dishis{width: 51% !important;}
+#hide_category{display: none; position: fixed;z-index: 9999;top: 30%;left: 0px;}
+/*#hide_cart_in{display: none; position: absolute;z-index: 999;top: 43%;right: 0px;}*/
+#hide_cart_in{display: none; position: absolute;z-index: 999;top: 30%;right: 0px;}
+
+/*Định dạng nút màu nền xanh*/
+#hide_category button{background-color: green;}
+#hide_cart_in button{background-color: green;}
+
+#mobile_cart{width:27% !important;margin-right: -60px !important;margin-left: 30px !important;}
+
+@media (max-width:1228px ) {
+  #mobile_dishis{width: 40% !important;}
+}
+@media (max-width:1024px ) {
+  #mobile_dishis{width: 100% !important;}
+  
+ /* #mobile_cart{width:100% !important;margin-right: -2em !important;margin-left: 0em !important; margin-bottom: 20px !important;}*/
+  /*Hiển thị giỏ hàng*/
+  #mobile_cart{display: none ;position: fixed;z-index: 99; top:10%; width:100% !important;
+              margin-right: -2em !important;margin-left: 0em !important; height: 80% !important;
+              margin-bottom: 20px !important; overflow:scroll !important;}
+  
+  /*#mobile_cart .ticket{width:90% !important;}*/
+  #mobile_cart .ticket{width:90% ;}
+  
+  .removeabc{width:90% !important; }
+  /*#order_summary{width: 100% !important; }*/
+  #order_summary{width: 100% !important;}
+  
+  #mobile_category{display: none ;position: fixed;z-index: 9998; top:25%; left: 2%;max-width:270px;
+  						height: 520px !important; overflow:scroll !important;}
+  #mobile_category h2{display: none;}
+  #hide_category{display: block; position: fixed;z-index: 9999;top: 25%;left: 0px; }
+  #hide_category button{background-color: green;   
+	/* Safari */
+    -webkit-transform: rotate(90deg);
+    /* Firefox */
+    -moz-transform: rotate(90deg);
+    /* IE */
+    -ms-transform: rotate(90deg);
+    /* Opera */
+    -o-transform: rotate(90deg); 
+    padding-left: 18px;
+ 	  margin-left: -35px; 
+    margin-top: -37px;
+
+  }
+
+  /*#hide_cart_in{display: block; position: absolute;z-index: 99;top: 43%;right: 0px;}*/
+  /*Hiển thị nút trên web*/
+  #hide_cart_in{display: block; position: fixed;z-index: 99;top: 25%;right: 0px;}
+  
+  #hide_cart_in button{background-color: green;   
+  /* Safari */
+    -webkit-transform: rotate(90deg);
+    /* Firefox */
+    -moz-transform: rotate(90deg);
+    /* IE */
+    -ms-transform: rotate(90deg);
+    /* Opera */
+    -o-transform: rotate(90deg); 
+    padding-left: 18px;
+    margin-right: -26px;
+    margin-top: -43px;
+  }
+
+ #mobile_cart_left{width: 100% !important;}
+ #mobile_cart_right{width: 100% !important;}
+ #mobile_cart_right .ticket{width:90% !important;}
+}
+
+@media (max-width:500px ) {
+  .col_sm_100{width: 100%;}
+}
+

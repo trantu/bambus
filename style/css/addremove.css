@@ -1,0 +1,22 @@
+.addremove{min-height:65px;width: 100%;border-bottom: 1px  dotted red; clear: both; text-align: center; margin:auto 0px; display: block;color: #343B46;}
+.addremove .quantity{width:30px;float:left; display: block; border: 2px solid #BBBDC0; margin-top: 10px; border-radius: 6px;height:25px; font-weight: bold;}
+.addremove .add-name {width:170px;float:left; display: block;margin-top:14px;margin-left: 4px; }
+.addremove .addremovenot{width:35px; display: block; float: left;margin-left:-4px;}
+.addremove .addremovenot p { width:100%;display: block;  margin-bottom:-12px;}
+
+.monanphu p{font-size:12px; font-weight: bold;display: block; margin-right:20px; float: left; }
+.addremove .sc-monanphu{display: block; float: left; width:40px; margin-top: 20px;margin-left:10px;}
+.addremove .sc-monanphu p{font-size: 14px; font-weight: bold;margin-right:10px;  float: left; padding-top: 10px;display: block;}
+.addremove .hienpopup{clear: both; float: left; margin-left: 90px;}
+#popupsh{
+	background-color: green;
+	display: none;
+	top:10em;
+	height: 9em;
+	z-index: 5;
+	position: absolute;
+	border-radius: 0.7em;
+	position: fixed;
+	top: 100px;
+	width: 200px;
+}

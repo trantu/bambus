@@ -1,0 +1,142 @@
+<h4>Settings</h4>
+
+<h4>
+    <select ng-model="search" class="selectpicker" value="All settings" ng-change="change(search)" >
+        <option value="">All</option>
+        <option ng-repeat="set in nameSettings" value="{{set.Name}}">{{set.Name}}</option>
+
+    </select>
+    <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal" >
+        Add Setting
+    </button>
+</h4>
+<div>
+    <table class="table table-bordered table-hover table-condensed">
+        <tr style="font-weight: bold">
+            <td style="width:5%">Index</td>
+            <td style="width:15%">Name</td>
+            <td style="width:20%">Key</td>
+            <td style="width:25%">Value</td>
+            <td style="width:25%">Description</td>
+            <td style="width:10%">Edit</td>
+        </tr>
+        <tr ng-repeat="user in settings track by $index">
+            <td>
+                {{ $index}}
+                </span>
+            </td>
+            <td>
+                <!-- editable username (text with validation) -->
+                <!--<span editable-text="user.Name" e-name="Name" e-form="rowform"  e-required>-->
+                {{ user.Name || '' }}
+                </span>
+            </td>
+            <td>
+                <!-- editable username (text with validation) -->
+                <span editable-text="user.Key" e-name="Key" e-form="rowform"  e-required>
+          {{ user.Key || '' }}
+        </span>
+            </td>
+            <td>
+                <!-- editable username (text with validation) -->
+                <span ng-if="user.Name!='header_color'" editable-text="user.Value" e-name="Value" e-form="rowform"  e-required>
+          {{ user.Value || '' }}
+        </span>
+                <span ng-if="user.Name=='header_color'" editable-color="user.Value" e-name="Value" e-form="rowform"  e-required>
+          {{ user.Value || '' }}
+        </span>
+            </td>
+            <td>
+                 <span editable-text="user.description" e-name="description" e-form="rowform"  e-required>
+          {{ user.description || '' }}
+        </span>
+            </td>
+
+
+            <td style="white-space: nowrap">
+                <!-- form -->
+                <form  editable-form name="rowform" onbeforesave="saveSetting($data, user.Id)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == user">
+                    <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary">
+                        save
+                    </button>
+                    <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default">
+                        cancel
+                    </button>
+                </form>
+                <div ng-if="user.Name!='logo_banner'&&user.Name!='form_logo'&&user.Name!='cart_logo'&&user.Name!='favicon_ico'" class="buttons" ng-show="!rowform.$visible">
+                    <button class="btn btn-primary" ng-click="rowform.$show()">edit</button>
+                    <!--<button class="btn btn-danger" ng-click="removeGroup(user.Online_Gruppe_ID)">del</button>-->
+                </div>
+                <div ng-if="user.Name=='logo_banner'||user.Name=='form_logo'||user.Name=='cart_logo'||user.Name=='favicon_ico'" class="buttons" >
+                    <button class="btn btn-primary" data-toggle="modal"  ng-click="modalEdit(user.Id)">edit</button>
+                    <!--<button class="btn btn-danger" ng-click="removeGroup(user.Online_Gruppe_ID)">del</button>-->
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <!--<button class="btn btn-default" ng-click="addGroup()">Add row</button>-->
+</div>
+
+<div class="modal fade" tabindex="-1" id="myModal" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Add Setting</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Name</label>
+                    <select ng-model="set_name" class="selectpicker form-control" value="All settings"  ng-change="change_add(set_name)" >
+                        <option ng-repeat="set in nameSettings" value="{{set.Name}}" ng-if="set.Name=='date_off'||set.Name=='price'">{{set.Name}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Key</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" ng-model="set_key" placeholder="Key">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Value</label>
+                    <input  type="text" class="form-control {{add_1}}" id="exampleInputPassword1" ng-model="set_value" placeholder="Value">
+                    <input  type="text" colorpicker class="form-control {{add_2}}" id="exampleInputPassword1" ng-model="set_value">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Description</label>
+                    <textarea class="form-control" rows="3" placeholder="Description" ng-model="set_des"></textarea>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" ng-click="save(set_name,set_key,set_value,set_des)">Save</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+<div class="modal fade" tabindex="-1" id="editLogo" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Edit</h4>
+            </div>
+            <form name="imageform" class="form-horizontal" id="imageform" method="post" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div class="form-group" style="margin:1px">
+                        <label >Image</label>
+                        <input type="file"  class="form-control" id="file" name="file" multiple ng-required="true">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" ng-click="saveLogo()">Save</button>
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

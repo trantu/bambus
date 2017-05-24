@@ -1,0 +1,160 @@
+.opacity-body{z-index: 4; background-color: #000; width:100%; height:100%; opacity: 0.5; display: none;position: fixed;}
+
+/* REGISTER */
+#pp-register,#pp-info-user{ overflow-y:auto;display:none; width: 600px; height:98%;border: 1px solid #fff;
+			background-color:#FFF;position:fixed;left: 50%;  margin-left:-300px;border-radius: 5px;
+            top:2%;color: #FFF;font-size: 16px; z-index: 5;}
+
+#ip-register{overflow-y: auto;}
+#form-left{width: 40%;float: left;margin-left:5%;margin-top:20px;}
+#form-right{width: 40%;float: left;margin-top:20px; margin-left: 30px;}
+#smb-register{clear: both;margin-left: 40%; height: 30px; width: 120px;background-color:#00DD00;color: #fff; font-size: 16px;margin-top: 20px; }
+.cancel-resgister{background-color:#a02d2f; color: #FFF; height: 30px; width: 70px; margin-top: 20px;}
+#fr-register .inputs,#fr-infouse .inputs{margin-top: 10px;}
+.errorinput{ font-size: 14px; color:#FF0000;}
+
+.formpassword{z-index: 999;width: 390px; height:170px; background-color: #FFF; position: fixed; 
+			top: 150px;left: 50%;  margin-left:-175px;display: none; border: 2px solid #fff; border-radius: 5px;}
+.formpassword  #email-forget{margin-left: 5px;float:left;margin-top: 30px;}
+.formpassword #sb-forget{  margin-top: 30px;}
+.cancel-forget{background-color:#a02d2f; color: #FFF;height: 30px; width: 70px; float: right;margin-right: 5px;}
+
+
+
+   #signup{
+    	display: none;
+    	border: 1px solid #EEE;
+        font-size: 62.5%;
+       font-family: 'PT Sans Narrow', sans-serif;
+        border-radius: 5px;
+    
+    }
+	  
+    #signup form{background-color: #FFF;}
+
+    #signup-header h2 {
+        color: #444;
+        font-size: 2em;
+        font-weight: 700;
+        margin-bottom: 3px;
+        text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+        font-family: 'PT Sans Narrow', sans-serif;
+    } 
+
+    #signup-header p {
+        color: #444;
+        font-size: 1.3em;
+        font-family: 'PT Sans Narrow', sans-serif;
+    }
+
+    .modal_close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        display: block;
+        width: 14px;
+        height: 14px;
+        background: url(../images/modal_close.png);
+        z-index: 2;
+    }
+
+
+    #signup-header {
+        background: url(../images/hd-bg.png);
+        padding: 18px 18px 14px 18px;
+        border-bottom: 1px solid #CCC;
+        border-top-left-radius: 5px;
+        -moz-border-radius-topleft: 5px;
+        -webkit-border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        -moz-border-radius-topright: 5px;
+        -webkit-border-top-right-radius: 5px;
+    } 
+
+    #signup .txt-fld {
+        position: relative;
+        width: 364px;
+        padding: 14px 20px;
+        border-bottom: 1px solid #EEE;
+        text-align: right;
+    }
+
+    
+
+    #signup .btn-fld {
+        width: 254px;
+       /* overflow: hidden;*/
+        padding: 12px 20px 12px 130px;
+    }
+    
+    #signup .txt-fld label {
+        display: block;
+        float: left;
+        width: 90px;
+        padding-top: 8px;
+        color: #222;
+        font-size: 1.3em;
+        text-align: left;
+        font-family: 'PT Sans Narrow', sans-serif;
+    }
+
+    #signup .txt-fld input,#fr-register .inputs,#fr-infouse .inputs {
+        width: 244px;
+        padding: 8px;
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        font-size: 1.2em;
+        color: #222;
+        background: #F7F7F7;
+        font-family: 'PT Sans Narrow', sans-serif;
+        outline: none;
+        border-top: 1px solid #CCC;
+        border-left: 1px solid #CCC;
+        border-right: 1px solid #E7E6E6;
+        border-bottom: 1px solid #E7E6E6;
+    }
+    
+    #email-forget{
+        width: 230px;
+        padding: 8px;
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        font-size: 1.2em;
+        color: #222;
+        background: #F7F7F7;
+        font-family: 'PT Sans Narrow', sans-serif;
+        outline: none;
+        border-top: 1px solid #CCC;
+        border-left: 1px solid #CCC;
+        border-right: 1px solid #E7E6E6;
+        border-bottom: 1px solid #E7E6E6;
+    }
+
+
+    #signup  button,#sb-forget,.orderminmaxs button {
+        /*float: right;*/
+        font-family: 'PT Sans Narrow', sans-serif;
+        background: #3F9D4A;
+        border: none;
+        width: auto;
+        /*overflow: visible;*/
+        font-size: 1.4em;
+        color: #FFF;
+        padding: 7px 10px;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        font-weight: bold;
+        text-shadow: 0 1px 0 rgba(0,0,0,0.4);
+    }
+   
+   .orderminmax{display:none; width: 600px;border: 1px solid #fff;
+            background-color:#FFF;position:fixed;left: 50%;  
+            margin-left:-300px;border-radius: 5px;top:30%;color: #FFF;font-size: 16px;z-index: 1000;
+    }
+    .orderminmaxs{display:block; width: 400px;border: 1px solid #fff;
+            background-color:#FFF;position:fixed;left: 50%;  
+            margin-left:-200px;border-radius: 5px;top:30%;color: #FFF;font-size: 16px;z-index: 9999;
+    }

@@ -1,0 +1,430 @@
+<!-- BEGIN:main -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HQ TECH</title>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+<link href="style/css/style.css" rel="stylesheet" type="text/css" />
+<link href="style/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link href="style/css/login.css" rel="stylesheet" type="text/css" />
+<link href="style/css/addremove.css" rel="stylesheet" type="text/css" />
+<link href="style/css/custom.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+    var ICONPRICE='{ICONPRICE}';
+    var pricemin={PRICEMIN};
+    var errormail='{REEMAIL}';
+    var errorrepass='{RERPASS}';
+    var errorregister='{RERRESGISTER}';
+    var fgsucess='{FGSUCESS}';
+    var fgerror='{FGERROR}';
+    var sgerror='{SGERROR}';
+    var DISHIS_FIRSTO="{DISHIS_FIRSTO}";
+</script>
+
+<script type="text/javascript" src="style/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="style/js/jqueryTab.js"></script>
+<script type="text/javascript" src="style/js/login.js"></script>
+<script type="text/javascript" src="style/js/register.js"></script>
+<script type="text/javascript" src="style/js/jquery-ui.js"></script>
+<script type="text/javascript" src="style/js/main.js"></script>
+<script type="text/javascript" src="style/js/prefixfree.min.js"></script>
+<script type="text/javascript" src="style/js/append-beilage.js"></script>
+
+</head>
+
+<body>
+<div class="opacity-body"></div>
+<div class="index-in">
+	
+    <div class="indexheader-in">
+    	<div class="header">
+            <div class="logo"><a href="index.php"><img src="style/images/logo.png" alt="" /></a></div>
+            <div class="login">
+                <ul>
+                    <li class="active"><a href="#"><span>KONTAKT</span></a></li>
+                    <!-- BEGIN:login -->
+                    <li class="action-login"><a href="#"><span>{SLOGIN}</span></a></li>
+                    
+                    <!-- END:login -->
+
+                    <!-- BEGIN:loginsession -->
+                    <li class="action-logins"><a href="index.php?mod=history_order"><span>{SACCOUT}</span></a></li>
+                    <li class="action-logout"><a href="index.php?mod=logout"><span>{SLOGUOT}</span></a></li>
+                    <!-- END:loginsession -->
+                </ul>
+            </div>
+            <div class="titin">
+                <p>Klick ein Gericht an, um es in den Warenkorb zu legen</p>
+            </div>
+        </div>
+    </div>
+    <div class="indexcontent">
+    	<div class="content">
+            <div class="contin">
+                <div class="spei">
+                    <div class="menuleft">
+                    	<div class="tt-menuleft"><p>Warenkorb</p></div>
+                        <ul>
+                            <!-- BEGIN:menu -->
+                            <li><a href="#" NameGruppe="{GRUPPEID}" class="class{GRUPPEID}" height="200" img="style/images/{GRUPPEBILD}" style="color:#{GRUPPEFARBE}">{NAMEGRUPPE}</a></li> 
+                             <!-- USE {GRUPPEFARBE}-->
+                            <!-- END:menu -->
+                        </ul>
+                    </div>
+                    <div class="contlist">
+                       
+                        <div class="listmenu">
+                            <div class="boxlist">
+                            <!-- BEGIN:contentdishis -->
+                                <div class="tt-boxlist"><h2>{NAMEGRUPPE}</h2></div>
+                                <div class="cc-boxlist">
+                                    <div class="banlist">
+                                        <a href="#">
+                                            <img  class="imgnameguppe" height="200" src="style/images/{GRUPPEBILD}" alt="" />
+                                        </a>
+                                    </div>              
+                            <!-- END:contentdishis -->
+                                <div id="loaddisher-jquery">
+                                   <!-- BEGIN:name --> 
+                                    <div class="list appendsall" >
+                                        <ul>
+                                            <li class="list-1" >
+                                                <a href="#" style="color:#{ONLINEFARBE}; font-weight:bold;" >
+                                                    {NAME}
+                                                </a>
+                                            </li>
+
+                                            <li class="list-2">
+                                                <a href="#"  >
+                                                    <img src="style/images/icon-9.png" alt="{NAME}" />
+                                                </a>
+                                            </li>
+                                            <li class="list-3" ><a href="#" >{PRICE}{ICONPRICE}</a></li>
+                                            <li class="list-4 hover-img"  style="position: relative;display: block; ">
+                                                <a href="#" ><h2 style="font-weight: normal;">{NAMEONLINE}
+                                                    <div class="disaleimg">
+                                                        <div class="img-dishis">
+                                                            <img  src="style/images/{ONLINEBILD}" width="600" height="200" alt="{NAMEONLINE}" />
+                                                        </div>
+                                                    </div>
+                                                </h2></a>
+                                            </li>
+                                        </ul>
+                                        <div class="note_ones">
+                                            <h3>{NOTE}</h3>
+                                            <p>{NOTECONTENT}</p>
+                                            <textarea class="note-text" placeholder="{NOTEPLACEHOLDER}"></textarea>
+                                            <div style=" display:block;text-align:center; height:33px;margin-top:10px;margin-bottom:10px;margin-left: 34%;">
+                                                <button href="#" idSP="{IDSP}" class="button  green close note-ok"><img src="style/images/tick.png">{NOTEBUTTON}</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- END:name --> 
+                                    <!-- BEGIN:names -->
+                                    <div  idSP="{IDSP}"  class="list">
+                                        <ul>
+                                            <li class="list-1">
+                                                <a href="#" style="color:#{ONLINEFARBE};font-weight:bold;">{NAME}
+                                                </a>
+                                            </li>
+                                            <li class="list-2"> 
+                                                <a href="#" idSP="{IDSP}"  class="appends-beilage"  item="{COUNT_DISHIS}" >
+                                                    <img src="style/images/icon-9.png" alt="" />
+                                                </a>
+                                            </li>
+                                            <li class="list-3"><a href="#">{PRICE}{ICONPRICE}</a></li>
+                                            <li class="list-4 hover-img">
+                                                <a href="#">
+                                                    <h2 style="font-weight: normal;">{NAMEONLINE}
+                                                        <div class="disaleimg">
+                                                            <div class="img-dishis">
+                                                                <img  src="style/images/{ONLINEBILD} " width="600" height="200" alt="{NAMEONLINE}" />
+                                                            </div>
+                                                        </div>   
+                                                    </h2>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="beilage-list" style="text-align:center;">
+                                            
+                                            <h3 style="">{SIDEDISH}</h3>
+                                            <div class="count_ds">
+                                            <!-- BEGIN:demdishis -->
+                                                <p class="count_ds{DEM_DS} count_ds_c ">{STEP} {DEM_DS} </p>
+                                            <!-- END:demdishis -->
+                                            </div>
+                                            <!-- BEGIN:beilage -->
+
+                                            <ul beilage="{BEILAGE}" style="display:none;" price="{PRICES}" idSP="{BEILAGE}{IDSP}" idSPs="{IDSP}" classCLick="{CLASSDS}" onceclass="{GROUPCLASS}class" class="beilage-click  {GROUPCLASS}class" display="{DISPLAY_DS}"> 
+                                                
+                                                <li class="list-1s">
+                                                    <input type="checkbox" class='{GROUPCLASS}classinputs'  idSPs="{IDSP}" price="{PRICES}" value="{BEILAGE}" />
+                                                </li>                                        
+
+                                                <li class="list-2s">
+                                                    <a href="#" style="text-decoration:none;font-weight:bold;font-size:17px;">{BEILAGE}
+                                                    </a>
+                                                </li>
+
+                                                <li class="list-2s">
+                                                    <a href="#" style="text-decoration:none;font-size:17px;">{PRICES}{ICONPRICE}
+                                                    </a>
+                                                </li>
+                                                
+                                                <br><hr>
+
+                                            </ul>
+                                            <!-- END:beilage -->
+                                    
+                                            <div style="clear:both;display:block;height:33px;margin-top:10px;margin-bottom:15px;">
+                                                <a href="#" class="button green close backds"><img src="style/images/tick.png">Back</a>
+                                                <button href="#" class="button  green close boquads"><img src="style/images/tick.png" ><p>Next</p></button>
+                                                <a href="#" class="button green close quitds"><img src="style/images/cross.png">Quit</a>
+                                            </div>
+                                            <p class="error-beilage" style="color:red;width:100%; text-align:center;font-size:14px;margin-bottom:10px;"></p>
+                                            
+                                        </div>
+                                        <div class="note_ones">
+                                            <h3>{NOTE}</h3>
+                                            <p>{NOTECONTENT}</p>
+                                            <textarea class="note-text" placeholder="{NOTEPLACEHOLDER}"></textarea>
+                                            <div style=" display:block;text-align:center; height:33px;margin-top:10px;margin-bottom:10px;margin-left: 34%;">
+                                                <button href="#" idSP="{IDSP}" class="button  green close note-ok-beilage"><img src="style/images/tick.png">{NOTEBUTTON}</button>
+                                            </div>
+                                        </div>
+                                    </div>      
+                                    <!-- END:names -->  
+                                </div>                                   
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="giohang floating-widget" >
+                         <div class="giohang-fix">
+                            <div class="tt-giohang"><p>Warenkorb</p><a href="index.php?mod=unsetCart"><img src="style/images/bin.png" alt="" /></a></div>
+                            <div class="cc-giohang"> 
+                                 
+                                <div id="order_summary"></div>
+
+                                 <div style="width:264px; float:left; margin:10px; margin-bottom:0;">
+                                    <ul style="list-style:none;">
+                                        <li>
+                                            <p style="float:left; width:194px; margin-left:10px; line-height:26px; display:block; height:26px; color:red;font-family: 'PT Sans Narrow', sans-serif;font-size:16px;">{CMINOMUM}</p>
+                                            <span style="text-align:right; line-height:26px; width:50px; float:right; margin-right:10px;">{PRICEMIN},00 {ICONPRICE}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="sum-0">
+                                    <ul>
+                                        <li class="sum-1"><a href="#">{CSUMME}</a></li>
+                                        <li class="sum-2"><a href="#" class="sum_total">{TOTAL} {ICONPRICE}</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="zur newpeople" style="padding-top:20px;padding-bottom:20px;">
+                                    <a href="#">
+                                        <span style="background:#FFF;">NEW</span>
+                                    </a>
+                                </div>
+
+                                <!-- BEGIN:ordercart -->
+                                <div class="zur order-cartnow" style="padding-top:20px;"><a href="#"><span style="background:#0C0;">{CBTORDER}</span></a></div>
+                                <!-- END:ordercart -->
+
+                                <!-- BEGIN:notordercart -->
+                                <!--<div class="zur notorder-cartnow" id="notorder-cartnows" style="padding-top:20px;"><a href="#"><span style="background:#0C0;">{CBTORDER}</span></a></div> -->
+                                <!-- END:notordercart -->
+
+                                <div class="nganhang">
+                                    <ul>
+                                        <li><a href="#"><img src="style/images/n-1.jpg" alt="" /></a></li>
+                                        <li><a href="#"><img src="style/images/n-2.jpg" alt="" /></a></li>
+                                        <li><a href="#"><img src="style/images/n-3.jpg" alt="" /></a></li>
+                                        <li><a href="#"><img src="style/images/n-4.jpg" alt="" /></a></li>
+                                        <li><a href="#"><img src="style/images/n-5.jpg" alt="" /></a></li>
+                                        <li><a href="#"><img src="style/images/n-6.jpg" alt="" /></a></li>
+                                        <li><a href="#"><img src="style/images/n-1.jpg" alt="" /></a></li>
+                                        <li><a href="#"><img src="style/images/n-2.jpg" alt="" /></a></li>
+                                        <li><a href="#"><img src="style/images/n-3.jpg" alt="" /></a></li>
+                                        <li><a href="#"><img src="style/images/n-4.jpg" alt="" /></a></li>
+                                        <li><a href="#"><img src="style/images/n-5.jpg" alt="" /></a></li>
+                                        <li><a href="#"><img src="style/images/n-6.jpg" alt="" /></a></li>
+                                    </ul>
+                                    <a href="#"><img src="style/images/b-2.jpg" alt="" /></a>
+                                </div>
+                            </div>
+                         </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="indextopfoot2">
+    	<div class="topfoot2">
+        	<div class="topfoot2-1">
+            	<ul>
+                	<li> <!-- BEGIN:addressstore -->
+                    	<a href="#">{NAMESTORE}</a></br>
+                        <a href="#">{ADDRESSSTORE}</a></br>
+                        <a href="#">{REGIONSTORE}</a>
+                        <!-- END:addressstore -->
+                    </li>
+                </ul>
+            </div>
+            <div class="topfoot2-2">
+            	<ul>
+                	<li> 
+                    <!-- BEGIN:contactus -->
+                    	<a href="#">{TELEPHONE}</a></br>
+                        <a href="#">{EMAILCONTACT}</a>
+                    <!-- END:contactus -->   
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<!-- popup login -->
+<div id="signup" style="position: fixed; opacity: 1; z-index: 11000; left: 50%; margin-left: -202px; top:15%;">
+    <div id="signup-ct">
+        <div id="signup-header">
+            <h2>{SGTITLE} </h2>
+            <p>{SGTITLEP}<a class="ins-popupregister" href="#" style="color:red;font-size:16px;">{SGTITLEREGISTER}</a></p>
+            <a class="modal_close cancel" href="#"></a>
+        </div>
+        
+        <form id="sm-login">
+
+          <div class="txt-fld">
+            <label for="">{SGEMAIL}</label>
+            <input id="login-email" class="good_input" name="login-email" type="email" required placeholder="{SGEMAILP}" >
+          </div>
+
+          <div class="txt-fld">
+            <label for="">{SGPASSWORD}</label>
+            <input id="login-password" name="login-password" type="password" required placeholder="{SGPASSWORDP}">
+            <div style="text-align:center;padding-top:7px;">
+                <a style="font-size:16px;font-weight:bold;font-family: 'PT Sans Narrow', sans-serif; color:black;" href="#" class="forget-pass">{SGFGPASS}</a>
+            </div>
+          </div>
+           
+          <div class="btn-flds" style="text-align:center; padding-bottom:16px;">
+              <div style="text-align:center;padding-top:7px;">
+                <button type="submit" id="login-button">{SGBTSIGNUP}</button>
+                <button type="button" class="ins-popupregister">{SGBTRGTER}</button>
+              </div>
+          </div>
+               
+        </form>
+
+    </div>
+</div>
+
+
+<!-- popup register -->
+    <div id="pp-register">
+         <div id="signup-header">
+            <h2>{RTITLE}</h2>
+            <p>{RPTITLE}</p>
+            <a class="modal_close cancel-resgister" href="#"></a>
+        </div>
+
+        <p class="successful" style="display:none;font-size:15px; color:black; text-align:center;margin-top:7px;">{RSUCCESSS}  <a  class="regis-login" style="font-size:16px;color:red;" href="#">{RLOGIN}</a></p>
+        <div id="ip-register">
+            <form id="fr-register">
+                <div id="form-left"> 
+                    <input type="email" class="inputs" required name="email" id="rg_email"  placeholder="{RPMAIL}"/><br>
+                    <p class="erroremail errorinput" style="font-family: 'PT Sans Narrow', sans-serif;"></p>
+                    <input type="password" class="inputs" required name="password" id="rg_password" placeholder="{RPPASSWORD}"/><br>
+                    <input type="password" class="inputs" required name="repassword" id="rg_repassword" placeholder="{RPREPASSWORD}"/><br>
+                    <p class="errorrepass errorinput" style="font-family: 'PT Sans Narrow', sans-serif;"></p>
+                    <input type="text" required class="inputs"name="firtname" id="rg_firstname" placeholder="{RPFIRSTNAME}"/><br>
+                    <input type="text" required class="inputs" name="lastname" id="rg_lastname" placeholder="{RPLASTNAME}"/><br><br>
+                    <span style="color:black;font-family: 'PT Sans Narrow', sans-serif;">
+                        <span style="width:50px;display:block;float:left;margin-top:4px;font-family: 'PT Sans Narrow', sans-serif; font-size:11px; font-weight:bold;">{RPMALE}</span>
+                        <input  type="radio" required name="sex" class="rg_sex" value="1" />
+                    </span><br>
+                    <span style="color:black;font-family: 'PT Sans Narrow', sans-serif;">
+                        <span style="width:50px;display:block;float:left;margin-top:4px;font-family: 'PT Sans Narrow', sans-serif;font-size:11px;font-weight:bold;">{RPFEMALE}</span>
+                        <input type="radio" required name="sex" value="0" class="rg_sex" />
+                    </span><br>
+                    <input type="text" required class="inputs" name="postalcode" id="rg_postalcode" placeholder="{RPPOSTAL}"/><br>
+                    
+                </div>
+                <div id="form-right">
+                    <input type="text" required class="inputs" name="office" id="rg_office" placeholder="{RPOFFICE}"/><br>
+                    <input type="text" required class="inputs" name="numberhouse" id="rg_numberhouse" placeholder="{RPNUMBERHOUSE}"/><br>
+                    <textarea name="noteposition" class="inputs" id="rg_noteposition" placeholder="{RPNOTEPOSITION}"></textarea><br>
+                    <input type="text" required class="inputs" name="stress" id="rg_stress" placeholder="{RPSTRESS}"/> 
+                    <input type="text" required class="inputs" name="region" id="rg_region" placeholder="{RPREGION}"/><br>
+                    <input type="text" required class="inputs" name="company" id="rg_company" placeholder="{RPCOMPANY}"/><br>
+                    <input type="number" required class="inputs" name="phone" id="rg_phone" placeholder="{RPPHONE}"/><br>
+                    <textarea name="note" id="rg_note" class="inputs" placeholder="{RPNOTE}"></textarea><br>
+                </div>
+                <input type="submit" value="{RBUTTON}" class="sm-register" style="width:360px; height:50px; background:url(style/images/icon-8.png) no-repeat; border:none; margin-left:20%; margin-top:20px; color:white; text-transform:uppercase; font-size:18px; cursor:pointer;font-family: 'PT Sans Narrow', sans-serif;"/><br><br>
+               
+            </form>
+        </div>
+    </div>
+
+    <div class="formpassword" >
+        <div id="signup-header">
+            <h2>{FGTITLE}</h2>
+            <a class="modal_close cancel-forget" href="#"></a>
+        </div>
+        <form  id="form-forgetpass">      
+            <input type="email" id="email-forget" required name="email-forget" placeholder="{FGPLACE}" />
+            <input type="submit" value="{FGBUTTON}" id="sb-forget" /><br><br>
+        </form>
+    </div>
+    
+    <div class="orderminmax">
+        <div id="signup-header" style="text-align:center">
+            <h2> {ER_PRICEMIN} {PRICEMIN} {ICONPRICE}</h2>
+             <a class="modal_close cancel-orderminmax" href="#"></a>
+        </div>
+    </div>
+    
+    <!-- BEGIN:timeout -->
+    <div class="orderminmaxs">
+        <div id="signup-header" style="text-align:center;">
+            <h2>{TOTITLE}</h2><br>
+            <button class="orderfirst" style="margin-left:-25px;">{TOORDER}</button>
+            <button class="seeit" style="margin-left:55px;">{TOSEE}</button>
+
+        </div>
+
+    </div>
+     <div class="opacity-body" style="display:block;"></div>
+    <!-- END:timeout -->
+
+</div>
+<!-- BEGIN:checkstress -->
+<style>
+    .appends{display: none;}
+    .appends-beilage{display: none;}
+</style>
+   
+<!-- END:checkstress -->
+<!-- BEGIN:checkimggruppe -->
+<style>
+    .imgnameguppe{display: none;}
+</style>
+<!-- END:checkimggruppe -->
+
+<!-- BEGIN:checkimgdishis -->
+<style>
+    .disaleimg {display: none;}
+</style>
+<!-- END:checkimgdishis -->
+ <div class="popupeditshiss">
+ </div>
+</body>
+</html>
+<!-- END:main -->

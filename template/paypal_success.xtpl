@@ -1,0 +1,125 @@
+<!-- BEGIN:main -->
+<html>
+ <meta charset="utf8">
+<title> HQTECH </title>	
+<head>
+	<link href="style/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="style/css/paypal.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+  
+</head>
+<body>
+	<div class="index-in">
+	
+	    <div class="indexheader-in">
+	    	<div class="header">
+	            <div class="logo"><a href="index.php?mod=main"><img src="style/images/logo.png" alt="" /></a></div>
+	            <div class="login">
+	                <ul>
+	                    <li class="active"><a href="#"><span>KONTAKT</span></a></li>
+	                    
+	                    <!-- BEGIN:loginsession -->
+	                    <li class="action-logins"><a href="index.php?mod=history_order"><span>{EMAIL}</span></a></li>
+	                    <li class="action-logout"><a href="index.php?mod=logout"><span>{SGLOGOUT}</span></a></li>
+	                    <!-- END:loginsession -->
+	                </ul>
+	            </div>
+
+	            <div class="titin">
+	                <p>Klick ein Gericht an, um es in den Warenkorb zu legen</p>
+	            </div>
+
+	        </div>
+	    </div>
+        <div class="indexcontent">
+        	<div class="content">
+                <div class="contin">
+                    <div class="spei">
+                        <div class="menuleft"  style="width:98%; float:left;">
+                    		<div id="pp-register">
+                                 <div id="signup-header" style="text-align:center;">
+                                    <h2>{PPTITLE}</h2>
+                                    <p>{PPTITLEP}<a href="index.php?mod=main"> {PPTITLEA} </a> {PPTITLEPN} </p>
+                                </div>
+
+                                <div id="ip-register"  style="text-align:center;font-family: 'PT Sans Narrow', sans-serif;">
+                                    <h3 style="font-size:24px;padding-top:30px;margin-bottom:20px;">{IFTITLEADDRESS}</h3>
+                                        <table border="1px" style="width:700px;margin:0px auto;text-align:center; ">
+                                            <tr> 
+                                               <th>{IFNAME}</th> 
+                                               <th>{IFSTRESS}</th>
+                                               <th>{IFPHONE}</th>
+                                            </tr>
+                                            <tr> 
+                                               <td>{NAMEUSER}</td>
+                                               <td>{ADDRESSUSER}</td>
+                                               <td>{PHONEUSER}</td>
+                                            </tr>
+                                            
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- BEGIN:people -->
+                                <div id="ip-register" style="text-align:center;">
+                                    <h3 style="font-size:24px;padding-top:30px;margin-bottom:20px;">{LTITLECART}{NUMBER}</h3>
+                                    <table border="1px" style="width:700px;margin:0px auto;text-align:center; ">
+                                        <tr> 
+                                           <th>{LNAME}</th> 
+                                           <th>{LQTY}</th>
+                                           <th>{LTOTALPRICE}</th>
+                                           <th>{LBEILAGE}</th>
+                                           <th>{LNOTE}</th>
+                                        </tr>
+                                        <!-- BEGIN:cart -->
+                                        <tr> 
+                                           <td>{NAME}</td>
+                                           <td>{QTY}</td>
+                                           <td>{PRICES} {ICONPRICE}</td>
+                                           <td>{BEILAGE}</td>
+                                           <td>{NOTE}</td>
+                                        </tr>
+                                        <!-- END:cart -->
+                                        <tr>
+                                            <td colspan="2">{LTOTAL}</td>
+                                            <td colspan="2">{TOTAL} {ICONPRICE}</td>
+                                         </tr>
+                                    </table>
+                                </div>
+        						 <!-- END:people --> 
+    						</div>
+                        </div>
+                                                                        
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+    <div class="indextopfoot2">
+    	<div class="topfoot2">
+        	<div class="topfoot2-1">
+            	<ul>
+                	<li> <!-- BEGIN:addressstore -->
+                    	<a href="#">{NAMESTORE}</a></br>
+                        <a href="#">{ADDRESSSTORE}</a></br>
+                        <a href="#">{REGIONSTORE}</a>
+                        <!-- END:addressstore -->
+                    </li>
+                </ul>
+            </div>
+            <div class="topfoot2-2">
+            	<ul>
+                	<li> 
+                    <!-- BEGIN:contactus -->
+                    	<a href="#">{TELEPHONE}</a></br>
+                        <a href="#">{EMAILCONTACT}</a>
+                    <!-- END:contactus -->   
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>    
+    
+</body>
+</html>
+<!-- End:main -->

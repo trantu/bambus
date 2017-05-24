@@ -1,0 +1,7 @@
+  <!-- BEGIN:loginsession -->
+  	<ul>
+  		<li class="action-logins"><a href="index.php?mod=history_order"><span>{SACCOUT}</span></a></li>
+		<li class="action-logout"><a href="index.php?mod=logout"><span>{SLOGUOT}</span></a></li>
+  	</ul>
+	
+  <!-- END:loginsession -->

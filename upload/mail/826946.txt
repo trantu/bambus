@@ -1,0 +1,25 @@
+﻿HQ-Online Version 2
+IP : ::1
+Date : 2015_07_02 15_49_06
+Zahlung : Cash
+Benutzername : khacthanh244@gmail.com
+Firma : DVMS
+Abteilung : DEVELOPER
+Anrede : Male
+Vorname : Thành
+Nachname : Nguyễn Khắc
+Strasse : Am Wasserwerk
+PLZ : 10365
+Ort : Berlin
+Hausnummer : 150
+Vorwahl : 098
+Telefon : 09876564
+Email : khacthanh244@gmail.com
+Hinterhof/Etage : Gần sông Sài Gòn 100m
+Besonderheiten/Lieferzeitpunkt : Nhớ bấm chuông nhé
+Entfernung : 5.193
+#########################################################################
+¶¶¶*¶¶¶8¶¶¶*¶¶¶1¶¶¶*¶¶¶2¶¶¶*¶¶¶¶¶¶*¶¶¶
+¶¶¶*¶¶¶10¶¶¶*¶¶¶2¶¶¶*¶¶¶2¶¶¶*¶¶¶¶¶¶*¶¶¶
+¶¶¶*¶¶¶11¶¶¶*¶¶¶2¶¶¶*¶¶¶2.5¶¶¶*¶¶¶¶¶¶*¶¶¶
+¶¶¶*¶¶¶14¶¶¶*¶¶¶6¶¶¶*¶¶¶7¶¶¶*¶¶¶¶¶¶*¶¶¶

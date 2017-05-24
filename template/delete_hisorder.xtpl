@@ -1,0 +1,41 @@
+<!-- BEGIN:main -->
+
+    <CAPTION style="padding-top:40px; font-size:20px; font-weight:bold;padding-bottom:20px;color:green;"> {HCATION}</CAPTION>
+    <tr> 
+       <th>{HDAY}</th> 
+       <th>{HQTY}</th>
+       <th>{HTOTALPRICE}</th>
+       <th>{HADDRESS}</th>
+       <th>{HDELETE}</th>
+    
+    </tr>
+    <!-- BEGIN:history -->
+    <tr> 
+       <td>{DAY}</td>
+       <td>{QTY}</td>
+       <td>{TOTAL} {ICONPRICE}</td>
+       <td>{ADDRESSORDER}</td>
+       <td><a href="#" class="delete_order" idDH="{IDDH}" > {HDELETE}</a></td>
+    </tr>
+  
+
+    <!-- END:history -->
+            
+<script>
+    $(document).ready(function(){
+      $('.delete_order').on('click',function(){
+          var idDH=$(this).attr("idDH");
+         // alert(idDH);
+          $.ajax({
+            type:"POST",
+            url:"index.php?mod=delete_hisorder",
+            data:"idDH=" + idDH,
+            success:function(sms){
+              $('#table-history').html(sms);
+            }
+          })
+          return false;
+      })
+    });
+  </script>
+<!-- End:main -->

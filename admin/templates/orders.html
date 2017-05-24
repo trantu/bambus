@@ -1,0 +1,142 @@
+<h4>History Order
+    <button type="button" class="btn btn-danger " data-toggle="modal" data-target="#addGroup" ng-click="delete_order_all()" >
+        Delete All
+    </button>
+</h4>
+
+
+<div>
+    <table class="table table-bordered table-hover table-condensed">
+        <tr style="font-weight: bold;background: #b2dba1">
+            <td style="width:5%">ID Order</td>
+            <td style="width:10%">ID User</td>
+            <td style="width:10%">Product</td>
+            <td style="width:10%">Qty</td>
+            <td style="width:10%">Total</td>
+            <td style="width:10%">Day</td>
+            <td style="width:10%">Address</td>
+            <td style="width:10%">Type</td>
+            <td style="width:10%">Paypal ID</td>
+            <td style="width:10%">Hash</td>
+            <td style="width:10%">Del</td>
+        </tr>
+        <tr ng-repeat="item in items">
+            <td>{{item.idDH}}</td>
+            <td>{{item.idUser}}</td>
+            <td><span style="cursor: pointer" ng-click="show_product(item.product)" class="pull-right"><i style="color:#3A73EF" class="fa fa-info-circle fa-lg" aria-hidden="true"></i></span></td>
+            <td>{{item.Qty}}</td>
+            <td>{{item.Total}}</td>
+            <td>{{item.Day}}</td>
+            <td style="white-space: nowrap"> {{item.Address|getAddress}} <span style="cursor: pointer" ng-click="show_address(item.Address)" class="pull-right"><i style="color:#3A73EF" class="fa fa-info-circle fa-lg" aria-hidden="true"></i></span></td>
+            <td>{{item.type}}</td>
+            <td>{{item.id_paypal_transaction}}</td>
+            <td>{{item.hash}}</td>
+            <td ng-click="delete_order(item.idDH)"><button class="btn btn-danger">Delete</button></td>
+
+        </tr>
+    </table>
+
+    <!--<button class="btn btn-default" ng-click="addGroup()">Add row</button>-->
+</div>
+<ul ng-if="pager.pages.length" class="pagination">
+    <li ng-class="{disabled:pager.currentPage === 1}">
+        <a ng-click="setPage(1)">First</a>
+    </li>
+    <li ng-class="{disabled:pager.currentPage === 1}">
+        <a ng-click="setPage(pager.currentPage - 1)">Previous</a>
+    </li>
+    <li ng-repeat="page in pager.pages" ng-class="{active:pager.currentPage === page}">
+        <a ng-click="setPage(page)">{{page}}</a>
+    </li>
+    <li ng-class="{disabled:pager.currentPage === pager.totalPages}">
+        <a ng-click="setPage(pager.currentPage + 1)">Next</a>
+    </li>
+    <li ng-class="{disabled:pager.currentPage === pager.totalPages}">
+        <a ng-click="setPage(pager.totalPages)">Last</a>
+    </li>
+</ul>
+
+
+<div class="modal fade" tabindex="-1" id="product" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Product Detail</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered table-hover table-condensed">
+                    <tr style="font-weight: bold;background: #b2dba1" >
+
+                        <td style="width:5%">PLU</td>
+                        <td style="width:20%">Name</td>
+                        <td style="width:15%">Note</td>
+                        <td style="width:5%">Qty</td>
+                        <td style="width:10%">Price</td>
+                        <td style="width:40%">Beilage</td>
+                    </tr>
+                    <tr ng-repeat="item in products">
+
+                        <td>{{item.plu}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.note}}</td>
+                        <td>{{item.qty}}</td>
+                        <td>{{item.price}}</td>
+                        <td>
+                            <table class="table table-bordered table-hover table-condensed">
+                            <tr ng-if="item.stt_bei!=null" style="background: #b2dba1">
+                                <td>Name</td>
+                                <td>Price</td>
+                            </tr>
+                            <tr ng-repeat="da in item.stt_bei">
+                                <td>{{da[1]}}</td>
+                                <td>{{da[2]}}</td>
+                            </tr>
+                            </table>
+
+                    </tr>
+                </table>
+            </div>
+            <!--<div class="modal-footer">-->
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                <!--<button type="button" class="btn btn-primary" ng-click="save(set_name,set_key,set_value,set_des)">Save</button>-->
+            <!--</div>-->
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+<div class="modal fade" tabindex="-1" id="address" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Address</h4>
+            </div>
+            <div class="modal-body">
+                <dl class="dl-horizontal" ng-repeat="address in data">
+                    <dt>First Name :</dt><dd>{{address.firstname}}</dd>
+                    <dt>Last Name :</dt><dd>{{address.lastname}}</dd>
+                    <dt>Postal Code :</dt><dd>{{address.postalcode}}</dd>
+                    <dt>Office :</dt><dd>{{address.office}}</dd>
+                    <dt>House Number :</dt><dd>{{address.numberhouse}}</dd>
+                    <dt>Note Possition :</dt><dd>{{address.noteposition}}</dd>
+                    <dt>Street :</dt><dd>{{address.stress}}</dd>
+                    <dt>Region :</dt><dd>{{address.region}}</dd>
+                    <dt>Company :</dt><dd>{{address.company}}</dd>
+                    <dt>Phone :</dt><dd>{{address.phone}}</dd>
+                    <dt>Note :</dt><dd>{{address.note}}</dd>
+                    <dt>Type Payment :</dt><dd>{{address.type_payment}}</dd>
+                    <dt>Sex :</dt><dd>{{address.sex}}</dd>
+                    <dt>Login :</dt><dd>{{address.login}}</dd>
+                    <dt>ip_user :</dt><dd>{{address.ip_user}}</dd>
+                    <dt>Email :</dt><dd>{{address.email_cus}}</dd>
+                    <dt>Distance :</dt><dd>{{address.distance_deliver}}</dd>
+
+                </dl>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

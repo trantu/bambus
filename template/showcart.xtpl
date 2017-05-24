@@ -1,0 +1,150 @@
+
+<!-- BEGIN:cart -->
+<div class="sum-01 removeabc {IDSP}{STTPP}" style="width:264px; float:left; margin:10px; margin-bottom:0;">
+	<ul style="list-style:none;">
+    	<li style="width:40px; float:left;">
+        	<span style="width:24px; height:24px; border:1px solid #ddd; float:left; text-align:center; line-height:24px; background:white;" class ="quantity{IDSP}">{QTY}</span>
+            <a href="#" style="float:left; margin:0 0 0 2px" class='append' idSP='{IDSP}' stt='{STTPP}'
+					onclick="{
+					var idSP='{IDSP}';var sttplus='{STTPP}';
+					var $this=$(this);
+						$.ajax({	
+								type:'POST',
+								url:'index.php?mod=j_add',
+								data:{idSP:idSP,stt:sttplus},
+								success:function(smgs){
+									$('.sum_total').html(smgs + '{ICONPRICE}');
+									var parent_a=$this.closest('.removeabc');					
+									var sls=$(parent_a).find('.quantity{IDSP}').text();
+									sls=parseInt(sls);
+									var slsnow=sls+1;
+									$(parent_a).find('.quantity{IDSP}').html(slsnow);
+									var pr=slsnow;
+									var pri_ce='{PRICE}';
+									pri_ce=pri_ce.replace(',','.');
+									pri_ce=parseFloat(pri_ce);
+									var prices=(pr*pri_ce).toFixed(2);
+									var pricess=prices.replace('.',',');
+									$(parent_a).find('.price{IDSP}').html(pricess + '{ICONPRICE}');
+										
+								}
+							});return false; 
+						}"><img src="style/images/cong.jpg" alt="" />
+			</a>
+
+            <a href="#" style="float:left; margin:2px 0 0 2px;" class='remove' idSP='{IDSP}'
+					onclick="{var divdel=$(this).closest('div');
+					var idSP='{IDSP}';var sttplus='{STTPP}';var $this=$(this);
+						$.ajax({	
+								type:'POST',
+								url:'index.php?mod=j_delete',
+								data:{idSP:idSP,stt:sttplus},
+								success:function(smgs){
+									$('.sum_total').html(smgs + '{ICONPRICE}');
+									var parent_d=$this.closest('.removeabc');
+									var sls=$(parent_d).find('.quantity{IDSP}').text();
+									sls=parseInt(sls);
+									var slsnow=sls-1;
+									if(slsnow>0){
+										$(parent_d).find('.quantity{IDSP}').html(slsnow);
+										var pr=slsnow;
+										var pri_ce='{PRICE}';
+										pri_ce=pri_ce.replace(',','.');
+										pri_ce=parseFloat(pri_ce);
+										var prices=(pr*pri_ce).toFixed(2);
+										var pricess=prices.replace('.',',');
+										$(parent_d).find('.price{IDSP}').html(pricess + '{ICONPRICE}');
+									}
+									if(slsnow==0) {
+										divdel.remove();
+										$.ajax({	
+											type:'POST',
+											url:'index.php?mod=j_deleteCarts',
+											data:'idSP='+ idSP,
+											success:function(smgss){}
+										})	
+									}
+									
+								}
+							});return false;}"><img src="style/images/tru.jpg" alt="" />
+			</a>
+        </li>
+		<!-- BEGIN:namenot -->
+		<li style="width:154px; float:left;">
+        	<p style="float:left; width:164px; margin:0 0 0 10px; display:block; line-height:26px;height:26px; overflow:hidden;" title="{NAME}">{NAME}</p>
+        <!-- END:namenot -->
+        	
+        <!-- BEGIN:beilage -->
+
+        <li style="width:154px; float:left;">
+        	<p style="float:left; width:164px; margin:0 0 0 10px; display:block; height:16px; overflow:hidden;" title="{NAME}">{NAME}</p>
+            <a href="#"  class="remove_click" idSP='{PLU}' onclick="getClick({PLU},'{IDSP}',this,'{STTPP}')">
+            	<!-- BEGIN:dishisshiss -->
+            	<p style="float:left; width:164px; margin:0 0 0 10px; display:block; height:16px; overflow:hidden; font-size:11px; font-style:italic;" title="{BEILAGE}">*--------{BEILAGE}---------*</p>
+            	<!-- END:dishisshiss -->
+            </a>
+        <!-- END:beilage -->
+        </li>
+		
+		<!-- BEGIN:pricenotsession -->
+		<li style="width:50px; float:right;">
+        	<span style="text-align:right; line-height:26px; width:50px; float:right;" class="price{IDSP}">{PRICE}{ICONPRICE}</span>
+        </li>
+      	<!-- END:pricenotsession -->
+      	<!-- BEGIN:pricesession -->
+		<li style="width:50px; float:right;">
+        	<span style="text-align:right; line-height:26px; width:50px; float:right;" class="price{IDSP}">{PRICES}{ICONPRICE}</span>
+        </li>
+      	<!-- END:pricesession -->
+    </ul>
+</div>
+<!-- BEGIN:newpeople -->
+    <div class="sum-01" style="width:264px; float:left; margin:10px; margin-bottom:0;">
+        <hr>
+    </div>
+<!-- END:newpeople -->
+<script>
+	
+function getClick(idSP,id,elm,stt){
+	$('.opacity-body').css("display","block");
+	$.ajax({
+		type:"POST",
+		url:"index.php?mod=editShish",
+		data:{idSP:idSP,id:id,stt:stt},
+		success:function(sms){
+			$('.popupeditshiss').css("display","block");
+			$('.popupeditshiss').html(sms);
+			var cl=$('.popupeditshiss').children('.beilage-list');
+			$(cl).css("display","block");
+			var onceclass=$(cl).children('ul').eq(0).attr("onceclass");
+	        var chilclass=$(cl).children('.' + onceclass);
+	        var lengthclass=chilclass.length;
+	        $(chilclass).css("display","block");
+	        var clas_childs=$(cl).children('.count_ds');
+	        $(clas_childs).children('.count_ds_c').removeClass('active');
+	        $(clas_childs).children('.count_ds_c').removeClass('require');
+	        $(clas_childs).children('.count_ds1').addClass('require');
+	        
+	        
+	        $.ajax({    
+                type:'POST',
+                url:'index.php?mod=j_wdelete_beilge',
+                data:{idSP:id,stt:stt},
+                success:function(hn){
+                	//alert(hn);
+                }
+            })
+
+
+		}
+	})
+};
+
+</script>
+
+<!-- END:cart -->
+
+
+	
+
+	

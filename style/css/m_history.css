@@ -1,0 +1,10 @@
+.modal_close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        display: block;
+        width: 5.5em;
+        height: 5.5em;
+        background: url(../images/delete.png);
+        z-index: 2;
+    }
