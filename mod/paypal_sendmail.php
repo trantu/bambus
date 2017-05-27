@@ -175,13 +175,10 @@ $infopaypal='';
 			}
 			return false;
 		}
-		foreach ($config as $key => $val) {
-			 echo $key;
-			 echo ":";
-			 echo $val;
-			 echo '<br>';
-		}
-return false;
+
+		echo 'Message could not be sent.';
+echo 'Mailer Error: ' . $mail->ErrorInfo;
+		return false;
 		if($config['send_mail_customer']==1){
 			$j_all->sendmail($TO_EMAILC,$subject1,$mess1,false);
 		}
