@@ -1,4 +1,4 @@
-<?php 
+<?php
 #tat ca moi thu lien quan den mysql nam trong day
 
 if(!defined('SECURITY')) exit('404 - Not Access');
@@ -72,7 +72,7 @@ Class j_all extends  db{
 			else{
 				return $info;
 			}
-			
+
 		}
 		else { return 0;}
 
@@ -100,10 +100,10 @@ Class j_all extends  db{
 	}
 
 
-	//lay OR_PLZ 
+	//lay OR_PLZ
 	function getPzl($db,$key){
 		//strassenort_de_ort
-		
+
 		$sql="SELECT DISTINCT(OR_PLZ) from `$db` where OR_PLZ Like '$key%' order by OR_PLZ DESC LIMIT 0,10 ";
 		$result=mysql_query($sql) or die(mysql_error());
 		$ar='';
@@ -115,7 +115,7 @@ Class j_all extends  db{
 
 	//lay stress
 	function getStress($db,$stress,$postal){
-		
+
 		$sql="SELECT ST_NAME from `$db` where ST_PLZ='$postal' and ST_NAME Like '$stress%' LIMIT 0,10 ";
 		$result=mysql_query($sql) or die(mysql_error());
 		$ar='';
@@ -178,7 +178,7 @@ Class j_all extends  db{
 			if(!$result){ return 0;}
 			else {return 1;}
 		}
-		
+
 	}
 
 
@@ -225,11 +225,11 @@ Class j_all extends  db{
 			if(!$result){ return 0;}
 			else {return 1;}
 		}
-		
-	}
-	
 
-	//quen mat khau 
+	}
+
+
+	//quen mat khau
 	function randompass($email){
 		$pass_new=md5(uniqid(rand(), true));
 		$pass_new=substr($pass_new,1,6);
@@ -328,15 +328,15 @@ Class j_all extends  db{
 
 	   		$sql="UPDATE db_users SET `Firstname`='$firstname',`Lastname`='$lastname',`Sex`='$sex',
 	   		`Postalcode`='$postalcode',`Office`='$office',`Numberhouse`='$numberhouse',`Stress`='$stress',
-	   		`Region`='$region',`Company`='$company',`Phone`='$phone',`Note`='$note',`Noteposition`='$noteposition' 
+	   		`Region`='$region',`Company`='$company',`Phone`='$phone',`Note`='$note',`Noteposition`='$noteposition'
 			where `Email`='$email'";
 			$result=mysql_query($sql);
 			if(!$result){ return 0;}
 			else {return 1;}
-		}	
-		
+		}
+
 	}
-		
+
 	//update info dia chi cho user
 	function update_address_user($email){
 		$postalcode=trim(strip_tags($_POST['postalcode']));
@@ -387,24 +387,25 @@ Class j_all extends  db{
 		if($config['server_sendmail']!=5){
 			$mail = new PHPMailer();
 			//$mail->IsSMTP();
-            $mail->isMail();
+			try {
+			$mail->isMail();
 			$mail->CharSet="utf-8";
-			$mail->Host =$config['SMTP_SERVER']; 
-			$mail->Username =$config['SMTP_USER'] ;  
+			$mail->Host =$config['SMTP_SERVER'];
+			$mail->Username =$config['SMTP_USER'] ;
 			$mail->Password = $config['SMTP_PASSWORD'];
 			$mail->SMTPSecure = $config['SMTPSecure']; // Giao thức SSL
 			$mail->Port = $config['SMTP_SERVER_PORT']; // cổng SMTP
-			$mail->From = $config['SMTP_USER']; // mail người gửi   
+			$mail->From = $config['SMTP_USER']; // mail người gửi
 			$mail->SMTPAuth = $config['SMTPAuth_sv'];
 
 			if($config['server_sendmail']==1 || $config['server_sendmail']==3){
-				$mail->Host =$config['SMTP_SERVER_sv']; 
-				$mail->Username =$config['SMTP_USER_sv'] ;  
+				$mail->Host =$config['SMTP_SERVER_sv'];
+				$mail->Username =$config['SMTP_USER_sv'] ;
 				$mail->Password = $config['SMTP_PASSWORD_sv'];
 				$mail->SMTPSecure = $config['SMTPSecure_sv']; // Giao thức SSL
 				$mail->Port = $config['SMTP_SERVER_PORT_sv']; // cổng SMTP
 				$mail->From = $config['SMTP_USER_sv'];
-				$mail->SMTPAuth = $config['SMTPAuth_sv']; 
+				$mail->SMTPAuth = $config['SMTPAuth_sv'];
 
 			}
 
@@ -413,9 +414,9 @@ Class j_all extends  db{
 					$mail->AddAttachment($attach);
 				}
 			}
-			$mail->SMTPDebug  = 2; 
+			$mail->SMTPDebug  = 2;
 			$mail->FromName =$config['namestore']; // tên người gửi
-		
+
 			if(is_array($TO_EMAIL)){
 				foreach ($TO_EMAIL as $value) {
 					$mail->AddAddress($value, $value);
@@ -424,7 +425,7 @@ Class j_all extends  db{
 			else {
 				$mail->AddAddress($TO_EMAIL,$TO_EMAIL); //thêm mail người nhận
 			}
-			
+
 			$mail->Subject = $subject;
 			if($is_admin==false){
 				$mail->isHTML(false); //Bật HTML không thích thì false
@@ -432,14 +433,20 @@ Class j_all extends  db{
                 $mail->isHTML(false); //Bật HTML không thích thì false
             }
 			$mail->Body = $body;
-			
-			if(!$mail->Send())
+			$is_send = $mail->Send();
+
+			if(!$is_send)
 			{
 			    return 0;
 			}
 			else
 			{
 				return 1;
+			}
+			} catch (phpmailerException $e) {
+				echo $e->errorMessage(); //Pretty error messages from PHPMailer
+			} catch (Exception $e) {
+				echo $e->getMessage(); //Boring error messages from anything else!
 			}
 		}else{
 

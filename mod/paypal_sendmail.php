@@ -167,7 +167,7 @@ $infopaypal='';
 		$reusult=$j_all->sendmail($TO_EMAIL,$subject,$mess,$attach,true);
 		if($reusult==0){
 			echo $mp['errorsendmail'];
-			//return false;
+			return false;
 		}
 
 		if($config['send_mail_customer']==1){
