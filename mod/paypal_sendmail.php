@@ -175,7 +175,7 @@ $infopaypal='';
 			}
 			return false;
 		}
-
+return false;
 		if($config['send_mail_customer']==1){
 			$j_all->sendmail($TO_EMAILC,$subject1,$mess1,false);
 		}

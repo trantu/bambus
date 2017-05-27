@@ -383,7 +383,6 @@ Class j_all extends  db{
 
 	//gui mail
 	function sendmail($TO_EMAIL, $subject, $body,$attach=false,$is_admin=false){
-		echo $TO_EMAIL;
 		include("./config/config.rule.php");
 		if($config['server_sendmail']!=5){
 			$mail = new PHPMailer();
