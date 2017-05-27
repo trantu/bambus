@@ -433,10 +433,12 @@ Class j_all extends  db{
                 $mail->isHTML(false); //Bật HTML không thích thì false
             }
 			$mail->Body = $body;
-			$is_send = $mail->Send();
+			$is_send = $mail->send();
 
 			if(!$is_send)
 			{
+				echo 'Message could not be sent.';
+				echo 'Mailer Error: ' . $mail->ErrorInfo;
 			    return 0;
 			}
 			else
