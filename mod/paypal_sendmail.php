@@ -1,4 +1,4 @@
-<?php 
+<?php
 if(!defined('SECURITY')) exit('404 - Not Access');
 //gui mail khi tinh tinh thành cong
 require("./lib/mail/class.phpmailer.php");
@@ -8,7 +8,7 @@ $infopaypal='';
 
 	if(isset($_SESSION['infopaypal'])){
 		$_SESSION['infopaypals']=$_SESSION['infopaypal'];
-	    
+
 	    /**
 		*-khi paypal thanh cong chuyen sang
 		*Send mail for customer
@@ -27,15 +27,15 @@ $infopaypal='';
 		$date=date("Y_m_d H_i_s");
 		$subject=str_replace("{time}", $date, $config['titleadmin']);
 		$mess=str_replace("{Email}",$TO_EMAILC ,$config['bodyadmin']);
-				
+
 	  	/**
 		*Curl get info address and order
 		*
 		*/
-		
+
 		$info=$_SESSION['infopaypal'];
 		$info['date_order']=$date;
-		$ar=$_SESSION['arrSPPP']; 
+		$ar=$_SESSION['arrSPPP'];
 
 		$post=array("arrSP"=>$ar,"TOTAL"=>$_SESSION['total_PP']);
 		$post2=array("address"=>$info);
@@ -84,7 +84,7 @@ $infopaypal='';
 		$order_info[] = "Date : " . $info['date_order'] . "\n";
 		$order_info[] = "Zahlung : " . $info['type_payment'] . "\n";
 		$order_info[] = "Benutzername : " . $info['email_login'] . "\n";
-		
+
 		$order_info[] = "Firma : " . $info['company'] . "\n";
 		$order_info[] = "Abteilung : " . $info['office'] . "\n";
 		$order_info[] = "Anrede : " . $info['sex'] . "\n";
@@ -93,7 +93,7 @@ $infopaypal='';
 		$order_info[] = "Strasse : " . $info['stress'] . "\n";
 		$order_info[] = "PLZ : " . $info['postalcode'] . "\n";
 		$order_info[] = "Ort : " . $info['region'] . "\n";
-		
+
 		$order_info[] = "Hausnummer : " . $info['numberhouse'] . "\n";
 		$order_info[] = "Vorwahl : " . $info['first_number'] . "\n";
 
@@ -140,7 +140,7 @@ $infopaypal='';
 		*
 		*/
 
-		$time_order=time();    
+		$time_order=time();
 		preg_match('/......\b/', $time_order,$result);
 
 		$code_transaction=$result[0];
@@ -167,13 +167,13 @@ $infopaypal='';
 		$reusult=$j_all->sendmail($TO_EMAIL,$subject,$mess,$attach,true);
 		if($reusult==0){
 			echo $mp['errorsendmail'];
-			return false;
+			//return false;
 		}
 
 		if($config['send_mail_customer']==1){
 			$j_all->sendmail($TO_EMAILC,$subject1,$mess1,false);
 		}
-		unset($_SESSION['infopaypal']);		
+		unset($_SESSION['infopaypal']);
 	}
 
 	header("location:index.php?mod=paypal_success");
