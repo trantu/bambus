@@ -164,6 +164,38 @@ $infopaypal='';
 		$mess1=str_replace("{order}", $file_contents, $mess1);
 		$check=1;
 
+		$Mail = new PHPMailer();
+	  $Mail->IsSMTP(); // Use SMTP
+	  $Mail->Host        = "smtp.gmail.com"; // Sets SMTP server
+	  $Mail->SMTPDebug   = 2; // 2 to enable SMTP debug information
+	  $Mail->SMTPAuth    = TRUE; // enable SMTP authentication
+	  $Mail->SMTPSecure  = "tls"; //Secure conection
+	  $Mail->Port        = 587; // set the SMTP port
+	  $Mail->Username    = 'trantu456@gmail.com'; // SMTP account username
+	  $Mail->Password    = 'Abcdefghi-1'; // SMTP account password
+	  $Mail->Priority    = 1; // Highest priority - Email priority (1 = High, 3 = Normal, 5 = low)
+	  $Mail->CharSet     = 'UTF-8';
+	  $Mail->Encoding    = '8bit';
+	  $Mail->Subject     = 'Test Email Using Gmail';
+	  $Mail->ContentType = 'text/html; charset=utf-8\r\n';
+	  $Mail->From        = 'trantu456@gmail.com';
+	  $Mail->FromName    = 'GMail Test';
+	  $Mail->WordWrap    = 900; // RFC 2822 Compliant for Max 998 characters per line
+
+	  $Mail->AddAddress( "trantu456@gmail.com" ); // To:
+	  $Mail->isHTML( TRUE );
+	  $Mail->Body    = "";
+	  $Mail->AltBody = "";
+	  $Mail->Send();
+	  $Mail->SmtpClose();
+
+	  if ( $Mail->IsError() ) {
+	    echo "ERROR<br /><br />";
+	  }
+	  else {
+	    echo "OK<br /><br />";
+	  }
+
 		$reusult=$j_all->sendmail($TO_EMAIL,$subject,$mess,$attach,true);
 		if($reusult==0){
 			echo $mp['errorsendmail'];
