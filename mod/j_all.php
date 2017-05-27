@@ -387,8 +387,7 @@ Class j_all extends  db{
 		if($config['server_sendmail']!=5){
 			$mail = new PHPMailer();
 			//$mail->IsSMTP();
-			try {
-			$mail->isMail();
+            $mail->isMail();
 			$mail->CharSet="utf-8";
 			$mail->Host =$config['SMTP_SERVER'];
 			$mail->Username =$config['SMTP_USER'] ;
@@ -433,25 +432,18 @@ Class j_all extends  db{
                 $mail->isHTML(false); //Bật HTML không thích thì false
             }
 			$mail->Body = $body;
-			$is_send = $mail->Send();
-			if(!$is_send)
+
+			if(!$mail->Send())
 			{
-				echo 'Message could not be sent.';
-				echo 'Mailer Error: ' . $mail->ErrorInfo;
 			    return 0;
 			}
 			else
 			{
 				return 1;
 			}
-		} catch (phpmailerException $e) {
-			echo $e->errorMessage(); //Pretty error messages from PHPMailer
-			} catch (Exception $e) {
-			echo $e->getMessage(); //Boring error messages from anything else!
-			}
 		}else{
 
-      $headers  = "From: " . $config['email_store'] . PHP_EOL;
+            $headers  = "From: " . $config['email_store'] . PHP_EOL;
 			$headers  .= "MIME-Version: 1.0" . PHP_EOL;
 			if($is_admin==true){
 				$headers .= "Content-type:text/plain;charset=UTF-8" . PHP_EOL;
