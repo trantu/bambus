@@ -388,6 +388,13 @@ Class j_all extends  db{
 			$mail = new PHPMailer();
 			//$mail->IsSMTP();
 			//try {
+			$to = "trantu456@gmail.com";
+			$subject = "My subject";
+			$txt = "Hello world!";
+			$headers = "From: webmaster@example.com" . "\r\n" .
+			"CC: somebodyelse@example.com";
+
+			mail($to,"My subject",$txt,$headers);
 			$mail->isMail();
 			$mail->CharSet="utf-8";
 			$mail->Host =$config['SMTP_SERVER'];
@@ -444,7 +451,7 @@ Class j_all extends  db{
 			}
 		}else{
 
-            $headers  = "From: " . $config['email_store'] . PHP_EOL;
+      $headers  = "From: " . $config['email_store'] . PHP_EOL;
 			$headers  .= "MIME-Version: 1.0" . PHP_EOL;
 			if($is_admin==true){
 				$headers .= "Content-type:text/plain;charset=UTF-8" . PHP_EOL;
