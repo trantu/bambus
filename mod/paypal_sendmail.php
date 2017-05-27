@@ -169,6 +169,7 @@ $infopaypal='';
 			echo $mp['errorsendmail'];
 			foreach ($config as $key => $val) {
 			   echo $val;
+				 echo '<br>'
 			}
 			return false;
 		}
