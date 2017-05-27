@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once("settings.rule.php");
 $settings=new  settings;
 $data=$settings->getSettings();
@@ -104,7 +104,7 @@ $config['time']=Array(
 //					"WEDNESDAY"=>"11H-12H|12H-15H|15H-22H", // Ruhetag
 					"THURSDAY"=>"11H-12H|12H-15H|15H-22H",
 					"FRIDAY"=>"11H-12H|12H-15H|15H-22H",
-					//"SATURDAY"=>"11H-22H", 
+					//"SATURDAY"=>"11H-22H",
 					//"SUNDAY"=>"11H-12H|12H-16H|16H-22H"
 					"SATURDAY"=>"1H-1H", //Neu Jahr het thoi gian thi bo lay lai 2 dong tren
 					"SUNDAY"=>"15H-16H|16H-22H" // Weihnacht
@@ -147,7 +147,7 @@ $config['time_in_web']=Array(
 //$config['logo_store']="http://localhost/pizza/style/images/piza.jpg";//Đường dẫn đến hinh anh logo cua cua hang dung cho mobile
 //$config['telephone_store']="(030)820.728 - 10/11";//điện thoại của hàng
 //$config['address_store']=Array("name"=>"",
-//								"address"=>"BRODOWINER RING 16 / 18",		
+//								"address"=>"BRODOWINER RING 16 / 18",
 //								"region"=>"12679 Berlin"
 //								 );//địa chỉ của hàng
 
@@ -162,8 +162,8 @@ $config['dishis_first_name']="Vorspeisen";//tên nhóm món ăn xuất hiện đ
 $config['iconprice']="€";// loại tiền tệ hiện trên website
 **/
 
-/** 
-  Config Email send mail 
+/**
+  Config Email send mail
   body:body mail
   title:title mail
 
@@ -174,24 +174,24 @@ $config['email_admin']='onlinebestellungs@hanhantran.de'; // Email của admin �
 
 /**----------------GUI MAIL----------------------------------------------**/
 
-## 1. Phuong an dung smtp cua server 
+## 1. Phuong an dung smtp cua server
 
-$config['email_sv']="onlinebestellungs@hanhantran.de";	//email gửi mail khi khach hàng order server
-$config['password_sv']="Eho5Lev6";	//Mật khẩu email gửi mail
+$config['email_sv']="trantu456@gmail.com";	//email gửi mail khi khach hàng order server
+$config['password_sv']="Abcdefghi-1";	//Mật khẩu email gửi mail
 //$config['email_sv']="test@thaihuong.de";//email gửi mail khi khach hàng order server
 //$config['password_sv']="P@ssw0rd";//Mật khẩu email gửi mail
 
-$config['SMTP_SERVER_sv']='smtp.1und1.de';	//server 1&1
-$config['SMTP_SERVER_PORT_sv']=587; //port mail 1&1---- 465: ssl ----- 587(hoặc 25): none
-$config['SMTPSecure_sv']="tls";	//giao thuc: ssl --- none: khong co ssl - tls
+$config['SMTP_SERVER_sv']='smtp.gmail.com';	//server 1&1
+$config['SMTP_SERVER_PORT_sv']=465; //port mail 1&1---- 465: ssl ----- 587(hoặc 25): none
+$config['SMTPSecure_sv']="ssl";	//giao thuc: ssl --- none: khong co ssl - tls
 $config['SMTP_USER_sv']=$config['email_sv'];	//email gui BIẾN Ở TRÊN
 $config['SMTP_PASSWORD_sv']=$config['password_sv'];	//pass word email BIẾN Ở TRÊN
 $config['SMTPAuth_sv']=true;
 
 ## 2. Phuong an dung smtp google
 
-$config['email']="khacthanh234@gmail.com";//email gửi mail khi khach hàng order google
-$config['password']="jhgjh";//Mật khẩu email gửi mail
+$config['email']="trantu456@gmail.com";//email gửi mail khi khach hàng order google
+$config['password']="Abcdefghi-1";//Mật khẩu email gửi mail
 
 $config['SMTP_SERVER']='smtp.gmail.com';//server google
 $config['SMTP_SERVER_PORT']=465; //port mail
@@ -215,7 +215,7 @@ $config['SMTP_PASSWORD']=$config['password'];//password email BIẾN Ở TRÊN
 /** lưu ý không được xoá những ký tự nằm trong {}.ví dụ {Email} {address} .... **/
 
 //Nội dung gửi thư cho admin
-$config['bodyadmin']=" {address} <br>###################################################################### <br> {order} "; 
+$config['bodyadmin']=" {address} <br>###################################################################### <br> {order} ";
 //tiêu đề gửi thư cho admin
 $config['titleadmin']="Bestellen{time}";
 //TIÊU đề gửi cho custormer
