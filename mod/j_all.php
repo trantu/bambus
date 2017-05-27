@@ -387,7 +387,7 @@ Class j_all extends  db{
 		if($config['server_sendmail']!=5){
 			$mail = new PHPMailer();
 			//$mail->IsSMTP();
-			//try {
+			try {
 			$mail->isMail();
 			$mail->CharSet="utf-8";
 			$mail->Host =$config['SMTP_SERVER'];
@@ -436,11 +436,18 @@ Class j_all extends  db{
 			$is_send = $mail->Send();
 			if(!$is_send)
 			{
-			    return 1;
+				echo 'Message could not be sent.';
+				echo 'Mailer Error: ' . $mail->ErrorInfo;
+			    return 0;
 			}
 			else
 			{
 				return 1;
+			}
+		} catch (phpmailerException $e) {
+			echo $e->errorMessage(); //Pretty error messages from PHPMailer
+			} catch (Exception $e) {
+			echo $e->getMessage(); //Boring error messages from anything else!
 			}
 		}else{
 
