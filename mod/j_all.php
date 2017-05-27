@@ -439,6 +439,7 @@ Class j_all extends  db{
 			{
 				echo 'Message could not be sent.';
 				echo 'Mailer Error: ' . $mail->ErrorInfo;
+				exit();
 			    return 0;
 			}
 			else
