@@ -388,13 +388,6 @@ Class j_all extends  db{
 			$mail = new PHPMailer();
 			//$mail->IsSMTP();
 			//try {
-			$to = "trantu456@gmail.com";
-			$subject = "My subject";
-			$txt = "Hello world!";
-			$headers = "From: webmaster@example.com" . "\r\n" .
-			"CC: somebodyelse@example.com";
-
-			mail($to,"My subject",$txt,$headers);
 			$mail->isMail();
 			$mail->CharSet="utf-8";
 			$mail->Host =$config['SMTP_SERVER'];
