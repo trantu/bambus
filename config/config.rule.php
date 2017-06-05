@@ -190,7 +190,7 @@ $config['SMTPAuth_sv']=true;
 
 ## 2. Phuong an dung smtp google
 
-$config['email']="trantu456@gmail.com";//email gửi mail khi khach hàng order google
+$config['email']="bambustran456@gmail.com";//email gửi mail khi khach hàng order google
 $config['password']="Abcdefghi-1";//Mật khẩu email gửi mail
 
 $config['SMTP_SERVER']='smtp.gmail.com';//server google
