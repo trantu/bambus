@@ -111,7 +111,7 @@
                                             </a>
                                         </li>
                                         <li style=" width:80%; float:right;">
-                                        	<p style="float:left; width:60%; margin-left:20px; line-height:26px; display:block; height:26px; font-size:30px;">NR. {IDSP}:{NAME}  {BEILAGE}</p>
+                                        	<p style="float:left; width:60%; margin-left:20px; line-height:26px; display:block; height:26px; font-size:30px;">(NR. {IDSP}) {NAME}  {BEILAGE}</p>
                                             <span style=" width:28%; text-align:right; line-height:26px; float:right; font-size:30px;" class="price{IDSP}" >{PRICES} {ICONPRICE}</span>
                                         </li>
                                     </ul>

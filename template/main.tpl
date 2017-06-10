@@ -184,7 +184,7 @@
 						</a>
 					</div>
 					<article>
-						<a href="#" ><h6 style="color:#{ONLINEFARBE}">NR. {IDSP}: {NAME}</h6></a>
+						<a href="#" ><h6 style="color:#{ONLINEFARBE}">(NR. {IDSP}) {NAME}</h6></a>
 						<hr>
 						<p>{NAMEONLINE}</p>
 					</article>
@@ -213,7 +213,7 @@
 						</a>
 					</div>
 					<article class="appends-beilage" item="{COUNT_DISHIS}">
-						<a href="#"><h6 style="color:#{ONLINEFARBE}">NR. {IDSP}:{NAME}</h6></a>
+						<a href="#"><h6 style="color:#{ONLINEFARBE}">(NR. {IDSP}) {NAME}</h6></a>
 						<hr>
 						<p>{NAMEONLINE}</p>
 					</article>

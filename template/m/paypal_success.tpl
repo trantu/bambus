@@ -60,7 +60,7 @@
                             </tr>
                             <!-- BEGIN:cart -->
                             <tr>
-                               <td>NR. {IDSP}:{NAME} {BEILAGE}</td>
+                               <td>(NR. {IDSP}) {NAME} {BEILAGE}</td>
                                <td>{QTY}</td>
                                <td>{PRICES} {ICONPRICE}</td>
                             </tr>

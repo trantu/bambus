@@ -92,7 +92,7 @@
                                         <ul>
                                             <li class="list-1" >
                                                 <a href="#" style="color:#{ONLINEFARBE}; font-weight:bold;" >
-                                                    NR. {IDSP}:{NAME}
+                                                    (NR. {IDSP}) {NAME}
                                                 </a>
                                             </li>
 

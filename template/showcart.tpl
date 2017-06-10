@@ -16,13 +16,13 @@
         </li>
 		<!-- BEGIN:namenot -->
 		<li style="width:154px; float:left;">
-        	<p style="float:left; width:164px; margin:0 0 0 10px; display:block; line-height:26px;height:26px; overflow:hidden;color:#fff;" title="{NAME}">NR. {IDSP}:{NAME}</p>
+        	<p style="float:left; width:164px; margin:0 0 0 10px; display:block; line-height:26px;height:26px; overflow:hidden;color:#fff;" title="{NAME}">(NR. {IDSP}) {NAME}</p>
         <!-- END:namenot -->
 
         <!-- BEGIN:beilage -->
 
         <li style="width:154px; float:left;">
-        	<p style="float:left; width:164px; margin:0 0 0 10px; display:block; height:16px; overflow:hidden;color:#fff;" title="{NAME}">NR. {IDSP}:{NAME}</p>
+        	<p style="float:left; width:164px; margin:0 0 0 10px; display:block; height:16px; overflow:hidden;color:#fff;" title="{NAME}">(NR. {IDSP}) {NAME}</p>
             <a href="#"  class="remove_click" idSP='{PLU}'>
             	<!-- BEGIN:dishisshiss -->
             	<p style="float:left; width:164px; margin:0 0 0 10px; display:block; height:16px; overflow:hidden; font-size:11px; font-style:italic;color:#fff;" title="{BEILAGE}">*--------{BEILAGE}---------*</p>

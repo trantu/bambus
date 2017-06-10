@@ -73,7 +73,7 @@
                                                         <div class="list appends" idSP="{IDSP}">
 
                                                             <ul>
-                                                                <li class="list-1"><a href="#" >NR. {IDSP}:{NAME}</a></li>
+                                                                <li class="list-1"><a href="#" >(NR. {IDSP}) {NAME}</a></li>
                                                                 <li class="list-2">
                                                                     <a href="#" >
                                                                         <img src="style/images/icon-9.png" alt="" />
@@ -99,7 +99,7 @@
                                                       <!-- BEGIN:lists -->
                                                       <div class="list" idSP="{IDSP}" >
                                                             <ul>
-                                                                <li class="list-1"><a href="#" >NR. {IDSP}:{NAME}</a></li>
+                                                                <li class="list-1"><a href="#" >(NR. {IDSP}) {NAME}</a></li>
                                                                 <li class="list-2">
                                                                     <a href="#" class="appends-beilage"  item="{COUNT_DISHIS}">
                                                                         <img  src="style/images/icon-9.png" alt="" />

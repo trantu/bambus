@@ -13,7 +13,7 @@
                 </a>
             </div>
             <article>
-                <a href="springtime-sushi.html"><h6 style="color:#{ONLINEFARBE}">NR. {IDSP}:{NAME}</h6></a>
+                <a href="springtime-sushi.html"><h6 style="color:#{ONLINEFARBE}">(NR. {IDSP}) {NAME}</h6></a>
                  <ul class="rate stars">
                 </ul>
                 <hr>
@@ -44,7 +44,7 @@
                 </a>
             </div>
             <article class="appends-beilage" item="{COUNT_DISHIS}">
-                <a href="#"><h6 style="color:#{ONLINEFARBE}">NR. {IDSP}:{NAME}</h6></a>
+                <a href="#"><h6 style="color:#{ONLINEFARBE}">(NR. {IDSP}) {NAME}</h6></a>
                 <ul></ul>
                 <hr>
                 <p>{NAMEONLINE}</p>
