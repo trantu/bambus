@@ -44,7 +44,7 @@
 	<style>
 		.imgLiquidFill {display: none; background-image: none;}
 	</style>
-	
+
 	<!-- END:checkimgdishis -->
 </head>
 <body>
@@ -184,7 +184,7 @@
 						</a>
 					</div>
 					<article>
-						<a href="#" ><h6 style="color:#{ONLINEFARBE}">{NAME}</h6></a>
+						<a href="#" ><h6 style="color:#{ONLINEFARBE}">({IDSP}) {NAME}</h6></a>
 						<hr>
 						<p>{NAMEONLINE}</p>
 					</article>
@@ -234,10 +234,10 @@
 						</div>
 
                             <!-- BEGIN:beilage -->
-                            <ul beilage="{BEILAGE}" style="display:none;" price="{PRICES}" idSP="{BEILAGE}{IDSP}" idSPs="{IDSP}" classCLick="{CLASSDS}" onceclass="{GROUPCLASS}class"  class="beilage-click  {GROUPCLASS}class" display="{DISPLAY_DS}"> 
+                            <ul beilage="{BEILAGE}" style="display:none;" price="{PRICES}" idSP="{BEILAGE}{IDSP}" idSPs="{IDSP}" classCLick="{CLASSDS}" onceclass="{GROUPCLASS}class"  class="beilage-click  {GROUPCLASS}class" display="{DISPLAY_DS}">
                                 <li class="list-1s">
                                     <input type="checkbox" style="display:inline-block" sttbei="{GROUPCLASS}"  class='{GROUPCLASS}classinputs'  idSPs="{IDSP}" price="{PRICES}" value="{BEILAGE}" />
-                                </li>                                        
+                                </li>
                                 <li class="list-2s">
                                     <a href="#" style="text-decoration:none;font-weight:bold;font-size:17px;">{BEILAGE}</a>
                                 </li>
@@ -247,7 +247,7 @@
                                 <br><hr style="border:1px solid mistyrose">
                             </ul>
                             <!-- END:beilage -->
-                    
+
                             <div class="button_beilage" style="clear:both;display:block;height:33px;margin-top:10px;margin-bottom:15px;">
                                 <a href="#" class="button green close backds"><!-- <img src="style/images/tick.png"> -->{LANGUAGEMAIN.btn_back}</a>
                                 <a href="#" class="button green close boquads"><!-- <img src="style/images/tick.png" > -->{LANGUAGEMAIN.btn_next}</a>
@@ -263,7 +263,7 @@
 							<form >
 								<textarea class="note-text" cols="30" rows="10" placeholder="{NOTECONTENT}"></textarea>
 								<button class="note-ok-beilage" idsp="{IDSP}" type="button"  href='#'  style="background-color: #95c12a;width: 100%;font-size: 1.125em;font-family: 'Source Sans Pro', sans-serif;text-transform: uppercase;font-weight: 900;color: #fff;line-height: 40px;cursor: pointer;margin-bottom: 40px;border-radius: 2px;">{LANGUAGEMAIN.addcart}</button>
-							</form>						
+							</form>
 						</article>
 						<h6 class="appends-beilage" item="{COUNT_DISHIS}">{PRICE}{ICONPRICE}</h6>
 					</li>
@@ -364,10 +364,10 @@
 	<script src="style/jsme/append-beilage.js"></script>
 	<script src="style/jsme/cart.js"></script>
 	<script src="style/jsme/login.js"></script>
-	<script src="style/js/menu.js"></script> 
+	<script src="style/js/menu.js"></script>
 	<script type="text/javascript" src="style/jsme/autogoogle.js"></script>
 	<script type="text/javascript" src="style/jsme/jquery-ui.js"></script>
-	
+
 <style>
 	.ui-autocomplete {
 		z-index: 10000000;
@@ -380,4 +380,3 @@
 </html>
 
 <!-- END:main -->
-
