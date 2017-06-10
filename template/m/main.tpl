@@ -15,7 +15,7 @@
 <link href="style/css/m_login.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="style/js/danhmuc-menu-jquery.js"></script>
 <script type="text/javascript" src="style/js/jquery-1.9.1.js"></script>
- 
+
 <script type="text/javascript" src="style/js/jqueryTab.js"></script>
 <script type="text/javascript" src="style/js/m_append-beilage.js"></script>
 
@@ -39,13 +39,13 @@
                 <li class="action-logins"><a href="index.php?mod=m/history_order"><span>{SACCOUT}</span></a></li>
                 <li class="action-logout"><a href="index.php?mod=m/logout"><span>{SLOGUOT}</span></a></li>
                 <!-- END:loginsession -->
-            
+
             </ul>
         </div>
         <div class="titin">
         	<p>Klick ein Gericht an, um es in den Warenkorb zu legen</p>
         </div>
-        
+
     </div>
     <div class="indexcontent">
     	<div class="content">
@@ -62,18 +62,18 @@
                                 <div class="contlist">
                                 	<div class="productMenu">
                                         <ul class="cap1">
-                                            <!-- BEGIN:gruppe -->    
+                                            <!-- BEGIN:gruppe -->
                                             <li>
                                                 <a href="#"><span>{NAMEGRUPPE}</span></a>
                                                 <ul class="cap2">
                                                 	<li>
                                                         <div class="cc-boxlist">
-                                                        
+
                                                     <!-- BEGIN:list -->
                                                         <div class="list appends" idSP="{IDSP}">
-                                                           
+
                                                             <ul>
-                                                                <li class="list-1"><a href="#" >{NAME}</a></li>
+                                                                <li class="list-1"><a href="#" >NR. {IDSP}:{NAME}</a></li>
                                                                 <li class="list-2">
                                                                     <a href="#" >
                                                                         <img src="style/images/icon-9.png" alt="" />
@@ -99,7 +99,7 @@
                                                       <!-- BEGIN:lists -->
                                                       <div class="list" idSP="{IDSP}" >
                                                             <ul>
-                                                                <li class="list-1"><a href="#" >{NAME}</a></li>
+                                                                <li class="list-1"><a href="#" >NR. {IDSP}:{NAME}</a></li>
                                                                 <li class="list-2">
                                                                     <a href="#" class="appends-beilage"  item="{COUNT_DISHIS}">
                                                                         <img  src="style/images/icon-9.png" alt="" />
@@ -108,22 +108,22 @@
                                                                 <li class="list-3"><a href="#">{PRICE}{ICONPRICE}</a></li>
                                                                 <li class="list-4" ><a href="#">{NAMEONLINE}</a></li>
                                                             </ul>
-                                                       
+
                                                             <div class="beilage-list list" >
                                                                 <h3 style="text-align:center;margin-top:5px;font-size:4em;background:#FFF;"> {SIDEDISH}</h3>
                                                                 <div class="count_ds">
                                                                 <!-- BEGIN:demdishis -->
                                                                     <p class="count_ds{DEM_DS} count_ds_c">{STEP} {DEM_DS} </p>
                                                                 <!-- END:demdishis -->
-                                                                </div>  
+                                                                </div>
 
                                                                 <!-- BEGIN:beilage -->
-                                                                
+
                                                                     <ul beilage="{BEILAGE}" style="display:none;" price="{PRICES}" idSP="{BEILAGE}{IDSP}" idSPs="{IDSP}" classCLick="{CLASSDS}" onceclass="{GROUPCLASS}class" class="beilage-clickss  {GROUPCLASS}class" display="{DISPLAY_DS}">
-                                                                                    
+
                                                                         <li class="list-1s" >
                                                                             <input type="checkbox" style="float:right" class='{GROUPCLASS}classinputs'  idSPs="{IDSP}" price="{PRICES}" value="{BEILAGE}" />
-                                                                        </li>                                        
+                                                                        </li>
 
                                                                         <li class="list-3s">
                                                                             <a href="#" style="text-decoration:none;font-weight:bold;font-size:17px;">{BEILAGE}
@@ -138,7 +138,7 @@
                                                                          <br><hr>
                                                                     </ul>
                                                                 <!-- END:beilage -->
-                                                                
+
                                                                 <div style="clear:both;display:block;height:33px;margin-top:10px;margin-bottom:15px;">
                                                                     <a href="#" class="button green close backds">
                                                                         <img src="style/images/tick.png">Back
@@ -154,7 +154,7 @@
                                                                 <p class="error-beilage" style="color:red;width:100%; text-align:center;font-size:14px;margin-bottom:10px;"></p>
 
                                                             </div>
-                                                        
+
                                                             <div class="note_ones">
                                                                 <h3>{NOTE}</h3>
                                                                 <p>{NOTECONTENT}</p>
@@ -166,7 +166,7 @@
                                                                 </div>
                                                             </div>
 
-                                                    </div>  
+                                                    </div>
                                                     <!-- END:lists -->
 
                                                     </div>
@@ -206,11 +206,11 @@
             </div>
             <div class="topfoot2-2" style="overflow:hidden;">
                 <ul style="margin-left:-3.8em;">
-                    <li style="background:none;"> 
+                    <li style="background:none;">
                         <!-- BEGIN:contactus -->
                         <a href="#">{TELEPHONE}</a></br>
                         <a href="#">{EMAILCONTACT}</a>
-                        <!-- END:contactus -->   
+                        <!-- END:contactus -->
                     </li>
                 </ul>
             </div>
@@ -228,7 +228,7 @@
             <p  style="font-size:2.8em;">{SGTITLEP} <a class="ins-popupregister" href="index.php?mod=m/register" style="color:red;font-size:1.4em;">{SGTITLEREGISTER}</a></p>
             <a class="modal_close cancel" href="#"></a>
         </div>
-        
+
         <form id="sm-login">
 
           <div class="txt-fld">
@@ -240,7 +240,7 @@
             <label for="">{SGPASSWORD}</label><br>
             <input id="login-password" name="login-password" type="password" required placeholder="{SGPASSWORDP}">
           </div>
-           
+
           <div class="txt-fld">
             <a  href="#" class="forget-pass"><label> {SGFGPASS}</label><br> </a>
           </div>
@@ -250,7 +250,7 @@
                 <a href="index.php?mod=m/register"><button type="button" class="ins-popupregister">{SGBTRGTER}</button></a>
               </div>
           </div>
-               
+
         </form>
 
     </div>
@@ -277,7 +277,7 @@
         <h2 style="font-size:3em"> {FGTITLE}</h2>
         <a class="modal_close cancel-forget" href="#"></a>
     </div>
-    <form  id="form-forgetpass" style="text-align:center">      
+    <form  id="form-forgetpass" style="text-align:center">
         <input type="email" style="margin-top:1em;" id="email-forget" name="email-forget" placeholder="{FGPLACE}" />
         <input type="submit" value="{FGBUTTON}" id="sb-forget"  style="margin-top:1em;padding: 0.9em 1em;"/><br><br>
     </form>
@@ -300,7 +300,7 @@
     .appends{display: none;}
     .appends-beilage{display: none;}
 </style>
-   
+
 <!-- END:checkstress -->
 
 </body>

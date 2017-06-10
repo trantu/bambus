@@ -37,7 +37,7 @@
 <body>
 <div class="opacity-body"></div>
 <div class="index-in">
-	
+
     <div class="indexheader-in">
     	<div class="header">
             <div class="logo"><a href="index.php"><img src="style/images/logo.png" alt="" /></a></div>
@@ -46,7 +46,7 @@
                     <li class="active"><a href="#"><span>KONTAKT</span></a></li>
                     <!-- BEGIN:login -->
                     <li class="action-login"><a href="#"><span>{SLOGIN}</span></a></li>
-                    
+
                     <!-- END:login -->
 
                     <!-- BEGIN:loginsession -->
@@ -68,13 +68,13 @@
                     	<div class="tt-menuleft"><p>Warenkorb</p></div>
                         <ul>
                             <!-- BEGIN:menu -->
-                            <li><a href="#" NameGruppe="{GRUPPEID}" class="class{GRUPPEID}" height="200" img="style/images/{GRUPPEBILD}" style="color:#{GRUPPEFARBE}">{NAMEGRUPPE}</a></li> 
+                            <li><a href="#" NameGruppe="{GRUPPEID}" class="class{GRUPPEID}" height="200" img="style/images/{GRUPPEBILD}" style="color:#{GRUPPEFARBE}">{NAMEGRUPPE}</a></li>
                              <!-- USE {GRUPPEFARBE}-->
                             <!-- END:menu -->
                         </ul>
                     </div>
                     <div class="contlist">
-                       
+
                         <div class="listmenu">
                             <div class="boxlist">
                             <!-- BEGIN:contentdishis -->
@@ -84,15 +84,15 @@
                                         <a href="#">
                                             <img  class="imgnameguppe" height="200" src="style/images/{GRUPPEBILD}" alt="" />
                                         </a>
-                                    </div>              
+                                    </div>
                             <!-- END:contentdishis -->
                                 <div id="loaddisher-jquery">
-                                   <!-- BEGIN:name --> 
+                                   <!-- BEGIN:name -->
                                     <div class="list appendsall" >
                                         <ul>
                                             <li class="list-1" >
                                                 <a href="#" style="color:#{ONLINEFARBE}; font-weight:bold;" >
-                                                    {NAME}
+                                                    NR. {IDSP}:{NAME}
                                                 </a>
                                             </li>
 
@@ -122,7 +122,7 @@
                                         </div>
 
                                     </div>
-                                    <!-- END:name --> 
+                                    <!-- END:name -->
                                     <!-- BEGIN:names -->
                                     <div  idSP="{IDSP}"  class="list">
                                         <ul>
@@ -130,7 +130,7 @@
                                                 <a href="#" style="color:#{ONLINEFARBE};font-weight:bold;">{NAME}
                                                 </a>
                                             </li>
-                                            <li class="list-2"> 
+                                            <li class="list-2">
                                                 <a href="#" idSP="{IDSP}"  class="appends-beilage"  item="{COUNT_DISHIS}" >
                                                     <img src="style/images/icon-9.png" alt="" />
                                                 </a>
@@ -143,13 +143,13 @@
                                                             <div class="img-dishis">
                                                                 <img  src="style/images/{ONLINEBILD} " width="600" height="200" alt="{NAMEONLINE}" />
                                                             </div>
-                                                        </div>   
+                                                        </div>
                                                     </h2>
                                                 </a>
                                             </li>
                                         </ul>
                                         <div class="beilage-list" style="text-align:center;">
-                                            
+
                                             <h3 style="">{SIDEDISH}</h3>
                                             <div class="count_ds">
                                             <!-- BEGIN:demdishis -->
@@ -158,11 +158,11 @@
                                             </div>
                                             <!-- BEGIN:beilage -->
 
-                                            <ul beilage="{BEILAGE}" style="display:none;" price="{PRICES}" idSP="{BEILAGE}{IDSP}" idSPs="{IDSP}" classCLick="{CLASSDS}" onceclass="{GROUPCLASS}class" class="beilage-click  {GROUPCLASS}class" display="{DISPLAY_DS}"> 
-                                                
+                                            <ul beilage="{BEILAGE}" style="display:none;" price="{PRICES}" idSP="{BEILAGE}{IDSP}" idSPs="{IDSP}" classCLick="{CLASSDS}" onceclass="{GROUPCLASS}class" class="beilage-click  {GROUPCLASS}class" display="{DISPLAY_DS}">
+
                                                 <li class="list-1s">
                                                     <input type="checkbox" class='{GROUPCLASS}classinputs'  idSPs="{IDSP}" price="{PRICES}" value="{BEILAGE}" />
-                                                </li>                                        
+                                                </li>
 
                                                 <li class="list-2s">
                                                     <a href="#" style="text-decoration:none;font-weight:bold;font-size:17px;">{BEILAGE}
@@ -173,19 +173,19 @@
                                                     <a href="#" style="text-decoration:none;font-size:17px;">{PRICES}{ICONPRICE}
                                                     </a>
                                                 </li>
-                                                
+
                                                 <br><hr>
 
                                             </ul>
                                             <!-- END:beilage -->
-                                    
+
                                             <div style="clear:both;display:block;height:33px;margin-top:10px;margin-bottom:15px;">
                                                 <a href="#" class="button green close backds"><img src="style/images/tick.png">Back</a>
                                                 <button href="#" class="button  green close boquads"><img src="style/images/tick.png" ><p>Next</p></button>
                                                 <a href="#" class="button green close quitds"><img src="style/images/cross.png">Quit</a>
                                             </div>
                                             <p class="error-beilage" style="color:red;width:100%; text-align:center;font-size:14px;margin-bottom:10px;"></p>
-                                            
+
                                         </div>
                                         <div class="note_ones">
                                             <h3>{NOTE}</h3>
@@ -195,9 +195,9 @@
                                                 <button href="#" idSP="{IDSP}" class="button  green close note-ok-beilage"><img src="style/images/tick.png">{NOTEBUTTON}</button>
                                             </div>
                                         </div>
-                                    </div>      
-                                    <!-- END:names -->  
-                                </div>                                   
+                                    </div>
+                                    <!-- END:names -->
+                                </div>
                                 </div>
                             </div>
                         </div>
@@ -205,8 +205,8 @@
                         <div class="giohang floating-widget" >
                          <div class="giohang-fix">
                             <div class="tt-giohang"><p>Warenkorb</p><a href="index.php?mod=unsetCart"><img src="style/images/bin.png" alt="" /></a></div>
-                            <div class="cc-giohang"> 
-                                 
+                            <div class="cc-giohang">
+
                                 <div id="order_summary"></div>
 
                                  <div style="width:264px; float:left; margin:10px; margin-bottom:0;">
@@ -258,13 +258,13 @@
                             </div>
                          </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <div class="indextopfoot2">
     	<div class="topfoot2">
         	<div class="topfoot2-1">
@@ -279,17 +279,17 @@
             </div>
             <div class="topfoot2-2">
             	<ul>
-                	<li> 
+                	<li>
                     <!-- BEGIN:contactus -->
                     	<a href="#">{TELEPHONE}</a></br>
                         <a href="#">{EMAILCONTACT}</a>
-                    <!-- END:contactus -->   
+                    <!-- END:contactus -->
                     </li>
                 </ul>
             </div>
         </div>
     </div>
-    
+
 <!-- popup login -->
 <div id="signup" style="position: fixed; opacity: 1; z-index: 11000; left: 50%; margin-left: -202px; top:15%;">
     <div id="signup-ct">
@@ -298,7 +298,7 @@
             <p>{SGTITLEP}<a class="ins-popupregister" href="#" style="color:red;font-size:16px;">{SGTITLEREGISTER}</a></p>
             <a class="modal_close cancel" href="#"></a>
         </div>
-        
+
         <form id="sm-login">
 
           <div class="txt-fld">
@@ -313,14 +313,14 @@
                 <a style="font-size:16px;font-weight:bold;font-family: 'PT Sans Narrow', sans-serif; color:black;" href="#" class="forget-pass">{SGFGPASS}</a>
             </div>
           </div>
-           
+
           <div class="btn-flds" style="text-align:center; padding-bottom:16px;">
               <div style="text-align:center;padding-top:7px;">
                 <button type="submit" id="login-button">{SGBTSIGNUP}</button>
                 <button type="button" class="ins-popupregister">{SGBTRGTER}</button>
               </div>
           </div>
-               
+
         </form>
 
     </div>
@@ -338,7 +338,7 @@
         <p class="successful" style="display:none;font-size:15px; color:black; text-align:center;margin-top:7px;">{RSUCCESSS}  <a  class="regis-login" style="font-size:16px;color:red;" href="#">{RLOGIN}</a></p>
         <div id="ip-register">
             <form id="fr-register">
-                <div id="form-left"> 
+                <div id="form-left">
                     <input type="email" class="inputs" required name="email" id="rg_email"  placeholder="{RPMAIL}"/><br>
                     <p class="erroremail errorinput" style="font-family: 'PT Sans Narrow', sans-serif;"></p>
                     <input type="password" class="inputs" required name="password" id="rg_password" placeholder="{RPPASSWORD}"/><br>
@@ -355,20 +355,20 @@
                         <input type="radio" required name="sex" value="0" class="rg_sex" />
                     </span><br>
                     <input type="text" required class="inputs" name="postalcode" id="rg_postalcode" placeholder="{RPPOSTAL}"/><br>
-                    
+
                 </div>
                 <div id="form-right">
                     <input type="text" required class="inputs" name="office" id="rg_office" placeholder="{RPOFFICE}"/><br>
                     <input type="text" required class="inputs" name="numberhouse" id="rg_numberhouse" placeholder="{RPNUMBERHOUSE}"/><br>
                     <textarea name="noteposition" class="inputs" id="rg_noteposition" placeholder="{RPNOTEPOSITION}"></textarea><br>
-                    <input type="text" required class="inputs" name="stress" id="rg_stress" placeholder="{RPSTRESS}"/> 
+                    <input type="text" required class="inputs" name="stress" id="rg_stress" placeholder="{RPSTRESS}"/>
                     <input type="text" required class="inputs" name="region" id="rg_region" placeholder="{RPREGION}"/><br>
                     <input type="text" required class="inputs" name="company" id="rg_company" placeholder="{RPCOMPANY}"/><br>
                     <input type="number" required class="inputs" name="phone" id="rg_phone" placeholder="{RPPHONE}"/><br>
                     <textarea name="note" id="rg_note" class="inputs" placeholder="{RPNOTE}"></textarea><br>
                 </div>
                 <input type="submit" value="{RBUTTON}" class="sm-register" style="width:360px; height:50px; background:url(style/images/icon-8.png) no-repeat; border:none; margin-left:20%; margin-top:20px; color:white; text-transform:uppercase; font-size:18px; cursor:pointer;font-family: 'PT Sans Narrow', sans-serif;"/><br><br>
-               
+
             </form>
         </div>
     </div>
@@ -378,19 +378,19 @@
             <h2>{FGTITLE}</h2>
             <a class="modal_close cancel-forget" href="#"></a>
         </div>
-        <form  id="form-forgetpass">      
+        <form  id="form-forgetpass">
             <input type="email" id="email-forget" required name="email-forget" placeholder="{FGPLACE}" />
             <input type="submit" value="{FGBUTTON}" id="sb-forget" /><br><br>
         </form>
     </div>
-    
+
     <div class="orderminmax">
         <div id="signup-header" style="text-align:center">
             <h2> {ER_PRICEMIN} {PRICEMIN} {ICONPRICE}</h2>
              <a class="modal_close cancel-orderminmax" href="#"></a>
         </div>
     </div>
-    
+
     <!-- BEGIN:timeout -->
     <div class="orderminmaxs">
         <div id="signup-header" style="text-align:center;">
@@ -410,7 +410,7 @@
     .appends{display: none;}
     .appends-beilage{display: none;}
 </style>
-   
+
 <!-- END:checkstress -->
 <!-- BEGIN:checkimggruppe -->
 <style>

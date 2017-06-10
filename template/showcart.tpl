@@ -16,13 +16,13 @@
         </li>
 		<!-- BEGIN:namenot -->
 		<li style="width:154px; float:left;">
-        	<p style="float:left; width:164px; margin:0 0 0 10px; display:block; line-height:26px;height:26px; overflow:hidden;color:#fff;" title="{NAME}">{NAME}</p>
+        	<p style="float:left; width:164px; margin:0 0 0 10px; display:block; line-height:26px;height:26px; overflow:hidden;color:#fff;" title="{NAME}">NR. {IDSP}:{NAME}</p>
         <!-- END:namenot -->
-        	
+
         <!-- BEGIN:beilage -->
 
         <li style="width:154px; float:left;">
-        	<p style="float:left; width:164px; margin:0 0 0 10px; display:block; height:16px; overflow:hidden;color:#fff;" title="{NAME}">{NAME}</p>
+        	<p style="float:left; width:164px; margin:0 0 0 10px; display:block; height:16px; overflow:hidden;color:#fff;" title="{NAME}">NR. {IDSP}:{NAME}</p>
             <a href="#"  class="remove_click" idSP='{PLU}'>
             	<!-- BEGIN:dishisshiss -->
             	<p style="float:left; width:164px; margin:0 0 0 10px; display:block; height:16px; overflow:hidden; font-size:11px; font-style:italic;color:#fff;" title="{BEILAGE}">*--------{BEILAGE}---------*</p>
@@ -30,13 +30,13 @@
             </a>
         <!-- END:beilage -->
         </li>
-		
+
 		<!-- BEGIN:pricenotsession -->
 		<li style="width:50px; float:right;" class="licuoicung">
         	<span style="text-align:right; line-height:26px; width:50px; float:right;color:#fff;" class="price{IDSP}">{ICONPRICE}{PRICE}</span>
         	<div style="color:#fff">
         		<a style="color:orange" onclick="var parent_notes=$(this).closest('li');return shownote(parent_notes);" href="#" title="" class="shownote">{LANGUAGEMAIN.notetext}</a>
-        	</div> 
+        	</div>
         	<article class="form-box note_ones" >
 				<a href="#" class="form-close">
 					<img src="style/images/form-close.png" alt="close">
@@ -47,7 +47,7 @@
 					<button class="note_change_idsp" idsp="{IDSP}" onclick="var parent_note_changes=$(this).closest('form');
 						var text_notes=$(parent_note_changes).find('.note-text').val();
 						var idSPs=$(this).attr('idsp'); return note_change_idsp(parent_note_changes,text_notes,idSPs,$(this));" type="button"  href='#'  style="background-color: #95c12a;width: 100%;font-size: 1.125em;font-family: 'Source Sans Pro', sans-serif;text-transform: uppercase;font-weight: 900;color: #fff;line-height: 40px;cursor: pointer;margin-bottom: 40px;border-radius: 2px;">{LANGUAGEMAIN.addcart}</button>
-				</form>						
+				</form>
 			</article>
         </li>
       	<!-- END:pricenotsession -->
@@ -62,8 +62,3 @@
 <script src="style/js/forms.js"></script>
 
 <!-- END:cart -->
-
-
-	
-
-	

@@ -8,13 +8,13 @@
 					onclick="{
 					var idSP='{IDSP}';var sttplus='{STTPP}';
 					var $this=$(this);
-						$.ajax({	
+						$.ajax({
 								type:'POST',
 								url:'index.php?mod=j_add',
 								data:{idSP:idSP,stt:sttplus},
 								success:function(smgs){
 									$('.sum_total').html(smgs + '{ICONPRICE}');
-									var parent_a=$this.closest('.removeabc');					
+									var parent_a=$this.closest('.removeabc');
 									var sls=$(parent_a).find('.quantity{IDSP}').text();
 									sls=parseInt(sls);
 									var slsnow=sls+1;
@@ -26,16 +26,16 @@
 									var prices=(pr*pri_ce).toFixed(2);
 									var pricess=prices.replace('.',',');
 									$(parent_a).find('.price{IDSP}').html(pricess + '{ICONPRICE}');
-										
+
 								}
-							});return false; 
+							});return false;
 						}"><img src="style/images/cong.jpg" alt="" />
 			</a>
 
             <a href="#" style="float:left; margin:2px 0 0 2px;" class='remove' idSP='{IDSP}'
 					onclick="{var divdel=$(this).closest('div');
 					var idSP='{IDSP}';var sttplus='{STTPP}';var $this=$(this);
-						$.ajax({	
+						$.ajax({
 								type:'POST',
 								url:'index.php?mod=j_delete',
 								data:{idSP:idSP,stt:sttplus},
@@ -57,27 +57,27 @@
 									}
 									if(slsnow==0) {
 										divdel.remove();
-										$.ajax({	
+										$.ajax({
 											type:'POST',
 											url:'index.php?mod=j_deleteCarts',
 											data:'idSP='+ idSP,
 											success:function(smgss){}
-										})	
+										})
 									}
-									
+
 								}
 							});return false;}"><img src="style/images/tru.jpg" alt="" />
 			</a>
         </li>
 		<!-- BEGIN:namenot -->
 		<li style="width:154px; float:left;">
-        	<p style="float:left; width:164px; margin:0 0 0 10px; display:block; line-height:26px;height:26px; overflow:hidden;" title="{NAME}">{NAME}</p>
+        	<p style="float:left; width:164px; margin:0 0 0 10px; display:block; line-height:26px;height:26px; overflow:hidden;" title="{NAME}">NR. {IDSP}:{NAME}</p>
         <!-- END:namenot -->
-        	
+
         <!-- BEGIN:beilage -->
 
         <li style="width:154px; float:left;">
-        	<p style="float:left; width:164px; margin:0 0 0 10px; display:block; height:16px; overflow:hidden;" title="{NAME}">{NAME}</p>
+        	<p style="float:left; width:164px; margin:0 0 0 10px; display:block; height:16px; overflow:hidden;" title="{NAME}">NR. {IDSP}:{NAME}</p>
             <a href="#"  class="remove_click" idSP='{PLU}' onclick="getClick({PLU},'{IDSP}',this,'{STTPP}')">
             	<!-- BEGIN:dishisshiss -->
             	<p style="float:left; width:164px; margin:0 0 0 10px; display:block; height:16px; overflow:hidden; font-size:11px; font-style:italic;" title="{BEILAGE}">*--------{BEILAGE}---------*</p>
@@ -85,7 +85,7 @@
             </a>
         <!-- END:beilage -->
         </li>
-		
+
 		<!-- BEGIN:pricenotsession -->
 		<li style="width:50px; float:right;">
         	<span style="text-align:right; line-height:26px; width:50px; float:right;" class="price{IDSP}">{PRICE}{ICONPRICE}</span>
@@ -104,7 +104,7 @@
     </div>
 <!-- END:newpeople -->
 <script>
-	
+
 function getClick(idSP,id,elm,stt){
 	$('.opacity-body').css("display","block");
 	$.ajax({
@@ -124,9 +124,9 @@ function getClick(idSP,id,elm,stt){
 	        $(clas_childs).children('.count_ds_c').removeClass('active');
 	        $(clas_childs).children('.count_ds_c').removeClass('require');
 	        $(clas_childs).children('.count_ds1').addClass('require');
-	        
-	        
-	        $.ajax({    
+
+
+	        $.ajax({
                 type:'POST',
                 url:'index.php?mod=j_wdelete_beilge',
                 data:{idSP:id,stt:stt},
@@ -143,8 +143,3 @@ function getClick(idSP,id,elm,stt){
 </script>
 
 <!-- END:cart -->
-
-
-	
-
-	

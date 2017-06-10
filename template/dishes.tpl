@@ -13,7 +13,7 @@
                 </a>
             </div>
             <article>
-                <a href="springtime-sushi.html"><h6 style="color:#{ONLINEFARBE}">{NAME}</h6></a>
+                <a href="springtime-sushi.html"><h6 style="color:#{ONLINEFARBE}">NR. {IDSP}:{NAME}</h6></a>
                  <ul class="rate stars">
                 </ul>
                 <hr>
@@ -44,7 +44,7 @@
                 </a>
             </div>
             <article class="appends-beilage" item="{COUNT_DISHIS}">
-                <a href="#"><h6 style="color:#{ONLINEFARBE}">{NAME}</h6></a>
+                <a href="#"><h6 style="color:#{ONLINEFARBE}">NR. {IDSP}:{NAME}</h6></a>
                 <ul></ul>
                 <hr>
                 <p>{NAMEONLINE}</p>
@@ -57,20 +57,20 @@
                 <p>{PRICE}{ICONPRICE}</p>
             </div>
             <a href="#" class="button red appends-beilage" idSP="{IDSP}" item="{COUNT_DISHIS}">{LANGUAGECART.addcart}</a>
-            
-            <div class="beilage-list" style="text-align:center;">      
+
+            <div class="beilage-list" style="text-align:center;">
                 <h3 style="">{SIDEDISH}</h3>
                 <div class="count_ds">
                 <!-- BEGIN:demdishis -->
                     <p class="count_ds{DEM_DS} count_ds_c ">{STEP} {DEM_DS} </p>
                 <!-- END:demdishis -->
                 </div>
-                
+
                 <!-- BEGIN:beilage -->
-                <ul beilage="{BEILAGE}" style="display:none;" price="{PRICES}" idSP="{BEILAGE}{IDSP}" idSPs="{IDSP}" classCLick="{CLASSDS}" onceclass="{GROUPCLASS}class" class="beilage-click  {GROUPCLASS}class" display="{DISPLAY_DS}"> 
+                <ul beilage="{BEILAGE}" style="display:none;" price="{PRICES}" idSP="{BEILAGE}{IDSP}" idSPs="{IDSP}" classCLick="{CLASSDS}" onceclass="{GROUPCLASS}class" class="beilage-click  {GROUPCLASS}class" display="{DISPLAY_DS}">
                     <li class="list-1s">
                         <input type="checkbox" style="display:inline-block" sttbei="{GROUPCLASS}" class='{GROUPCLASS}classinputs'  idSPs="{IDSP}" price="{PRICES}" value="{BEILAGE}" />
-                    </li>                                        
+                    </li>
                     <li class="list-2s">
                         <a href="#" style="text-decoration:none;font-weight:bold;font-size:17px;">{BEILAGE}
                         </a>
@@ -88,7 +88,7 @@
                     <a href="#" class="button green close quitds"><!-- <img src="style/images/cross.png"> -->{LANGUAGEMAIN.btn_quit}</a>
                 </div>
                 <p class="error-beilage" style="color:red;width:100%; text-align:center;font-size:14px;margin-bottom:10px;"></p>
-                
+
             </div>
             <article class="form-box note_ones" style="width: 400px;background-color: #fff;border-radius: 2px;padding: 105px 20px 20px;position: fixed;z-index: 10000;top: 50%;left: 50%;margin-left: -200px;height:auto;">
                 <a href="#" class="form-close">
@@ -98,7 +98,7 @@
                 <form>
                     <textarea class="note-text" cols="30" rows="10" placeholder="{NOTECONTENT}"></textarea>
                     <button class="note-ok-beilage" idsp="{IDSP}" type="button"  href='#'  style="background-color: #95c12a;width: 100%;font-size: 1.125em;font-family: 'Source Sans Pro', sans-serif;text-transform: uppercase;font-weight: 900;color: #fff;line-height: 40px;cursor: pointer;margin-bottom: 40px;border-radius: 2px;">{LANGUAGECART.addcart}</button>
-                </form>                     
+                </form>
             </article>
             <h6  class="appends-beilage" item="{COUNT_DISHIS}" >{PRICE}{ICONPRICE}</h6>
         </li>

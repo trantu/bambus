@@ -3,14 +3,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <script>
-        var PRICEMIN={PRICEMIN}; 
+        var PRICEMIN={PRICEMIN};
     </script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>HQ TECH</title>
 <link href="style/css/style-mobile.css" rel="stylesheet" type="text/css" />
 <link href="style/css/m_login.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="style/js/danhmuc-menu-jquery.js"></script> 
+<script type="text/javascript" src="style/js/danhmuc-menu-jquery.js"></script>
 <script type="text/javascript" src="style/js/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="style/js/jqueryTab.js"></script>
 <script type="text/javascript" src="style/js/m_cart.js"></script>
@@ -19,7 +19,7 @@
 <body>
 
 <div class="index-in" style="padding-bottom:0px;">
-	
+
     <div class="indexheader-in">
     	<div class="logo"><a href="index.php?mod=m/main"><img src="style/images/logo.png" alt="" /></a></div>
         <div class="login">
@@ -33,13 +33,13 @@
                 <li class="action-logins"><a href="index.php?mod=m/history_order"><span>{SACCOUT}</span></a></li>
                 <li class="action-logout"><a href="index.php?mod=m/logout"><span>{SLOGUOT}</span></a></li>
                 <!-- END:loginsession -->
-            
+
             </ul>
         </div>
         <div class="titin">
         	<p>Klick ein Gericht an, um es in den Warenkorb zu legen</p>
         </div>
-        
+
     </div>
     <div class="indexcontent">
     	<div class="content">
@@ -54,13 +54,13 @@
                                             <a href="#" style="float:left; margin:0 0 0 10px" class='append'  idSP='{IDSP}'
                                                 onclick="{
                                                 var idSP='{IDSP}';
-                                                    $.ajax({    
+                                                    $.ajax({
                                                             type:'POST',
                                                             url:'index.php?mod=j_add',
                                                             data:'idSP='+ idSP,
                                                             success:function(smgs){
                                                                 $('.sum_total').html(smgs + '{ICONPRICE}');
-                                                                $.ajax({    
+                                                                $.ajax({
                                                                     type:'POST',
                                                                     url:'index.php?mod=j_qtyID',
                                                                     data:'idSP='+ idSP,
@@ -74,22 +74,22 @@
                                                                     }
                                                                 });
                                                             }
-                                                        });return false; 
+                                                        });return false;
                                                     }">
                                                 <img src="style/images/cong.jpg" alt="" width="40"  height="49" />
-                                                
+
                                             </a>
-                                            
+
                                             <a href="#" style="float:left; margin:0px 0 0 15px;"class='remove' idSP='{IDSP}'
                                                 onclick="{var divdel=$(this).closest('div');
                                                 var idSP='{IDSP}';
-                                                    $.ajax({    
+                                                    $.ajax({
                                                             type:'POST',
                                                             url:'index.php?mod=j_delete',
                                                             data:'idSP='+ idSP,
                                                             success:function(smgs){
                                                                 $('.sum_total').html(smgs + '{ICONPRICE}');
-                                                                $.ajax({    
+                                                                $.ajax({
                                                                     type:'POST',
                                                                     url:'index.php?mod=j_qtyID',
                                                                     data:'idSP='+ idSP,
@@ -101,7 +101,7 @@
                                                                             $('.price{IDSP}').html(pricessr + '{ICONPRICE}')
                                                                         }
                                                                         if(smg==0) {
-                                                                            divdel.remove();    
+                                                                            divdel.remove();
                                                                         }
                                                                     }
                                                                 });
@@ -111,13 +111,13 @@
                                             </a>
                                         </li>
                                         <li style=" width:80%; float:right;">
-                                        	<p style="float:left; width:60%; margin-left:20px; line-height:26px; display:block; height:26px; font-size:30px;">{NAME}  {BEILAGE}</p>
+                                        	<p style="float:left; width:60%; margin-left:20px; line-height:26px; display:block; height:26px; font-size:30px;">NR. {IDSP}:{NAME}  {BEILAGE}</p>
                                             <span style=" width:28%; text-align:right; line-height:26px; float:right; font-size:30px;" class="price{IDSP}" >{PRICES} {ICONPRICE}</span>
                                         </li>
                                     </ul>
                                 </div>
                             <!-- END:cart -->
-                               
+
                                 <div class="sum-0">
                                     <ul>
                                         <li class="sum-1"><a href="#">{CSUMME}</a></li>
@@ -159,11 +159,11 @@
             </div>
             <div class="topfoot2-2">
                 <ul>
-                    <li> 
+                    <li>
                     <!-- BEGIN:contactus -->
                         <a href="#">{TELEPHONE}</a></br>
                         <a href="#">{EMAILCONTACT}</a>
-                    <!-- END:contactus -->   
+                    <!-- END:contactus -->
                     </li>
                 </ul>
             </div>
@@ -171,7 +171,7 @@
     </div>
 </div>
 
-    
+
 
     <div class="orderminmax">
         <div id="signup-header-min" style="text-align:center;">
