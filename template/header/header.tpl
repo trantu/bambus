@@ -24,7 +24,7 @@
 				</a>
 				<ul>
 					<li class="menu_hide_shows"><a href="index.php" class="{MODMENU.home} ">{LANGUAGEMENU.home}</a></li>
-					<li class="menu_hide_shows"><a href="index.php?mod=about" class="{MODMENU.about} ">{LANGUAGEMENU.about}</a></li>					
+					<li class="menu_hide_shows"><a href="index.php?mod=about" class="{MODMENU.about} ">{LANGUAGEMENU.about}</a></li>
 					<li><a href="index.php?mod=main" class="{MODMENU.main}">{LANGUAGEMENU.shop}</a></li>
 					<li class="checkout-desktop"><a  href="index.php?mod=checkout">{LANGUAGEMENU.cart}<span class="cart total_dishis">{TOTALDISHISCART}</span></a></li>
 					<li class="sub-items cart-items" id="hover_cai" >
@@ -41,9 +41,9 @@
 							<div class="container"></div>
 						</ul>
 					</li>
-					<li class="menu_hide_shows"><a href="index.php?mod=contact" class="{MODMENU.contact}">{LANGUAGEMENU.contact}</a></li>
+					<li class="menu_hide_shows_contact"><a href="index.php?mod=contact" class="{MODMENU.contact}">{LANGUAGEMENU.contact}</a></li>
 				</ul>
-				<a href="#" id="pull"></a> 
+				<a href="#" id="pull"></a>
 			</nav>
 		</div>
 
