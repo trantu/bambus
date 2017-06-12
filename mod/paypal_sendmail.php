@@ -126,7 +126,7 @@ $infopaypal='';
             $food['note']=preg_replace('/\r++/', '. ', $food['note']);
 
             //$order_info[] = "¶¶¶*¶¶¶" . $food['plu'] . "¶¶¶*¶¶¶" . $food['qty'] . "¶¶¶*¶¶¶" . $price_food. "¶¶¶*¶¶¶" .$beilage_food."¶¶¶*¶¶¶".$food['note']. "\n";
-						$order_info[] = $food['qty']." x " . $food['plu'] . " ".$food['name']." (" $price_food. "/Stk".")" .$beilage_food." : ".$food['note']. "\n";
+						$order_info[] = $food['qty']." x " . $food['plu'] . " ".$food['name']." (". $price_food. "/Stk".") " .$beilage_food." : ".$food['note']. "\n";
 		}
         //$order_info[] = "------------------------------\n";
 
