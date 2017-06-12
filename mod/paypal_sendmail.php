@@ -119,13 +119,14 @@ $infopaypal='';
 		foreach($ar as $food)
 		{
             $price_food=(isset($food['price_notbei']))? $food['price_notbei']:$food['price'];
-			$beilage_food=(isset($food['stt_bei']))? $food['stt_bei']:'';
-			$beilage_food=str_replace("█",'#', $beilage_food);
+						$beilage_food=(isset($food['stt_bei']))? $food['stt_bei']:'';
+						$beilage_food=str_replace("█",'#', $beilage_food);
 
             $food['note']=preg_replace('/\n++/', '. ', $food['note']);
             $food['note']=preg_replace('/\r++/', '. ', $food['note']);
 
-            $order_info[] = "¶¶¶*¶¶¶" . $food['plu'] . "¶¶¶*¶¶¶" . $food['qty'] . "¶¶¶*¶¶¶" . $price_food. "¶¶¶*¶¶¶" .$beilage_food."¶¶¶*¶¶¶".$food['note']. "\n";
+            //$order_info[] = "¶¶¶*¶¶¶" . $food['plu'] . "¶¶¶*¶¶¶" . $food['qty'] . "¶¶¶*¶¶¶" . $price_food. "¶¶¶*¶¶¶" .$beilage_food."¶¶¶*¶¶¶".$food['note']. "\n";
+						$order_info[] = $food['qty']." x " . $food['plu'] . " ". $price_food. " pro Stk" .$beilage_food." : ".$food['note']. "\n";
 		}
         //$order_info[] = "------------------------------\n";
 
