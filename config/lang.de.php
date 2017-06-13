@@ -170,7 +170,7 @@ $de_footer['all_right'] 	="- Alle Rechte vorbehalten 2017";
 	$de_checkout['credit']="Kreditkarte";
 	$de_checkout['mobile']="EC";
 	$de_checkout['address_deliver']="Zustelladresse *";
-	$de_checkout['confirm_order']="Weiter";
+	$de_checkout['confirm_order']="Bestellen";
 	$de_checkout['address_fail']="Ungünstige Adresse!Bitte wiederholen Sie!";
 	$de_checkout['money_fail']="Bitte noch mehr bestellen!";
 

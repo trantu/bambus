@@ -53,7 +53,7 @@
     </tr>
     <tr><td></td></tr>
     </tbody>
-</table>
+	</table>
 </div>
 	{FILE {TEMPLATEFOOTER}}
 	{FILE {TEMPLATELOGIN}}

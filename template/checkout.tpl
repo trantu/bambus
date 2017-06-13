@@ -200,7 +200,7 @@
 					<p>{LANGUAGEMAIN.cartsubtotal}<span class="sum_total">{ICONPRICE}{TOTALCART}</span></p>
 					<p>{LANGUAGEMAIN.ordermin}<span class="total_min">{ICONPRICE}{PRICEMIN}</span></p>
 					<p class="total">{LANGUAGEMAIN.total}<span class="sum_total ">{ICONPRICE}{TOTALCART}</span></p>
-					<a href="#order" class="button red confirm_order">Weiter</a>
+					<a href="#payment-paypal" class="button red confirm_order">Weiter</a>
 					<!--<ul style="width:190px;margin: 25px auto 10px;">
 						<li style="float:left"><img src="style/images/cc-visa.png" alt="cc"></li>
 						<li style="float:left"><img src="style/images/cc-master.png" alt="cc"></li>
