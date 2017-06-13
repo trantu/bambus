@@ -21,6 +21,7 @@
 	<header>
 		{FILE {TEMPLATEHEADER}}
 	</header>
+	<div style="margin: 0 auto; width: 50%">
 	<table>
     <tbody>
     <tr style="height:80px">
