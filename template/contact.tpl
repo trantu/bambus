@@ -22,7 +22,7 @@
 		{FILE {TEMPLATEHEADER}}
 	</header>
 
-<div style="display:block ;float:left;width:100px;padding-top: 20px;">
+<div style="left:100px;float:left;">
 	<p>
 		Anschrift:	Hohensaatener Str. 18, 12679 Berlin <br>
 		Verantwortlich:<br>
