@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>{TITLE} | Kontakt</title>
+	<title>{TITLE} | IMPRESSUM</title>
 	<link rel="stylesheet" href="style/css/style.css">
 	<link rel="stylesheet" href="style/css/animate.css">
 	<link rel="stylesheet" href="style/css/tooltipster.css">
@@ -22,9 +22,9 @@
 		{FILE {TEMPLATEHEADER}}
 	</header>
 
-<div>
+<div style="display:block ;float:left;width:100px;padding-top: 20px;">
 	<p>
-		Anschrift:	Heinrich-Heine Platz 12, 10179 Berlin <br>
+		Anschrift:	Hohensaatener Str. 18, 12679 Berlin <br>
 		Verantwortlich:<br>
 		Lieferzeiten:<br>
 		11:00-22.00<br>
