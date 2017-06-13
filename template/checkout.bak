@@ -97,7 +97,7 @@
 						<!-- END:cart -->
 					</ul>
 				</article>
-				
+
 				<div class="cleaner"></div>
 				<article id="info_user_payment" style="display:none">
 					<h2><span>{LANGUAGECHECKOUT.deliver}</span> </h2>
@@ -125,11 +125,11 @@
                     		<label for="Phone">{LANGUAGEREGISTER.phone}</label>
                     		<input type="text"   name="phone" value="{PHONEUSER}" id="info_phone" placeholder="{LANGUAGEREGISTER.phone_holder}"/>
 						</div>
-						
+
 						<div>
 							<label for="email">{LANGUAGECHECKOUT.emailyou_checkout} </label>
 							<input type="email" style='font-size: 0.875em;font-family: "Source Sans Pro", sans-serif;font-weight: 300; width: 100%;background-color: #f8f8f8;border-radius: 2px;border: 1px solid #e3e3e3;padding: 10px 15px;margin-bottom: 20px;'  value="{EMAILUSER}" placeholder="{LANGUAGEREGISTER.emailyou_holder}" id="info_email" name="email">
-						</div>					
+						</div>
 					<div style='max-height:86px'>
 							<label for="email">{LANGUAGECHECKOUT.type_payment}</label>
 							<select id="type_payment_order" name="type_payment_order" style='font-size: 0.875em;font-family: "Source Sans Pro", sans-serif;font-weight: 300;width: 100%;background-color: #f8f8f8;border-radius: 2px;border: 1px solid #e3e3e3;padding: 10px 15px;margin-bottom: 20px;'>
@@ -149,15 +149,15 @@
                     	</div>
 						<div>
 							<label for="stress">{LANGUAGEREGISTER.street}</label>
-							<input type="text"  name="stress"  value="{STRESSUSER}" id="info_stress_c" /> 
+							<input type="text"  name="stress"  value="{STRESSUSER}" id="info_stress_c" />
                     	</div>
                     	<div>
 							<label for="apartament">{LANGUAGEREGISTER.numberhouse}</label>
 							<input type="text" placeholder="Numberhouse"  value="{NUMBERHOUSEUSER}" id="info_numberhouse" name="numberhouse">
 					</div>
-						
-					
-										
+
+
+
                     <div style='max-height:86px'>
 							<label for="Office">{LANGUAGEREGISTER.office}</label>
 							<input type="text"  placeholder="{LANGUAGEREGISTER.office_holder}" value="{OFFICEUSER}" id="info_office" name="office">
@@ -191,7 +191,7 @@
 					<p>{LANGUAGEMAIN.cartsubtotal}<span class="sum_total">{ICONPRICE}{TOTALCART}</span></p>
 					<p>{LANGUAGEMAIN.ordermin}<span class="total_min">{ICONPRICE}{PRICEMIN}</span></p>
 					<p class="total">{LANGUAGEMAIN.total}<span class="sum_total ">{ICONPRICE}{TOTALCART}</span></p>
-					<a href="#" class="button red confirm_order" >{LANGUAGECHECKOUT.confirm_weiter}</a>
+					<a href="#order" class="button red confirm_order" >{LANGUAGECHECKOUT.confirm_weiter}</a>
 					<!--<ul style="width:190px;margin: 25px auto 10px;">
 						<li style="float:left"><img src="style/images/cc-visa.png" alt="cc"></li>
 						<li style="float:left"><img src="style/images/cc-master.png" alt="cc"></li>
@@ -229,11 +229,11 @@
 </article>
 
 	{FILE {TEMPLATELOGIN}}
-<script src="style/js/jquery-1.11.1.min.js"></script> 
+<script src="style/js/jquery-1.11.1.min.js"></script>
 <script src="style/js/imgLiquid-min.js"></script>
 <script src="style/js/jquery.tooltipster.min.js"></script>
 <script src="style/js/wow.min.js"></script>
-<script src="style/js/menu.js"></script> 
+<script src="style/js/menu.js"></script>
 <script type="text/javascript" src="style/jsme/jquery-ui.js"></script>
 <script src="style/js/checkout.js"></script>
 <script src="style/js/forms.js"></script>
@@ -244,9 +244,9 @@
 
 <script>
 $('#payment-paypal').on('click',function(){
- 
+
  var type_paypal = Number($('#type_payment_order').val());
-  
+
   if((type_paypal == 2) || (type_paypal == 3)) // 2 là paypal, 3 là thẻ
     {
 	$('.form-box-overlay').css('z-index','999999');
@@ -262,7 +262,7 @@ $('#payment-paypal').on('click',function(){
 		<img src="style/images/form-close.png" alt="close">
 	</a>
 	<img src="style/images/form-logo.png" alt="logo">
-	<p class='show_error_price' style='color:red;font-size:1em;font-weight:bold;'></p>		
+	<p class='show_error_price' style='color:red;font-size:1em;font-weight:bold;'></p>
 </article>
 <style>
 	.ui-autocomplete {
@@ -277,4 +277,3 @@ $('#payment-paypal').on('click',function(){
 
 
 <!-- END:main -->
-

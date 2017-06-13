@@ -1,7 +1,7 @@
-<?php 
+<?php
 if(!defined('SECURITY')) exit('404 - Not Access');
 /**
-*Config langue 
+*Config langue
 *đang để theo từng page.Lưu ý có những ngôn ngữ 2,3 page và có ngôn ngữ 1 page
 *
 **/
@@ -32,7 +32,7 @@ if(!defined('SECURITY')) exit('404 - Not Access');
 	$de_menu['cart_total']		='Gesamt';
 	$de_menu['cart_checkout']	='Weiter zur Bestellung';
 	$de_menu['cart_thankyou']	='Danke für Ihre Bestellung!';
-	$de_menu['contact']			='KONTAKT';
+	$de_menu['contact']			='IMPRESSUM';
 
 /**
 #
@@ -68,12 +68,12 @@ $de_footer['all_right'] 	="- Alle Rechte vorbehalten 2015";
 	/* quen password */
 	$de_login['forgetpass']				="Kennwort vergessen?";
 	$de_login['forget']['title']		="Email hinzufügen";//tieu de khi quen mat khau
-	$de_login['forget']['placeholder']	="Email login...";//hiện sẵn gợi ý 
+	$de_login['forget']['placeholder']	="Email login...";//hiện sẵn gợi ý
 	$de_login['forget']['button']		="Email senden >>";//tên button gửi mail
 	$de_login['forget_success']			="Email versendet!";//thông báo gửi mail thành công
 	$de_login['forget_error']		    ="Fehler! Wiederholen!";// Thông báo Mail gửi không dc
 	$de_login['mail_not_register']		="Diese Email ist nicht registriert!";// Thông báo Mail này chưa đăng ký
-	
+
 
 
 /**
@@ -81,7 +81,7 @@ $de_footer['all_right'] 	="- Alle Rechte vorbehalten 2015";
 # Page Home
 #
 **/
-	
+
 	$de_home['the_best']="Probieren Sie";
 	$de_home['asian_cuise']="Uns";
 	$de_home['in_all']="";
@@ -89,11 +89,11 @@ $de_footer['all_right'] 	="- Alle Rechte vorbehalten 2015";
 
 
 /**
-# 
+#
 # Page Main
 #
 **/
-	
+
 	$de_main['deine_address']='IHRE ADRESSE';
 	$de_main['btn_submit']='Abschließen';
 	$de_main['haccount']='Sie haben doch ein Konto?';
@@ -129,7 +129,7 @@ $de_footer['all_right'] 	="- Alle Rechte vorbehalten 2015";
 	$de_main['menu']['Bewertungen']='Bewertungen';
 	$de_main['menu']['Info']='Info';
 	*/
-	
+
 /**
 #
 # Langue cart
@@ -173,18 +173,18 @@ $de_footer['all_right'] 	="- Alle Rechte vorbehalten 2015";
 	$de_checkout['confirm_order']="Bestellen";
 	$de_checkout['address_fail']="Ungünstige Adresse!Bitte wiederholen Sie!";
 	$de_checkout['money_fail']="Bitte noch mehr bestellen!";
- 
+
  /* THÔNG BÁO LỖI KHI CHECKOUT*/
 	$de_checkout['enter_housenumber']="Bitter erfühlen Sie die Hausnummer Ihrer Adresse";
 	$de_checkout['enter_stress']="Bitter erfühlen Sie die Straße Ihrer Adresse";
 	$de_checkout['enter_postalcode']="Bitter erfühlen Sie die PLZ Ihrer Adresse";
 	$de_checkout['enter_region']="Bitter erfühlen Sie die Stadt Ihrer Adresse";
-	
+
 	$de_checkout['enter_firstname']="Bitter erfühlen Sie Ihre Vorname";
 	$de_checkout['enter_lastname']="Bitter erfühlen Sie Ihre Nachname";
 	$de_checkout['enter_phone']="Bitter erfühlen Sie Ihre Phonenummer";
 	$de_checkout['enter_email']="Bitter erfühlen Sie  Ihre Email";
-	$de_checkout['buy_more']="Bitter auswählen Sie mehr Gericht"; 
+	$de_checkout['buy_more']="Bitter auswählen Sie mehr Gericht";
 	$de_checkout['please_wait']="Etwas geduldt. System ist im Prozess.";
 	$de_checkout['alert_paid']="Vielen Dank für Ihre Bestellung, wir werden in ca. 45 Minuten zu Ihnen liefern.";
 
@@ -202,7 +202,7 @@ $de_footer['all_right'] 	="- Alle Rechte vorbehalten 2015";
 	$de_register['password_holder']='Kennwort';
 	$de_register['repassword']='Kennwort wiederholen';
 	$de_register['repassword_holder']='Kennwort wiederholen';
-	$de_register['male']='Herr';					
+	$de_register['male']='Herr';
 	$de_register['female']='Frau';
 	$de_register['firstname']='Vorname*';
 	$de_register['firstname_holder']='Vorname';
@@ -267,7 +267,7 @@ $de_register['title_account']='Mein Konto';
 	$history['info']['phone']="Telefon";
 	$history['info']['note']="Notiz";
 	$history['info']['button']="Speichen";
-	
+
 
 
 	/* Tab history */
@@ -290,7 +290,7 @@ $de_register['title_account']='Mein Konto';
 	$history['changepass']['success']="Kennwort Änderung erfolgreich!";
 	$history['changepass']['jconfirmpass']="Kennwort stimmt nicht überein!";
 
-	
+
 
 /*
 *
@@ -311,8 +311,8 @@ $de_register['title_account']='Mein Konto';
 	$mp['titleaddress']="KUNDEN INFORMATIONEN";
 	$mp['errorsendmail']="Bestellung fehlgeschlagen! Bitte kontaktieren Sie uns!";
 	$mp['note']="Notiz";
-	
-	
+
+
 /*
 *Cart mobile
 */

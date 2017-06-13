@@ -15,15 +15,25 @@
 	<script type="text/javascript">
     	var ICONPRICE='{ICONPRICE}';
 	</script>
-	
+
 </head>
 <body>
 	<header>
 		{FILE {TEMPLATEHEADER}}
 	</header>
 
-	<div style="height:500px;text-align:center">Comming Soon!</div>
-
+<div>
+	<p>
+		Anschrift:	Heinrich-Heine Platz 12, 10179 Berlin <br>
+		Verantwortlich:<br>
+		Lieferzeiten:<br>
+		11:00-22.00<br>
+		Mittwoch ist Ruhetag <br>
+		Kontakt	Telefon: 030 - 820 72 8 -10/11 <br>
+		Web: bambusstäbchen-marzahn.de <br>
+		Copyright	Bambusstäbchen Marzahn behält sich das Copyright. Kopieren, auszugsweise, insbesondere von Software oder Produktdaten, (Bilder,Text) nur mit schriftlicher Genehmigung der Bambusstäbchen.
+	</p>
+</div>
 	{FILE {TEMPLATEFOOTER}}
 	{FILE {TEMPLATELOGIN}}
 	<section class="form-box-overlay"></section>
