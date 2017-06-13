@@ -21,19 +21,39 @@
 	<header>
 		{FILE {TEMPLATEHEADER}}
 	</header>
+	<table>
+    <tbody>
+    <tr style="height:80px">
+        <td style="vertical-align: text-top;padding-top: 10px;"><b>Anschrift</b></td>
+        <td>Hohensaatener Str. 18, 12679 Berlin</td>
+    </tr><tr><td><hr></td></tr>
 
-<div style="left:20%;top:30%;">
-	<p>
-		Anschrift:	Hohensaatener Str. 18, 12679 Berlin <br>
-		Verantwortlich:<br>
-		Lieferzeiten:<br>
-		11:00-22.00<br>
-		Mittwoch ist Ruhetag <br>
-		Kontakt	Telefon: 030 - 820 72 8 -10/11 <br>
-		Web: bambusstäbchen-marzahn.de <br>
-		Copyright	Bambusstäbchen Marzahn behält sich das Copyright. Kopieren, auszugsweise, insbesondere von Software oder Produktdaten, (Bilder,Text) nur mit schriftlicher Genehmigung der Bambusstäbchen.
-	</p>
-</div>
+    <tr style="height:80px">
+        <td style="vertical-align: text-top;padding-top: 10px;"><b>Verantwortlich</b></td>
+        <td>Bambusstäbchen</td>
+    </tr>
+    <tr><td><hr></td></tr>
+
+    <tr style="height:80px">
+        <td style="vertical-align: text-top;padding-top: 10px;"><b>Lieferzeiten</b></td>
+        <td>Lieferzeit: 11:00-22.00, Mittwoch ist Ruhetag</td>
+    </tr>
+    <tr><td><hr></td></tr>
+
+    <tr style="height:80px">
+        <td style="vertical-align: text-top;padding-top: 10px;"><b>Kontakt</b></td>
+        <td>Telefon: 030 - 820 72 8 -10/11<br>Web: bambusstäbchen-marzahn.de oder hanhantran.de</td>
+    </tr>
+    <tr><td><hr></td></tr>
+
+    <tr style="height:80px">
+        <td style="vertical-align: text-top;padding-top: 10px;"><b>Copyright</b></td>
+        <td>Bambusstäbchen behält sich das Copyright. Kopieren, auszugsweise, insbesondere von Software oder Produktdaten, (Bilder,Text) nur mit schriftlicher Genehmigung der Bambusstäbchen</td>
+    </tr>
+    <tr><td></td></tr>
+    </tbody>
+</table>
+
 	{FILE {TEMPLATEFOOTER}}
 	{FILE {TEMPLATELOGIN}}
 	<section class="form-box-overlay"></section>
