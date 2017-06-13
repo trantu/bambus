@@ -21,7 +21,7 @@
 	<header>
 		{FILE {TEMPLATEHEADER}}
 	</header>
-	<div style="margin: 0 auto; width: 50%">
+	<div style="margin: 0 auto; width: 50%; height:500px;">
 	<table>
     <tbody>
     <tr style="height:80px">
@@ -54,7 +54,7 @@
     <tr><td></td></tr>
     </tbody>
 </table>
-
+</div>
 	{FILE {TEMPLATEFOOTER}}
 	{FILE {TEMPLATELOGIN}}
 	<section class="form-box-overlay"></section>
