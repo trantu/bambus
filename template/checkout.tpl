@@ -97,7 +97,7 @@
 						<!-- END:cart -->
 					</ul>
 				</article>
-				
+
 				<div class="cleaner"></div>
 				<article id="info_user_payment" style="display:none">
 					<h2><span>{LANGUAGECHECKOUT.deliver}</span> </h2>
@@ -158,15 +158,15 @@
                     	</div>
 						<div>
 							<label for="stress">{LANGUAGEREGISTER.street}</label>
-							<input type="text"  name="stress"  value="{STRESSUSER}" id="info_stress_c" /> 
+							<input type="text"  name="stress"  value="{STRESSUSER}" id="info_stress_c" />
                     	</div>
                     	<div>
 							<label for="apartament">{LANGUAGEREGISTER.numberhouse}</label>
 							<input type="text" placeholder="Numberhouse"  value="{NUMBERHOUSEUSER}" id="info_numberhouse" name="numberhouse">
 					</div>
-						
-					
-										
+
+
+
                     <div style='max-height:86px'>
 							<label for="Office">{LANGUAGEREGISTER.office}</label>
 							<input type="text"  placeholder="{LANGUAGEREGISTER.office_holder}" value="{OFFICEUSER}" id="info_office" name="office">
@@ -200,7 +200,7 @@
 					<p>{LANGUAGEMAIN.cartsubtotal}<span class="sum_total">{ICONPRICE}{TOTALCART}</span></p>
 					<p>{LANGUAGEMAIN.ordermin}<span class="total_min">{ICONPRICE}{PRICEMIN}</span></p>
 					<p class="total">{LANGUAGEMAIN.total}<span class="sum_total ">{ICONPRICE}{TOTALCART}</span></p>
-					<a href="#" class="button red confirm_order">Bestellen</a>
+					<a href="#order" class="button red confirm_order">Weiter</a>
 					<!--<ul style="width:190px;margin: 25px auto 10px;">
 						<li style="float:left"><img src="style/images/cc-visa.png" alt="cc"></li>
 						<li style="float:left"><img src="style/images/cc-master.png" alt="cc"></li>
@@ -240,11 +240,11 @@
 </article>
 
 	{FILE {TEMPLATELOGIN}}
-<script src="style/js/jquery-1.11.1.min.js"></script> 
+<script src="style/js/jquery-1.11.1.min.js"></script>
 <script src="style/js/imgLiquid-min.js"></script>
 <script src="style/js/jquery.tooltipster.min.js"></script>
 <script src="style/js/wow.min.js"></script>
-<script src="style/js/menu.js"></script> 
+<script src="style/js/menu.js"></script>
 <script type="text/javascript" src="style/jsme/jquery-ui.js"></script>
 <script src="style/js/checkout.js"></script>
 <script src="style/js/forms.js"></script>
@@ -274,9 +274,9 @@
 
     <script>
 $('#payment-paypal').on('click',function(){
- 
+
  var type_paypal = Number($('#type_payment_order').val());
-  
+
   if((type_paypal == 2) || (type_paypal == 3)) // 2 là paypal, 3 là thẻ
   {
 	$('.form-box-overlay').css('z-index','999999');
@@ -313,4 +313,3 @@ $('#payment-paypal').on('click',function(){
 
 
 <!-- END:main -->
-
