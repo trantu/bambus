@@ -26,12 +26,12 @@
     <tbody>
     <tr style="height:80px">
         <td style="vertical-align: text-top;padding-top: 10px;"><b>Anschrift</b></td>
-        <td>Hohensaatener Str. 18, 12679 Berlin</td>
+        <td>Hohensaatener Str. 18 (Ecke Brodowiner Ring 16), 12679 Berlin</td>
     </tr><tr><td><hr></td></tr>
 
     <tr style="height:80px">
         <td style="vertical-align: text-top;padding-top: 10px;"><b>Verantwortlich</b></td>
-        <td>Bambusstäbchen</td>
+        <td>Bambusstäbchen, Inh. Tu Tran Ngoc</td>
     </tr>
     <tr><td><hr></td></tr>
 
