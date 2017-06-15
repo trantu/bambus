@@ -146,9 +146,9 @@
 						<li style="float:left"><img src="style/images/cc-discover.png" alt="cc"></li>
 						<li style="float:left"><img src="style/images/cc-maestro.png" alt="cc"></li>
 						<li style="float:left"><img src="style/images/cc-visa.png" alt="cc"></li> -->
-						<li style="float:left"><img src="style/images/cc-paypal.png" alt="cc"></li>
+
+						<li style="float:left"> Zahlungsmethode: <img src="style/images/cc-paypal.png" alt="cc"></li>
 					</ul>
-					-->
 					<img src="{FORM_LOGO}" alt="cart-logo">
 					<p>{LANGUAGEMAIN.thankforu}</p>
 					<div style="height: 30px;width: 100%;position: relative;"></div>
