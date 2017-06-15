@@ -326,7 +326,7 @@
 		<img src="style/images/form-close.png" alt="close">
 	</a>
 	<img src="{FORM_LOGO}" alt="logo">
-	<p class='show_error_price' style='color:red;font-size:1em;font-weight:bold;'>{ALERT_TITLE}</p>
+	<p class='show_error_price' style='color:red;font-size:200%;font-weight:bold;'>{ALERT_TITLE}</p>
 </article>
 
 <style>

@@ -48,7 +48,7 @@ $(function() {
 		button.className = '';
 
 		// Message Validation
-		if(message.value == null || (message.value).length == 0 || /^\s+$/.test(message.value)) { 
+		if(message.value == null || (message.value).length == 0 || /^\s+$/.test(message.value)) {
 		  	message.focus();
 		  	message.className = 'error';
 		    form.getElementsByClassName('msg-wrng')[0].style.display = 'block';
@@ -98,7 +98,7 @@ $(function() {
 	            $(this.el).find('span').each(function() {
 	            	var value, perc;
 	            	if(count) {
-	            		value = $(this).text();          		
+	            		value = $(this).text();
 	            		$(this).data('value', value);
 	            		count--;
 	            	} else {

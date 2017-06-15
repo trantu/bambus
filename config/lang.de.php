@@ -186,7 +186,7 @@ $de_footer['all_right'] 	="- Alle Rechte vorbehalten 2017";
 	$de_checkout['enter_email']="Bitter erfühlen Sie  Ihre Email";
 	$de_checkout['buy_more']="Bitter auswählen Sie mehr Gericht";
 	$de_checkout['please_wait']="Etwas geduldt. System ist im Prozess.";
-	$de_checkout['alert_paid']="Vielen Dank für Ihre Bestellung, wir werden in ca. 45 Minuten zu Ihnen liefern.";
+	$de_checkout['alert_paid']="Vielen Dank. Wir haben Ihre Bestellung erhalten, wir werden in ca. 45 Minuten zu Ihnen liefern.";
 
 
 /**
