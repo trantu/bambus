@@ -183,8 +183,8 @@
 						12 = kann bei übermäßigem Verzehr abführend wirken<br>
 						13 = koffeinhaltig<br>
 						14 = chininhaltig</p>
-				</div>
-					<div style="height: 30px;width: 100%;position: relative;">
+
+					<div style="height: 30px;width: 100%;position: relative;"></div>
 
 					<div class="container"></div>
 
