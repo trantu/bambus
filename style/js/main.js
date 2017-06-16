@@ -142,7 +142,7 @@ $('.typeahead').typeahead({
 
 function onAutocompleted($e, data) {
     $('.form-box-overlay').css('z-index','999999');
-    $('.form-box-overlay').css('opacity','0.1');
+    $('.form-box-overlay').css('opacity','0.5');
     $('.form-box-overlay').css('display','block');
     $('.form-box-overlay').html('<img style=" position: absolute; margin: auto;top: 0; left: 0;right: 0;bottom: 0;" src="upload/ajax-loader.gif"> loading...');
     var idSP = data.id;
