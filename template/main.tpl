@@ -151,40 +151,41 @@
 					</ul>
 					<img src="{FORM_LOGO}" alt="cart-logo">
 					<p>{LANGUAGEMAIN.thankforu}</p>
+					<p>*Allergeninformation gemäß Codex-Empfehlung:<br>
+					 <br>
+						a) glutenhaltiges Getreide <br>
+						b) Krebstiere <br>
+						c) Eier von Geflügel <br>
+						d) Fisch (Fischgelatine) <br>
+						e) Erdnüsse <br>
+						f) Sojabohnen <br>
+						g) Milch von Säugetieren (inkl. Laktose) <br>
+						h) Schalenfrüchte <br>
+						l) Sellerie <br>
+						m) Senf <br>
+						n) Sesamsamen <br>
+						o) Schwefeldioxid und Sulfate <br>
+						p) Lupinen <br>
+						r) Weichtiere (Schnecken, Muscheln, Tintenfische etc.)<br>
+						<br>
+						*Zusatzstoff-Nummerierung der Speisen- und Getränke <br>
+						1 = Farbstoff<br>
+						2 = geschwärzt<br>
+						3 = Konservierungsstoffe<br>
+						4 = geschwefelt <br>
+						5 = mit Phosphat<br>
+						6 = mit Antioxidationsmittel<br>
+						7 = mit Geschmacksverstärker<br>
+						8 = gewachst<br>
+						9 = mit Süßungsmittel(n)<br>
+						10 = mit Zuckerart(en) und Süßungsmittel(n)<br>
+						11 = enthält eine Phenylalaninquelle<br>
+						12 = kann bei übermäßigem Verzehr abführend wirken<br>
+						13 = koffeinhaltig<br>
+						14 = chininhaltig</p>
+				</div>
 					<div style="height: 30px;width: 100%;position: relative;">
-						<p>*Allergeninformation gemäß Codex-Empfehlung:<br>
-						 <br>
-							a) glutenhaltiges Getreide <br>
-							b) Krebstiere <br>
-							c) Eier von Geflügel <br>
-							d) Fisch (Fischgelatine) <br>
-							e) Erdnüsse <br>
-							f) Sojabohnen <br>
-							g) Milch von Säugetieren (inkl. Laktose) <br>
-							h) Schalenfrüchte <br>
-							l) Sellerie <br>
-							m) Senf <br>
-							n) Sesamsamen <br>
-							o) Schwefeldioxid und Sulfate <br>
-							p) Lupinen <br>
-							r) Weichtiere (Schnecken, Muscheln, Tintenfische etc.)<br>
-							<br>
-							*Zusatzstoff-Nummerierung der Speisen- und Getränke <br>
-							1 = Farbstoff<br>
-							2 = geschwärzt<br>
-							3 = Konservierungsstoffe<br>
-							4 = geschwefelt <br>
-							5 = mit Phosphat<br>
-							6 = mit Antioxidationsmittel<br>
-							7 = mit Geschmacksverstärker<br>
-							8 = gewachst<br>
-							9 = mit Süßungsmittel(n)<br>
-							10 = mit Zuckerart(en) und Süßungsmittel(n)<br>
-							11 = enthält eine Phenylalaninquelle<br>
-							12 = kann bei übermäßigem Verzehr abführend wirken<br>
-							13 = koffeinhaltig<br>
-							14 = chininhaltig</p>
-					</div>
+
 					<div class="container"></div>
 
 				</article>
