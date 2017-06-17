@@ -56,8 +56,8 @@
 					<span class="remarked">{LANGUAGEHOME.asian_cuise}</span>
 					<span class="right">{LANGUAGEHOME.in_all}</span>
 				</h1>
-				<a href="index.php?mod=main" class="order wow bounceInDown" data-wow-delay=".5s">{LANGUAGEHOME.start_you}</a>
-				<img src="style/images/asian-girl.png" alt="asian-girl" class="wow fadeInRight">
+				<!--<a href="index.php?mod=main" class="order wow bounceInDown" data-wow-delay=".5s">{LANGUAGEHOME.start_you}</a> -->
+				<!--<img src="style/images/asian-girl.png" alt="asian-girl" class="wow fadeInRight"> -->
 			</section>
 		</div>
 		<!--/HEADER-BOTTOM-->
