@@ -37,7 +37,9 @@ $(document).ready(function(){
     $('.boquads').on('click',function(){
         var display_n=$(cl).children('.'+ onceclass).attr('display');
         var anext=$('.'+ onceclass +' input:checkbox:checked').length;
-        if(anext < 1 && display_n==1 ) {$('.error-beilage').text(please_check_checkbox);}
+        if(anext < 1 && display_n==1 ) {
+          alert(please_check_checkbox);
+          $('.error-beilage').text(please_check_checkbox);return false;}
         else {
             $('.error-beilage').text('');
             length_old[length_old.length]=numcl;
