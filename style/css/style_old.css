@@ -80,10 +80,10 @@
 	-webkit-box-sizing: border-box;
 }
 
-h1, h2, h3, h4, 
+h1, h2, h3, h4,
 h5, h6, p, a {line-height: 1em;}
 
-a { text-decoration: none;} 
+a { text-decoration: none;}
 
 ul, ol {list-style: none;}
 
@@ -107,7 +107,7 @@ p, a {font-family: 'Source Sans Pro', sans-serif;}
 h1, h2, h3,
 h4, h5, h6 {
 	font-family: 'Oswald', sans-serif;
-	text-transform: uppercase;	
+	text-transform: uppercase;
 }
 
 h1 {
@@ -136,7 +136,7 @@ h2 span {
 
 h2 + hr {
 	float: left;
-	width: 16%;	
+	width: 16%;
 	height: 0;
 	border-top: 5px solid #db2e2e;
 	margin-top: 18px;
@@ -317,7 +317,7 @@ ul.social.big > li > a.social-icon.gplus {
 #header-top, #main-nav,
 #header-bottom, #top-dishes,
 #specials, #team, #history,
-#phone-order, #combos, 
+#phone-order, #combos,
 #stats, #contact, footer,
 #shop, #promo, #faq, #profile,
 #checkout, #forms {
@@ -327,7 +327,7 @@ ul.social.big > li > a.social-icon.gplus {
 }
 
 /*--------------------
-  2.3 FORM STYLES 
+  2.3 FORM STYLES
 --------------------*/
 form label {
 	display: block;
@@ -439,7 +439,7 @@ form > label.ok:before {
 }
 
 /*----------------------------
-  2.3.4 RADIO AND CHECKBOX 
+  2.3.4 RADIO AND CHECKBOX
 ----------------------------*/
 input[type="radio"],
 input[type="checkbox"] {
@@ -496,15 +496,15 @@ input[type="checkbox"]:checked + label:before {
 }
 
 /*--------------------
-  2.4 FORM POPUP BOX 
+  2.4 FORM POPUP BOX
 --------------------*/
 .form-box-overlay {
 	position: fixed;
 	z-index: 9999;
 	top: 0;
 	left: 0;
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     background-color: rgba(0,0,0,.9);
   	display: none;
 }
@@ -514,8 +514,8 @@ input[type="checkbox"]:checked + label:before {
 	z-index: 9999;
 	top: 0;
 	left: 0;
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     background-color: rgba(0,0,0,.9);
   	display: none;
 }
@@ -682,7 +682,7 @@ div.circle > figure {
 	position: absolute;
 }
 
-div.circle > div.shadow {	
+div.circle > div.shadow {
 	position: absolute;
 	border-radius: 50%;
 	border: 4px solid rgba(0,0,0,.1);
@@ -713,7 +713,7 @@ div.circle div.fill:hover img {
 	-webkit-animation: slide-u .6s ease-in-out forwards;
 }
 
-div.circle div.fill:hover p { 
+div.circle div.fill:hover p {
 	animation: slide-l .4s ease-in-out forwards;
 	-webkit-animation: slide-l .4s ease-in-out forwards;
 }
@@ -944,10 +944,10 @@ ul.dishes > li > div.circle {
 }
 
 ul.dishes > li > article > p {
-	font-size: 0.875em; /* 14px / 16px */
-	font-weight: 300;
+	/*font-size: 0.875em;  14px / 16px */
+	font-weight: 600;
 	line-height: 24px;
-	color: #a0a0a0;
+	color: green;
 }
 
 ul.dishes > li > a.button {
@@ -1045,13 +1045,13 @@ ul.rate.hearts.gold > li {
 --------------*/
 ul.dishes.detail > li {
 	float: none;
-	margin: 0 0 15px 0;	
+	margin: 0 0 15px 0;
 	padding: 10px 0 10px 70px;
 }
 
 ul.dishes.detail > li > div.circle {
 	left: 0;
-	margin-left: 0;	
+	margin-left: 0;
 }
 
 ul.dishes.detail > li > div.circle {
@@ -1081,7 +1081,7 @@ ul.dishes.detail > li > div.circle div.fill {
 ul.dishes.detail > li > article {
 	width: 100%;
 	height: auto;
-	padding: 25px 0 30px 95px;	
+	padding: 25px 0 30px 95px;
 	text-align: left;
 	border-radius: 2px;
 }
@@ -1494,16 +1494,16 @@ ul.dishes.list > li > article > p {
 	left: 0;
 }
 
-#main-nav a#pull {  
-   	display: none;    
-    position: absolute;  
+#main-nav a#pull {
+   	display: none;
+    position: absolute;
    	top: 40px;
    	right: 25px;
-}  
+}
 
-#main-nav a#pull:after {  
-    content: url('../images/nav-icon.png');   
-} 
+#main-nav a#pull:after {
+    content: url('../images/nav-icon.png');
+}
 
 /*-------------------
   5.3 HEADER-BOTTOM
@@ -1551,7 +1551,7 @@ ul.dishes.list > li > article > p {
 /*-------------------
   5.3.2 MAIN-SLIDER
 -------------------*/
-#main-slider-wrap {	
+#main-slider-wrap {
 	width: 770px;
 	min-height: 130px;
 	background-color: rgba(0,0,0,.8);
@@ -1585,7 +1585,7 @@ span.arrow.right {
 
 #main-slider > li > article.promo {
 	float: left;
-	width: 270px;	
+	width: 270px;
 	margin: 28px 0 0 35px;
 }
 
@@ -1897,7 +1897,7 @@ span.arrow.right {
 
 #phone-order > article {
 	margin-left: 350px;
-	width: 485px;	
+	width: 485px;
 }
 
 #phone-order > article > h4 {
@@ -1953,7 +1953,7 @@ span.arrow.right {
 }
 
 #combos > ul {
-	margin: 40px auto 70px;	
+	margin: 40px auto 70px;
 	overflow: hidden;
 }
 
@@ -2152,7 +2152,7 @@ span.arrow.right {
 
 #stats > ul {
 	margin: 0 auto;
-	overflow: hidden;	
+	overflow: hidden;
 }
 
 #stats > ul > li {
@@ -2170,7 +2170,7 @@ span.arrow.right {
 #stats .stats .data {
 	width: 200px;
 	height: 200px;
-	line-height: 200px;	
+	line-height: 200px;
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -2251,7 +2251,7 @@ span.arrow.right {
 }
 
 #contact > ul > li > article {
-	margin-top: 25px;	
+	margin-top: 25px;
 }
 
 #contact > ul > li > article > h6 {
@@ -2310,7 +2310,7 @@ span.arrow.right {
 
 footer {
 	min-height: 80px;
-	position: relative;	
+	position: relative;
 }
 
 footer img[alt="home-pin"] {
@@ -2322,7 +2322,7 @@ footer img[alt="home-pin"] {
 
 footer > article {
 	width: 550px;
-	margin: 0 auto;	
+	margin: 0 auto;
 	overflow: hidden;
 }
 
@@ -2330,7 +2330,7 @@ footer > article > p {
 	float: left;
 	font-size: 0.875em; /* 14px / 16px */
 	font-family: "Oswald", sans-serif;
-	font-weight: 700;	
+	font-weight: 700;
 	color: #f4f4f4;
 	text-transform: uppercase;
 	line-height: 80px;
@@ -2679,7 +2679,7 @@ ul.views > li > a.list {
 }
 
 /*-------------------
-  17.7 REVIEW INPUT 
+  17.7 REVIEW INPUT
 -------------------*/
 #shop #review-input > h2 + hr + hr {
 	margin-bottom: 30px;
@@ -2870,7 +2870,7 @@ ul.views > li > a.list {
 	margin-top: 5px;
 	line-height: 24px;
 	display: none;
-} 
+}
 
 #faq > article > ul > li > p:nth-child(2) {
 	margin-top: 25px;
@@ -3243,12 +3243,12 @@ div.quantity > div {
 
 a.counter {
 	display: block;
-	width: 0; 
-	height: 0; 
+	width: 0;
+	height: 0;
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
 	position: absolute;
-	right: 23px;	
+	right: 23px;
 }
 
 a.counter.up {
@@ -3359,7 +3359,7 @@ a.counter.down {
 ---------------------*/
 #checkout #login-co {
 	width: 46%;
-	float: right;	
+	float: right;
 }
 
 #checkout #login-co button {
@@ -3502,7 +3502,7 @@ a.counter.down {
 /***************************************/
 /* 25. MEDIA QUERIES */
 /***************************************/
-@media screen and (max-width: 1320px) { 
+@media screen and (max-width: 1320px) {
 	/*-------------------
 	  6. TOP DISHES
 	-------------------*/
@@ -3620,7 +3620,7 @@ a.counter.down {
 	  17.3 DISH GALLERY
 	-------------------*/
 	#shop > article {
-		width: 67%;	
+		width: 67%;
 	}
 
 	#shop > article > ul.dishes {
@@ -3713,7 +3713,7 @@ a.counter.down {
 
 	#checkout #cart {
 		width: 870px;
-	} 
+	}
 
 	#checkout.guest {
 		padding-bottom: 80px;
@@ -3736,7 +3736,7 @@ a.counter.down {
 	}
 }
 
-@media screen and (max-width: 1285px) { 
+@media screen and (max-width: 1285px) {
 	/*-------------------
 	  5.3 HEADER-BOTTOM
 	-------------------*/
@@ -3788,7 +3788,7 @@ a.counter.down {
 
 	#forms > ul > li {
 		margin: 0 0 80px 0;
-	} 
+	}
 
 	#forms > ul > li:nth-child(5) {
 		margin: 0 0 80px 0;
@@ -3805,7 +3805,7 @@ a.counter.down {
 		width: 100%;
 		text-align: center;
 	}
-	
+
 	#main-nav > ul {
 		display: none;
 		position: absolute;
@@ -3851,7 +3851,7 @@ a.counter.down {
 	#main-nav > ul > li.cart-items > ul > li:last-child > p {
 		text-align: center;
 	}
-	
+
 	.cart {
 		top: 5px;
 		right: 40%;
@@ -3889,7 +3889,7 @@ a.counter.down {
 	}
 
 	#main-slider > li {
-		padding-left: 75px;	
+		padding-left: 75px;
 	}
 
 	#main-slider > li > div.circle {
@@ -3979,7 +3979,7 @@ a.counter.down {
 	  19 FAQ
 	-----------*/
 	#faq > aside {
-		display: none;	
+		display: none;
 	}
 
 	#faq > article {
@@ -4093,7 +4093,7 @@ a.counter.down {
 	#checkout #login-co,
 	#checkout #guest-co {
 		width: 100%;
-	}	
+	}
 
 	#checkout #login-co {
 		float: left;
@@ -4252,7 +4252,7 @@ a.counter.down {
 	  5.1 HEADER-TOP
 	-----------------*/
 	#header-top {
-		padding-bottom: 15px;	
+		padding-bottom: 15px;
 	}
 
 	#header-top > article {
@@ -4441,7 +4441,7 @@ a.counter.down {
 	#delivery-info > div {
 		width: 100%;
 	}
-	
+
 	#delivery-info > div:nth-child(even) {
 		float: left;
 		clear: left;
@@ -4633,7 +4633,7 @@ a.counter.down {
 	}
 
 	/*-------------------
-	  17.7 REVIEW INPUT 
+	  17.7 REVIEW INPUT
 	-------------------*/
 	#shop #review-input > article {
 		float: none;
@@ -4671,7 +4671,7 @@ a.counter.down {
 	}
 
 	/*--------------------
-	  2.3 FORM POPUP BOX 
+	  2.3 FORM POPUP BOX
 	--------------------*/
 	.form-box {
 		width: 280px;
@@ -4704,7 +4704,7 @@ a.counter.down {
 	  23. FORMS
 	------------*/
 	#forms {
-		width: 100%;	
+		width: 100%;
 	}
 
 	#forms > ul {
