@@ -3203,10 +3203,10 @@ ul.views > li > a.list {
 }
 
 #cart > ul > li > div.description > p {
-	font-size: 12px; /* 12px / 17px */
+	font-size: 16px; /* 12px / 17px */
 	font-weight: 300;
 	line-height: 17px;
-	color: #a0a0a0;
+	color: green;
 	margin-top: 5px;
 }
 
