@@ -23,7 +23,6 @@
 					</figure>
 				</a>
 				<ul>
-					<li>Alle Preise sind bereits um 10% rabattiert.</li>
 					<li class="menu_hide_shows"><a href="index.php" class="{MODMENU.home} ">{LANGUAGEMENU.home}</a></li>
 					<li class="menu_hide_shows"><a href="index.php?mod=about" class="{MODMENU.about} ">{LANGUAGEMENU.about}</a></li>
 					<li><a href="index.php?mod=main" class="{MODMENU.main}">{LANGUAGEMENU.shop}</a></li>
