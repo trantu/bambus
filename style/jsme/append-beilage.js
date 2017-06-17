@@ -1,6 +1,6 @@
 $(document).ready(function(){
     var numcl=0;
-    var total_num=0; 
+    var total_num=0;
     var cl;//lay class parent
 	var arrDS=new Array();
     var name_dsall='';
@@ -29,15 +29,15 @@ $(document).ready(function(){
         $(clas_childs).children('.count_ds_c').removeClass('active');
         $(clas_childs).children('.count_ds_c').removeClass('require');
         $(clas_childs).children('.count_ds' +active).addClass('require');
-        $('.form-box-overlay').css('display','block');  
-		return false; 
+        $('.form-box-overlay').css('display','block');
+		return false;
 	})
-    
+
     //click nut next trong mon an them
     $('.boquads').on('click',function(){
         var display_n=$(cl).children('.'+ onceclass).attr('display');
         var anext=$('.'+ onceclass +' input:checkbox:checked').length;
-        if(anext < 1 && display_n==1 ) {$('.error-beilage').text(please_check_checkbox);return false;}
+        if(anext < 1 && display_n==1 ) {$('.error-beilage').text(please_check_checkbox);}
         else {
             $('.error-beilage').text('');
             length_old[length_old.length]=numcl;
@@ -59,17 +59,17 @@ $(document).ready(function(){
                 lengthclass=chilclass.length;
                 $(chilclass).css("display","block");
             }
-            else{   
+            else{
                $(cl).css("display","none");
                var parent_cl= $(cl).parent();
                $(parent_cl).children('.note_ones').css('display','block');
-               $('.form-box-overlay').css('display','block'); 
-               $(parent_cl).children('.note_ones').find('.note-ok-beilage').trigger('click');             
+               $('.form-box-overlay').css('display','block');
+               $(parent_cl).children('.note_ones').find('.note-ok-beilage').trigger('click');
             }
-        }   return false; 
+        }   return false;
     });
 
- 
+
     /**Button order mon an .Lấy tất cả input checkbox cho vào mang arrDS  **/
     $('.note-ok-beilage').on('click',function(){
         var parentnote=$(this).closest('.note_ones');
@@ -77,7 +77,7 @@ $(document).ready(function(){
         var note=$(parentnote).find('.note-text').val();
         var ar_item_beilage=[];//array mon an them
         $("input:checkbox").each(function(){
-            var $this = $(this);    
+            var $this = $(this);
             if($this.is(":checked")){
                 var price_s=$this.attr('price');
                 var name_s=$this.val();
@@ -91,7 +91,7 @@ $(document).ready(function(){
        // console.log(arrDS);
         var parent_cl= $(cl).parent();
         $(parent_cl).children('.note_ones').css('display','none');
-        $.ajax({    
+        $.ajax({
             type:'POST',
             url:'index.php?mod=j_wadd_beilge',
             data:{arrDS:arrDS,idSPs:idSPs,note:note},
@@ -100,13 +100,13 @@ $(document).ready(function(){
                 idSP=name_dsall.concat(idSPs);
                 $('.sum_total').html(info_cart_2.total_price + '' + ICONPRICE);
                 $('.total_dishis').html(info_cart_2.total_sp);
-                $.ajax({    
+                $.ajax({
                     type:'POST',
                     url: "index.php?mod=j_showcart",
                     data:'idSP='+ idSP,
                     success:function(smgs){
-                        $('.form-box-overlay').css('display','none'); 
-                        if($.isNumeric(smgs)==true){    
+                        $('.form-box-overlay').css('display','none');
+                        if($.isNumeric(smgs)==true){
                             var sl=$('.quantity'+idSP).eq(-1).text();
                             sl=parseInt(sl);
                             var quantt=sl + 1;
@@ -121,12 +121,12 @@ $(document).ready(function(){
                     }
                 })
             }
-        })    
+        })
     })
 
 
     //click tro ve nhom mon an phu truoc
-    $('.backds').on('click',function(){ 
+    $('.backds').on('click',function(){
         if(numcl<=0 || numcl==="undefined"){
             numcl=0;
             alert(canback_txt);
@@ -143,7 +143,7 @@ $(document).ready(function(){
             onceclass=$(cl).children('ul').eq(numcl).attr("onceclass");
             chilclass=$(cl).children('.' + onceclass);
             lengthclass=chilclass.length;
-            $(chilclass).css("display","block"); 
+            $(chilclass).css("display","block");
             var display_nac=$(cl).children('.'+ onceclass).attr('display');
             if(display_nac==1){
                 $(clas_childs).children('.count_ds' +active).addClass('require');
@@ -155,15 +155,15 @@ $(document).ready(function(){
             return false;
         }
         return false;
-    });  
+    });
 
     //click nut quit không order
     $('.quitds').on('click',function(){
         $(cl).css("display","none");
         $('.form-box-overlay').css('display','none');
         $("input:checkbox").each(function(){
-            var $this = $(this);    
-            if($this.is(":checked")){  
+            var $this = $(this);
+            if($this.is(":checked")){
                 $this.removeAttr('checked');
             }
         })
