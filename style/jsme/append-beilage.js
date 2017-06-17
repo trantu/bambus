@@ -38,7 +38,6 @@ $(document).ready(function(){
         var display_n=$(cl).children('.'+ onceclass).attr('display');
         var anext=$('.'+ onceclass +' input:checkbox:checked').length;
         if(anext < 1 ) {
-          alert(please_check_checkbox);
           $('.error-beilage').text(please_check_checkbox);return false;}
         else {
             $('.error-beilage').text('');
