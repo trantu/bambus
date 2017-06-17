@@ -60,7 +60,7 @@
 	font-weight:bold;
 	text-align:center;
 	line-height:50px;
-	
+
 }
 /* css step  */
 .beilage-list .count_ds,.popupeditshis .count_ds{
@@ -92,7 +92,7 @@
 /*  dinh dang khong gach chan cho the a  */
 .beilage-list a,.popupeditshis a{text-decoration: none;}
 /* css cho cot check box*/
-.beilage-list .list-1s,.popupeditshis .list-1s{float: left;width: 40%; list-style: none;}
+.beilage-list .list-1s,.popupeditshis .list-1s{float: left;width: 10%; list-style: none;}
 
 .beilage-list .list-3s,.popupeditshis .list-3s{display: block;float:left;margin-left: 20px; }
 /* tên món ăn thêm và số tiền*/
@@ -105,7 +105,7 @@
 /****BUTTTON MON AN THEM ***/
 
 .button_beilage .button p {line-height: 33px; float: left;}
-.button_beilage .button img { 
+.button_beilage .button img {
 	float:left;
 	width:33px;
 	height:33px;
@@ -197,7 +197,7 @@
 	left: -27px;
 }
 /* css hinh anh  */
-.img-dishis{z-index: 1000; display: none;position: absolute;background-color: #fff; opacity:1;margin-top:-270px; 
+.img-dishis{z-index: 1000; display: none;position: absolute;background-color: #fff; opacity:1;margin-top:-270px;
 	width: 600px; height: 200px; background-color:#f1f1f1;border: 3px solid #EEEED1;border-radius: 5px;}
 .hover-img a h2:hover .img-dishis{ display: block;}
 .list li:hover{background-color: #f1f1f1; cursor: pointer;}
@@ -223,6 +223,3 @@
 }
 
 #menu_active a{background-color: #DCDCDC;}
-
-
-
