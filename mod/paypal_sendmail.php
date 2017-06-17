@@ -128,7 +128,7 @@ $infopaypal='';
             //$order_info[] = "¶¶¶*¶¶¶" . $food['plu'] . "¶¶¶*¶¶¶" . $food['qty'] . "¶¶¶*¶¶¶" . $price_food. "¶¶¶*¶¶¶" .$beilage_food."¶¶¶*¶¶¶".$food['note']. "\n";
 						$order_info[] = $food['qty']." x " . $food['plu'] . " ".$food['name']." (". $price_food. "/Stk".") " .$beilage_food." : ".$food['note']. "\n";
 		}
-        //$order_info[] = "------------------------------\n";
+        $order_info[] = "Summe = ".$_SESSION['total_PP']." -----\n";
 
 		//$url_order_admin="http://".site_url."?mod=mail_order";
 		//$url_address_admin="http://".site_url."?mod=mail_address";
