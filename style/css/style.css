@@ -1531,6 +1531,11 @@ ul.dishes.list > li > article > p {
 	top: 0;
 	right: 120px;
 }
+#header-bottom img[alt="rabatt-text"] {
+	position: absolute;
+	top: 0;
+	right: 120px;
+}
 
 /*---------------------------
   5.3.1 HEADER-BOTTOM SMALL
