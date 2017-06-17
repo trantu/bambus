@@ -82,7 +82,7 @@ $infopaypal='';
 		$order_info[] = "HQ-Online Version 2\n";
 		$order_info[] = "IP : " . $info['ip_user'] . "\n";
 		$order_info[] = "Date : " . $info['date_order'] . "\n";
-		$order_info[] = "Zahlung : " . $info['type_payment'] . "\n";
+		$order_info[] = "!!!! ZAHLUNG : " . $info['type_payment'] . "\n";
 		$order_info[] = "Benutzername : " . $info['email_login'] . "\n";
 
 		$order_info[] = "Firma : " . $info['company'] . "\n";
