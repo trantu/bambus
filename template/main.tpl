@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>{TITLE} | Bestellung</title>
+	<title>{TITLE} Berlin | Asiatische Küche und Sushi | Online Bestellung Lieferservice</title>
 	<link rel="stylesheet" href="style/css/jquery.mCustomScrollbar.css">
 	<link rel="stylesheet" href="style/css/font-awesome.min.css">
 	<link rel="stylesheet" href="style/css/style.css">
