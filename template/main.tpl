@@ -346,7 +346,7 @@
 		<img src="style/images/form-close.png" alt="close">
 	</a>
 	<img src="{FORM_LOGO}" alt="logo">
-	<p class='show_error_price' style='color:red;font-size:1em;font-weight:bold;'>{TOTITLE}</p>
+	<p class='show_error_price' style='color:green;font-size:4em;font-weight:bold;'>{TOTITLE}</p>
 </article>
 
 <style>
