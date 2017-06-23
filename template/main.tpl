@@ -277,7 +277,7 @@
                                     <a href="#" style="text-decoration:none;font-weight:bold;font-size:17px;">{BEILAGE}</a>
                                 </li>
                                 <li class="list-2s">
-                                    <a href="#" style="text-decoration:none;font-size:17px;">{PRICES}{ICONPRICE} </a>
+                                    <a href="#" style="text-decoration:none;font-size:17px;"> + {PRICES}{ICONPRICE} </a>
                                 </li>
                                 <br><hr style="border:1px solid mistyrose">
                             </ul>
