@@ -286,7 +286,7 @@
 <!-- BEGIN:timeout -->
 <div class="orderminmaxs" style="z-index:9999;">
     <div id="signup-header" style="text-align:center; height:18em;z-index:9999;">
-        <h2 style="font-size:3em;margin-bottom:1.5em;">{TTIMEOUT}</h2><br>
+        <h2 style="font-size:6em;margin-bottom:1.5em;">{TTIMEOUT}</h2><br>
         <button class="orderfirst" style="font-size:2.5em;padding: 0.9em 2.5em;margin-right:1em ;"> {TTORDER}</button>
         <button class="seeit" style="font-size:2.5em;padding: 0.9em 2.5em;">{TTSEE}</button>
     </div>
