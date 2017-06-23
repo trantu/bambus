@@ -5,7 +5,7 @@
 				<!--<a class="home col_sm_100">{ADDRESSSTORE.name}</a> -->
 				<a href="mailto:{EMAILCONTACT}" class="col_sm_100">{EMAILCONTACT}</a>
 				<p>{TELEPHONE}</p>
-				<a class="time col_sm_100" style='font-size:12px'>{TIMEDAYWORK}</a>
+				<a class="time col_sm_100" style='font-size:15px'>{TIMEDAYWORK}</a>
 
                 <article id="login" class="col_sm_100">
 					{TEXTPOSITIONLOGIN}
