@@ -79,38 +79,40 @@ $infopaypal='';
 		$order_info= array();
 		//$cur_date = strftime("%d.%m.%y %H:%M:%S");
 		$order_info[] ="\xEF\xBB\xBF";
-		$order_info[] = "HQ-Online Version 2\n";
-		$order_info[] = "IP : " . $info['ip_user'] . "\n";
-		$order_info[] = "Date : " . $info['date_order'] . "\n";
-		$order_info[] = "!!!! ZAHLUNG : " . $info['type_payment'] . "\n";
-		$order_info[] = "Benutzername : " . $info['email_login'] . "\n";
+		//$order_info[] = "HQ-Online Version 2\n";
+		//$order_info[] = "IP : " . $info['ip_user'] . "\n";
+		$order_info[] = "Zeitpunkt der Bestellung : " . $info['date_order'] . "\n";
+		$order_info[] = "ZAHLUNG : " . $info['type_payment'] . "\n";
+		if(  strcmp($info['type_payment'],"Bargeld") !== 0 ){
+			$order_info[] = " ACHTUNG: SCHON ONLINE BEZAHLT!\n";
+		}
+		if(  strcmp($info['type_payment'],"Bargeld") == 0 ){
+			$order_info[] = " ACHTUNG: NOCH NICHT BEZAHLT!\n";
+		}
+		//$order_info[] = "Benutzername : " . $info['email_login'] . "\n";
 
 		$order_info[] = "Firma : " . $info['company'] . "\n";
 		$order_info[] = "Abteilung : " . $info['office'] . "\n";
 		$order_info[] = "Anrede : " . $info['sex'] . "\n";
-		$order_info[] = "Vorname : " . $info['lastname'] . "\n";
-		$order_info[] = "Nachname : " . $info['firstname'] . "\n";
-		$order_info[] = "Strasse : " . $info['stress'] . "\n";
+		$order_info[] = "VORNAHME : " . $info['lastname'] . "\n";
+		$order_info[] = "NACHNAME : " . $info['firstname'] . "\n";
 		$order_info[] = "PLZ : " . $info['postalcode'] . "\n";
-		$order_info[] = "Ort : " . $info['region'] . "\n";
-
-		$order_info[] = "Hausnummer : " . $info['numberhouse'] . "\n";
+		$order_info[] = "STRAßE : " . $info['stress'] . "\n";
+		$order_info[] = "ORT : " . $info['region'] . "\n";
+		$order_info[] = "HAUSNUMMER : " . $info['numberhouse'] . "\n";
 		$order_info[] = "Vorwahl : " . $info['first_number'] . "\n";
-
         $trimed_phone = preg_replace('/\D/', '', $info['phone']);
-        $order_info[] = "Telefon : " . $trimed_phone . "\n";
+    $order_info[] = "TELEPHONE : " . $trimed_phone . "\n";
+    $order_info[] = "Email : " . $info['email'] . "\n";
+		$info['note']=preg_replace('/\n++/', '. ', $info['note']);
+		$info['note']=preg_replace('/\r++/', '. ', $info['note']);
 
-        $order_info[] = "Email : " . $info['email'] . "\n";
-
+		$order_info[] = "NOTIZEN : " . $info['note'] . "\n";
         $info['noteposition']=preg_replace('/\n++/', '. ', $info['noteposition']);
         $info['noteposition']=preg_replace('/\r++/', '. ', $info['noteposition']);
 
 		$order_info[] = "Hinterhof/Etage : " . $info['noteposition'] . "\n";
 
-        $info['note']=preg_replace('/\n++/', '. ', $info['note']);
-        $info['note']=preg_replace('/\r++/', '. ', $info['note']);
-
-		$order_info[] = "Besonderheiten/Lieferzeitpunkt : " . $info['note'] . "\n";
 		$order_info[] = "Entfernung : " . $info['distance_deliver'] . "\n";
 
 
