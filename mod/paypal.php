@@ -1,4 +1,5 @@
 <?php if(!defined('SECURITY')) exit('404 - Not Access');
+require("./lib/mail/class.phpmailer.php");
 include("j_all.php");
 $j_all=new j_all;
 //lay cac thong tin can thiet de gui mail
