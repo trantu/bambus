@@ -66,7 +66,7 @@ if(isset($_POST['type_payment_order'])){
 	$TO_EMAIL="trantu456@gmail.com";
 	$date=date("Y_m_d H_i_s");
 	$subject=str_replace("{time}", $date, $config['titleadmin']);
-	$mess=str_replace("{Email}",$TO_EMAILC ,$config['bodyadmin']);
+	$mess=str_replace("{Email}",$TO_EMAIL ,$config['bodyadmin']);
 
 	$info=$_SESSION['infopaypal'];
 	$info['date_order']=$date;
