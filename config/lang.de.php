@@ -121,10 +121,10 @@ $de_footer['all_right'] 	="- Alle Rechte vorbehalten 2017";
 	$de_main['notice_address_fail']="Leider ist die Bestellung außerhalb unseres Liefergebiet!";
 	$de_main['please_check_checkbox']="Bitte kreuzen Sie an!";
 	/* Main menu in mobile*/
-	$de_main['showmenu']='Show Menu';
-	$de_main['hidemenu']='Hide Menu';
-	$de_main['showcart']='Show cart';
-	$de_main['hidecart']='Hide cart';
+	$de_main['showmenu']='Menü';
+	$de_main['hidemenu']='Menü';
+	$de_main['showcart']='Warenkorb';
+	$de_main['hidecart']='Warenkorb';
 	/*$de_main['menu']['Speisekarte']='Speisekarte';
 	$de_main['menu']['Bewertungen']='Bewertungen';
 	$de_main['menu']['Info']='Info';
