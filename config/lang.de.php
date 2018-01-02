@@ -113,12 +113,12 @@ $de_footer['all_right'] 	="- Alle Rechte vorbehalten 2017";
 	$de_main['btn_next']='Weiter';
 	$de_main['btn_quit']='Verlassen';
 	$de_main['enter_address_hover']='BRODOWINER RING 16, 12679 Berlin';
-	$de_main['timeout']['timeout_title']="Zurzeit keine Bestellannahme! <br> Am 31.12.2017 bleibt unser Restaurant geschlossen. Am 01.01.2018 sind wir von 15 Uhr bis 22 Uhr für Sie da. <br>Unsere Öffnungszeiten: <br> Montag-Sonntag 11 bis 22 Uhr <br> Mittwoch ist Ruhetag. <br> Vielen Dank für Ihren Besuch <br> Ihr Bambusstäbchen Team.";//tieu de thoi gian het gio
+	$de_main['timeout']['timeout_title']="Zurzeit keine Bestellannahme! <br>Unsere Öffnungszeiten: <br> Montag-Sonntag 11 bis 22 Uhr <br> Mittwoch ist Ruhetag. <br> Vielen Dank für Ihren Besuch <br> Ihr Bambusstäbchen Team.";//tieu de thoi gian het gio
 	$de_main['timeout']['order']="Vorbestellung";//button chon order truoc
 	$de_main['timeout']['see']="Menü anschauen";//button chon xem truoc
 	$de_main['priceorder_title']="Sie sollen mindesten bestellen";// tieu de khi order chua du tien
 	$de_main['txt_menu_gruppe_mobile']="Menü Übersicht";
-	$de_main['notice_address_fail']="Leider ist die Bestellung außerhalb unseres Liefergebiet!";
+	$de_main['notice_address_fail']="Leider ist die Bestellung außerhalb unseres Liefergebiet! Zur weiteren Infor rufen Sie uns bitte einfach an.";
 	$de_main['please_check_checkbox']="Bitte kreuzen Sie an!";
 	/* Main menu in mobile*/
 	$de_main['showmenu']='Menü';
