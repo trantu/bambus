@@ -89,6 +89,9 @@ foreach ($data as $da){
         case "favicon_ico":
             $config['favicon_ico']   =$da['Value'];
             break;
+        case "time_arrive":
+            $config['time_arrive']   =$da['Value'];
+          break;
         default:
             break;
     }
