@@ -92,6 +92,9 @@ foreach ($data as $da){
         case "time_arrive":
             $config['time_arrive']   =$da['Value'];
           break;
+        case "info_board":
+            $config['info_board']   =$da['Value'];
+          break;
         default:
             break;
     }

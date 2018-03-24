@@ -1,11 +1,11 @@
 <?php #trang chinh shop
-if(!defined('SECURITY')) exit('404 - Not Access'); 
+if(!defined('SECURITY')) exit('404 - Not Access');
 	$rule=new Rule;
 	$xtpl=new XTemplate(TEMPLATE.'main.tpl');
 	require_once("all.php");
 	require_once("j_all.php");
 	$all=new All;
-	$j_all=new j_all;	
+	$j_all=new j_all;
 	$xtpl->assign('LANGUAGEMAIN',$de_main);
 	$xtpl->assign('LANGUAGECART',$de_cart);
 
@@ -18,7 +18,7 @@ if(!defined('SECURITY')) exit('404 - Not Access');
 
 	include('inc/header.php');
 	unset($_SESSION['total_PP']);
-	
+
 	if(isset($_SESSION['addresold'])){
 		$address_old=$_SESSION['addresold'];
 		$xtpl->assign("ADDRESSOLD",$address_old);
@@ -44,7 +44,7 @@ if(!defined('SECURITY')) exit('404 - Not Access');
 		$xtpl->assign("DISPLAYFORMADDRESS",$display_form_address);
 		//$xtpl->assign("TEXTPOSITIONLOGIN",$text_position_login);
 	}
-	
+
 	/******* TIME ********/
     $weekday =strtoupper(date("l"));
     $time=$config['time']["$weekday"];
@@ -103,7 +103,7 @@ if(!defined('SECURITY')) exit('404 - Not Access');
 	/**End check time**/
     if(isset($_SESSION['alert_paid']))
     {
-        $xtpl->assign('ALERT_TITLE',$de_checkout['alert_paid']);
+        $xtpl->assign('ALERT_TITLE',sprintf($de_checkout['alert_paid'], $config['time_arrive']));
         $xtpl->parse("main.alert_paid");
 
         unset($_SESSION['alert_paid']);
@@ -143,7 +143,7 @@ if(!defined('SECURITY')) exit('404 - Not Access');
 			#khong co mon an them
 			$xtpl->assign('IDSP',$names['PLU']);
 			$xtpl->assign('NAME',$names['Name']);
-			$price_s=number_format($names['Preis1'],2,',','.'); 
+			$price_s=number_format($names['Preis1'],2,',','.');
 			$xtpl->assign("PRICE",$price_s);
 			$xtpl->assign("ONLINEBILD",$names['Online_Bild']);
 			$xtpl->assign("ONLINEFARBE",$names['Online_Farbe']);
@@ -184,19 +184,19 @@ if(!defined('SECURITY')) exit('404 - Not Access');
 						$xtpl->parse("main.names.demdishis");
 					}
 				}
-				
+
 				$beilages['name']=$d[$i][1];
 				$beilages['price']=$d[$i][2]/100;
 				$beilages['group']=$d[$i][0];
-				$beilages['display']=$d[$i][3];		
-			
-				$xtpl->assign('GROUPCLASS',$beilages['group']);	
+				$beilages['display']=$d[$i][3];
+
+				$xtpl->assign('GROUPCLASS',$beilages['group']);
 				$xtpl->assign('BEILAGE',$beilages['name']);
 				$xtpl->assign('DISPLAY_DS',$beilages['display']);
 				$xtpl->assign('CLASSDS',$dem_d);
 				$price_bei=number_format($beilages['price'],2,'.',',');
 				$xtpl->assign('PRICES',$price_bei);
-			
+
 				$xtpl->parse("main.names.beilage");
 				$dem_d++;
 			}
@@ -220,7 +220,7 @@ if(!defined('SECURITY')) exit('404 - Not Access');
 	$total=number_format($total_temp,2,',','.');
 	$xtpl->assign("TOTALCART",$total);
 	$total_dishis=(isset($_SESSION['total_dishis']))? $_SESSION['total_dishis']:0;
-	$xtpl->assign("TOTALDISHISCART",$total_dishis);	
+	$xtpl->assign("TOTALDISHISCART",$total_dishis);
 
 	#Hiện giỏ hàng chi tiết
 	if(isset($_SESSION['arrSP'])){
@@ -253,10 +253,10 @@ if(!defined('SECURITY')) exit('404 - Not Access');
 					$xtpl->parse("main.cart.namenot");
 				}
 				$xtpl->assign("STTPP",$_SESSION['countpp']);
-				$xtpl->parse("main.cart.pricesession");	
+				$xtpl->parse("main.cart.pricesession");
 				$xtpl->parse("main.cart");
 			}
-		}	
+		}
 	}
 
 
@@ -264,7 +264,7 @@ if(!defined('SECURITY')) exit('404 - Not Access');
 *
 * hiển thị hình ảnh của web
 *thay doi trong file config.rule.php
-*/	
+*/
 	if($config['wdisplayimggruppe']==0){
 		$xtpl->parse("main.checkimggruppe");
 	}
@@ -273,14 +273,14 @@ if(!defined('SECURITY')) exit('404 - Not Access');
 			$xtpl->parse("main.checkimgdishis");
 	}
 
-	//load ngon ngu	
+	//load ngon ngu
 	$xtpl->assign('LANGUAGEMENU',$de_menu);
 	$xtpl->assign('LANGUAGEFOOTER',$de_footer);
 	$xtpl->assign('LANGUAGELOGIN',$de_login);
 
 	$xtpl->assign_file("TEMPLATEHEADER",TEMPLATE.'header/header.tpl');
-	$xtpl->assign_file("TEMPLATEFOOTER",TEMPLATE.'footer/footer.tpl');	
-	$xtpl->assign_file("TEMPLATELOGIN",TEMPLATE.'login/login.tpl');	
+	$xtpl->assign_file("TEMPLATEFOOTER",TEMPLATE.'footer/footer.tpl');
+	$xtpl->assign_file("TEMPLATELOGIN",TEMPLATE.'login/login.tpl');
 	$xtpl->assign("ICONPRICE",$config['iconprice']);
 	$xtpl->parse("main");
 	$xtpl->out("main");
