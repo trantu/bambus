@@ -55,7 +55,7 @@
 <!--SHOP-->
 <div id="shop-wrap">
 	<section id="shop">
-		<div id="info-board"> {INFO_BOARD} </div>
+		<div id="info-board" style="background-color: rgb(227, 198, 181); font-weight: bold; font-size: large;"> {INFO_BOARD} </div><br>
 		<aside class="left" id="mobile_category">
 			<!--CATEGORIES-->
 			<article>
