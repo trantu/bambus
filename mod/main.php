@@ -12,6 +12,7 @@ if(!defined('SECURITY')) exit('404 - Not Access');
 
 
 	$xtpl->assign('FORM_LOGO',$config['cart_logo']);
+	$xtpl->assign('INFO_BOARD',$config['info_board']);
 	$xtpl->assign('TITLE',$config['namestore']);
 	$xtpl->assign('FAVICON_ICO',$config['favicon_ico']);
 
