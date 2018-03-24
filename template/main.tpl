@@ -192,7 +192,7 @@
         </aside>
 		<article class="right"  id='mobile_dishis'>
 			<h2 style="color:{HEADER_COLOR};"><span>{LANGUAGEMAIN.name}</span>{LANGUAGEMAIN.food}
-				<input class="typeahead" type="text" placeholder="Suchen nach Gerichten..." >
+				<input class="typeahead" type="text" placeholder="SUCHE NACH GERICHTEN..." style="border-style: solid;">
 			</h2>
 
 			<hr>
