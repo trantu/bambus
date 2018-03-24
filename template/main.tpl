@@ -55,6 +55,7 @@
 <!--SHOP-->
 <div id="shop-wrap">
 	<section id="shop">
+		<div id="info-board">Info</div>
 		<aside class="left" id="mobile_category">
 			<!--CATEGORIES-->
 			<article>
