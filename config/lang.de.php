@@ -185,8 +185,8 @@ $de_footer['all_right'] 	="- Alle Rechte vorbehalten 2017";
 	$de_checkout['enter_phone']="Bitter erfühlen Sie Ihre Phonenummer";
 	$de_checkout['enter_email']="Bitter erfühlen Sie  Ihre Email";
 	$de_checkout['buy_more']="Bitter auswählen Sie mehr Gericht";
-	$de_checkout['please_wait']="Etwas geduldt. System ist im Prozess.";
-	$de_checkout['alert_paid']="Vielen Dank. Wir haben Ihre Bestellung erhalten. Die normale Lieferzeit beträgt ca. %s , sonntagabends ca. 60-75 min";
+	$de_checkout['please_wait']="Etwas Geduld. System ist im Prozess.";
+	$de_checkout['alert_paid']="Vielen Dank. Wir haben Ihre Bestellung erhalten. Die Lieferzeit beträgt ca. %s min. Ihr Bambusstäbchen Team.";
 
 
 /**
