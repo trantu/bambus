@@ -41,7 +41,7 @@ if(!defined('SECURITY')) exit('404 - Not Access');
 **/
 
 $de_footer['the_samurai']	="BAMBUSSTÄBCHEN";
-$de_footer['all_right'] 	="- Alle Rechte vorbehalten 2017";
+$de_footer['all_right'] 	="- Alle Rechte vorbehalten 2018";
 
 /**
 #
