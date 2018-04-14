@@ -163,7 +163,7 @@
 /**/
 @media (max-width: 420px ) {
 	.beilage-list, .popupeditshis{width: 100%; left: 0%;margin-top: 0; margin-left: 0;  margin-top: -200px;}
-	.button_beilage .button {width: 55px;}
+	.button_beilage .button {width: 30%;}
 }
 
 
