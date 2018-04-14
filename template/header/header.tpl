@@ -1,12 +1,13 @@
 		<!--HEADER-TOP-->
 		<div id="header-top-wrap">
 			<section id="header-top">
-				<a class="map col_sm_100">{ADDRESSSTORE.address}, {ADDRESSSTORE.region}</a>
-				<!--<a class="home col_sm_100">{ADDRESSSTORE.name}</a> -->
-				<a href="mailto:{EMAILCONTACT}" class="col_sm_100">{EMAILCONTACT}</a>
-				<p>{TELEPHONE}</p>
-				<a class="time col_sm_100" style='font-size:15px'>{TIMEDAYWORK}</a>
-
+			    <div id="header-info">
+                    <a class="map col_sm_100">{ADDRESSSTORE.address}, {ADDRESSSTORE.region}</a>
+                    <!--<a class="home col_sm_100">{ADDRESSSTORE.name}</a> -->
+                    <a href="mailto:{EMAILCONTACT}" class="col_sm_100">{EMAILCONTACT}</a>
+                    <p>{TELEPHONE}</p>
+                    <a class="time col_sm_100" style='font-size:15px'>{TIMEDAYWORK}</a>
+                </div>
                 <article id="login" class="col_sm_100">
 					{TEXTPOSITIONLOGIN}
 				</article>
