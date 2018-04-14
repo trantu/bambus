@@ -31,7 +31,7 @@
 
     <tr style="height:80px">
         <td style="vertical-align: text-top;padding-top: 10px;"><b>Verantwortlich</b></td>
-        <td>Bambusstäbchen</td>
+        <td>Inh. Tu Tran Ngoc </td>
     </tr>
     <tr><td><hr></td></tr>
 
