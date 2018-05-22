@@ -1512,8 +1512,8 @@ ul.dishes.list > li > article > p {
   5.3 HEADER-BOTTOM
 -------------------*/
 #header-bottom-wrap {
-	/*background: url('../images/dots-texture.png') repeat, url('../images/header-bg.jpg') center;
-	background-size: 2px 2px, cover;*/
+	background: url('../images/dots-texture.png') repeat, url('../images/header-bg.jpg') center;
+	background-size: 2px 2px, cover;
 }
 
 #header-bottom {
