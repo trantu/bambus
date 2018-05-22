@@ -13,6 +13,10 @@
 	<link rel="stylesheet" href="style/css/giohangpopup.css">
 	<link rel="stylesheet" href="style/css/mobile.css">
 	<link href="style/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+    .mySlides {display:none;}
+    </style>
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
 	<!-- favicon -->
 	<link rel="icon" href="{FAVICON_ICO}">
@@ -403,6 +407,7 @@
 	<script src="style/js/menu.js"></script>
 	<script type="text/javascript" src="style/jsme/autogoogle.js"></script>
 	<script type="text/javascript" src="style/jsme/jquery-ui.js"></script>
+	<script type="text/javascript" src="style/jsme/custom-slideshow.js"></script>
 
 <style>
 	.ui-autocomplete {

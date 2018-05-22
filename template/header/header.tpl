@@ -50,6 +50,13 @@
 		<!--/MAIN-NAV-->
 		<!--HEADER-BOTTOM-->
 		<div id="header-bottom-wrap">
+		<div class="w3-content w3-section" style="max-width:500px">
+          <img class="mySlides w3-animate-right" src="upload/groups/Bratnudeln.jpg" style="width:100%">
+          <img class="mySlides w3-animate-right" src="upload/groups/phoxao.jpg20180430044807.jpg" style="width:100%">
+          <img class="mySlides w3-animate-right" src="upload/groups/gebratener-reis-mit-gemuese-und-ei_6514.jpg20170617030243.jpg" style="width:100%">
+          <img class="mySlides w3-animate-right" src="style/images/header-bg.jpg" style="width:100%">
+        </div>
+
 			<section id="header-bottom">
 				<h1 class="wow fadeInLeft">{LANGUAGEHOME.the_best}
 					<span class="remarked">{LANGUAGEHOME.asian_cuise}</span>
