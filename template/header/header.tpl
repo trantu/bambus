@@ -50,7 +50,7 @@
 		<!--/MAIN-NAV-->
 		<!--HEADER-BOTTOM-->
 		<div id="header-bottom-wrap">
-		<div class="w3-content w3-section" style="max-width:500px; max-height:250px">
+		<div class="w3-content w3-section" style="max-width:500px; max-height:100px">
           <img class="mySlides w3-animate-right" src="upload/slideshow/ebi-io.jpg" style="width:100%">
           <img class="mySlides w3-animate-right" src="upload/slideshow/ente-garnelen.jpg" style="width:100%">
           <img class="mySlides w3-animate-right" src="upload/slideshow/Reisbandnudeln-Kategorie.jpg" style="width:100%">
