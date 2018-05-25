@@ -127,6 +127,7 @@
   <script src="style/jsme/login.js"></script>
   <script src="style/jsme/register.js"></script>
   <script src="style/jsme/jquery-ui.js"> </script>
+  <script type="text/javascript" src="style/jsme/custom-slideshow.js"></script>
 <style>
     @media (max-width: 500px ) {
         #payment-paypal{width: 45% !important;}

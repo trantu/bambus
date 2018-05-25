@@ -61,7 +61,7 @@
 <script type="text/javascript" src="style/jsme/jquery-ui.js"></script>
 <script src="style/js/forms.js"></script>
 <script src="style/jsme/login.js"></script>
-
+<script type="text/javascript" src="style/jsme/custom-slideshow.js"></script>
  {FILE {TEMPLATELOGIN}}
 <style>
 	.ui-autocomplete {

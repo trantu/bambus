@@ -115,6 +115,7 @@
 <script src="style/js/menu.js"></script>
 <script src="style/js/profile.js"></script>
 <script type="text/javascript" src="style/jsme/jquery-ui.js"></script>
+<script type="text/javascript" src="style/jsme/custom-slideshow.js"></script>
 </body>
 </html>
 <!-- END:main -->

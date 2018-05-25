@@ -240,7 +240,7 @@
 <script src="style/jsme/cart.js"></script>
 <script src="style/jsme/login.js"></script>
 <script type="text/javascript" src="style/jsme/autogoogle.js"></script>
-
+<script type="text/javascript" src="style/jsme/custom-slideshow.js"></script>
 
 <script>
 $('#payment-paypal').on('click',function(){

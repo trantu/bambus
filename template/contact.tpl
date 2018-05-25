@@ -75,6 +75,7 @@
 	<script src="style/jsme/append-beilage.js"></script>
 	<script src="style/jsme/cart.js"></script>
 	<script src="style/jsme/login.js"></script>
+	<script type="text/javascript" src="style/jsme/custom-slideshow.js"></script>
 </body>
 </html>
 

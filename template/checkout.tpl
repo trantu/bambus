@@ -255,6 +255,7 @@
 <script src="style/js/typeahead.bundle.min.js"></script>
 <script src="style/js/bloodhound.min.js"></script>
 <script src="style/js/typeahead.jquery.min.js"></script>
+<script type="text/javascript" src="style/jsme/custom-slideshow.js"></script>
 
 <article class="form-box enterstress" style="display:none;z-index:1000021;">
 	<a href="#" class="form-close">
