@@ -32,7 +32,7 @@ if(!defined('SECURITY')) exit('404 - Not Access');
 	$de_menu['cart_total']		='Gesamt';
 	$de_menu['cart_checkout']	='Weiter zur Bestellung';
 	$de_menu['cart_thankyou']	='Danke für Ihre Bestellung!';
-	$de_menu['contact']			='IMPRESSUM';
+	$de_menu['contact']			='IMPRESSUM-DATENSCHUTZ';
 
 /**
 #
