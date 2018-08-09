@@ -7,6 +7,7 @@ $config['time_in_web']=array();
 $config['date_off']=array();
 $config['price']=array();
 $config['address_store']=array();
+$config['area']=array();
 foreach ($data as $da){
     switch ($da['Name']) {
         case "time":
@@ -91,10 +92,13 @@ foreach ($data as $da){
             break;
         case "time_arrive":
             $config['time_arrive']   =$da['Value'];
-          break;
+            break;
         case "info_board":
             $config['info_board']   =$da['Value'];
-          break;
+            break;
+        case "area":
+            $config['area']=array_merge($config['area'],array($da['Key']=>$da['Value']));
+            break;
         default:
             break;
     }
