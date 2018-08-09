@@ -194,7 +194,7 @@ Class Rule{
 		if(isset($_POST['address'])==true || $address_temp!=false){
 			$address=(isset($_POST['address']))?$_POST['address']:$address_temp;
 			$xml =simplexml_load_file("http://maps.googleapis.com/maps/api/distancematrix/xml?origins=$start&destinations=$address&mode=walking&language=de&sensor=true&key=AIzaSyCdj_1UQtoPjHu2X_dnkNNOzBz9T_LBxSE");
-			$result = $xml->xpath('//distance');
+			$result = 3; //$xml->xpath('//distance');
 			foreach($result as $item){
 				$distance=$item->value/1000;
 				
@@ -217,7 +217,7 @@ Class Rule{
 				$_SESSION['price_distance']=$price;
 			}
 			
-			return 8; //$price;
+			return $price;
 		}
 				
 	}
