@@ -205,7 +205,7 @@ Class Rule{
                 $number = $matches[0];
             }
             $price = 0;
-            //$price=$config['area']["$number"];
+            $price=$config['area']["$number"];
 			$distance = 2;
 			if(!isset($distance)){
 				$price=false;//not
