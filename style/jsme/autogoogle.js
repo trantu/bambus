@@ -24,12 +24,12 @@ $(document).ready(function(){
             url:'index.php?mod=j_save_session_min_order',
             data:datas,
             success:function(sms){
-                if(sms=='1' || sms==1 || sms=='0' || sms==0) { // TODO:
+                //if(sms=='1' || sms==1 ) { // TODO:
                     location.reload();
                     $('.form-box-overlay').fadeOut(600);
                     $('.form-box.enterstress').fadeOut(600);
-                }
-                else {alert(message_adress_false);}
+                //}
+                //else {alert(message_adress_false);}
             }
             
         })
