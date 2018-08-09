@@ -199,7 +199,7 @@ Class Rule{
 				$distance=$item->value/1000;
 				
 			}
-			$distance = 3;
+			$distance = 2;
 			if(!isset($distance)){
 				$price=false;//not
 				//$_SESSION['price_distance']="Address not isset! Try again!";
