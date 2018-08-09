@@ -205,9 +205,9 @@ Class Rule{
                 $number = $matches[0];
             }
             $price = 0;
-            $price=$config['area']["$number"];
+            //$price=$config['area']["$number"];
 			$distance = 2;
-			if(!isset($distance) or $number == 0 ){
+			if(!isset($distance)){
 				$price=false;//not
 				//$_SESSION['price_distance']="Address not isset! Try again!";
 			}
@@ -215,19 +215,19 @@ Class Rule{
 				$_SESSION['addresold']=$address;
 				$price=0;
 				$_SESSION['distance_deliver']=$distance;
-				/*
+
 				foreach ($config_price as $key => $value) {
 					// settype($key,'int');
 					if($distance < $key){
 						$price=$value;
 						break;
 					}		
-				}*/
+				}
 				
 				$_SESSION['price_distance']=$price;
 			}
 			
-			return 8; //$price;
+			return $price;
 		}
 				
 	}
