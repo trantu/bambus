@@ -213,9 +213,9 @@ Class Rule{
 			}
 			else{
 				$_SESSION['addresold']=$address;
-				//$price=0;
+				$price=0;
 				$_SESSION['distance_deliver']=$distance;
-                /*
+
 				foreach ($config_price as $key => $value) {
 					// settype($key,'int');
 					if($distance < $key){
@@ -223,7 +223,7 @@ Class Rule{
 						break;
 					}		
 				}
-				*/
+
 				$_SESSION['price_distance']=$price;
 			}
 			
