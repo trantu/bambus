@@ -201,7 +201,7 @@ Class Rule{
 			// }
 			$number = 0;
 			//get postcode from address
-			if( preg_match("/(?<![0-9])[0-9]{5}(?![0-9])/", $string, $matches) ) {
+			if( preg_match("/(?<![0-9])[0-9]{5}(?![0-9])/", $address, $matches) ) {
                 $number = $matches[0];
             }
             $price = 0;
@@ -213,9 +213,9 @@ Class Rule{
 			}
 			else{
 				$_SESSION['addresold']=$address;
-				$price=0;
+				//$price=0;
 				$_SESSION['distance_deliver']=$distance;
-
+                /*
 				foreach ($config_price as $key => $value) {
 					// settype($key,'int');
 					if($distance < $key){
@@ -223,7 +223,7 @@ Class Rule{
 						break;
 					}		
 				}
-				
+				*/
 				$_SESSION['price_distance']=$price;
 			}
 			
