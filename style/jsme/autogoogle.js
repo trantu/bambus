@@ -25,7 +25,7 @@ $(document).ready(function(){
             data:datas,
             success:function(sms){
                 if(sms=='1' || sms==1 ) { // TODO:
-                    //location.reload();
+                    location.reload();
                     $('.form-box-overlay').fadeOut(600);
                     $('.form-box.enterstress').fadeOut(600);
                 }

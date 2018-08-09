@@ -12,7 +12,7 @@ if(isset($_POST['address'])){
 	$config_price=$config["price"];
 	$price=$rule->getPrice($start,$config_price);
 	if(!$price){
-		echo 1;
+		echo 0;
 	}
 	else {echo 1;}
 }
