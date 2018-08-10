@@ -18,7 +18,6 @@ $(document).ready(function(){
     //gửi sang j_save_session_min_order để tạo session tính khoảng cách
     $('#address_form').submit(function(e){
         var enter_address=$('#enter_address').val();
-        console.log(enter_address);
         var datas={"address":enter_address};
         $.ajax({
             type:'POST',

@@ -193,20 +193,12 @@ Class Rule{
 	function getPrice($start,$config_price,$address_temp=false){
 		if(isset($_POST['address'])==true || $address_temp!=false){
 			$address=(isset($_POST['address']))?$_POST['address']:$address_temp;
-			// $xml =simplexml_load_file("http://maps.googleapis.com/maps/api/distancematrix/xml?origins=$start&destinations=$address&mode=walking&language=de&sensor=true");
-			// $result = $xml->xpath('//distance');
-			// foreach($result as $item){
-				// $distance=$item->value/1000;
+			$xml =simplexml_load_file("http://maps.googleapis.com/maps/api/distancematrix/xml?origins=$start&destinations=$address&mode=walking&language=de&sensor=true");
+			$result = $xml->xpath('//distance');
+			foreach($result as $item){
+				$distance=$item->value/1000;
 				
-			// }
-			$number = 0;
-			//get postcode from address
-			if( preg_match("/(?<![0-9])[0-9]{5}(?![0-9])/", $address, $matches) ) {
-                $number = $matches[0];
-            }
-            $price = 0;
-            $price=$config['area']["$number"];
-			$distance = 2;
+			}
 			if(!isset($distance)){
 				$price=false;//not
 				//$_SESSION['price_distance']="Address not isset! Try again!";
@@ -215,12 +207,10 @@ Class Rule{
 				$_SESSION['addresold']=$address;
 				$price=0;
 				$_SESSION['distance_deliver']=$distance;
-
 				foreach ($config_price as $key => $value) {
 					// settype($key,'int');
 					if($distance < $key){
-						$price=$value;
-						break;
+						$price=$value;break;
 					}		
 				}
 
