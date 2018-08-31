@@ -27,7 +27,7 @@ Class db{
         $this->user = $config['dbuser'];
         $this->connect($this->host, $this->user, $this->password, $this->database);
         //mysql_select_db($this->database);
-        mysql_query("SET NAMES 'utf8'");
+        mysqli_query("SET NAMES 'utf8'");
 
 
     }
@@ -35,19 +35,19 @@ Class db{
 
     function connect($sv = "", $us = "", $pw = "", $database = "")
     {
-        $this->connection = @mysql_connect($sv, $us, $pw);
+        $this->connection = @mysqli_connect($sv, $us, $pw);
         if (!$this->connection) {
             print "L&#7895;i k&#7871;t n&#7889;i c&#417; s&#7903; d&#7919; li&#7879;u";
             exit;
         }
-        if (!mysql_select_db($database, $this->connection)) {
+        if (!mysqli_select_db($database, $this->connection)) {
             echo("Khong the doc duoc CSDL");
         }
     }
 
     function query($the_query)
     {
-        $this->query_id = @mysql_query($the_query, $this->connection);
+        $this->query_id = @mysqli_query($the_query, $this->connection);
         return $this->query_id;
     }
 
@@ -56,7 +56,7 @@ Class db{
         if ($query_id == "") {
             $query_id = $this->query_id;
         }
-        $record_row = @mysql_fetch_array($query_id, MYSQL_ASSOC);
+        $record_row = @mysqli_fetch_array($query_id, MYSQL_ASSOC);
         return $record_row;
     }
 
@@ -75,12 +75,12 @@ Class db{
         if ($query_id == "") {
             $query_id = $this->query_id;
         }
-        return @mysql_num_rows($query_id);
+        return @mysqli_num_rows($query_id);
     }
 
     function close()
     {
-        mysql_close($this->connection);
+        mysqli_close($this->connection);
     }
 
     function compile_db_insert_string($data)
@@ -146,9 +146,9 @@ Class db{
         }
         // Quote value
         if (version_compare(phpversion(), "4.3.0") == "-1") {
-            $value = mysql_escape_string($value);
+            $value = mysqli_escape_string($value);
         } else {
-            $value = mysql_real_escape_string($value);
+            $value = mysqli_real_escape_string($value);
         }
         $value = $quote . $value . $quote;
         return $value;
