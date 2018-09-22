@@ -94,7 +94,7 @@ $de_footer['all_right'] 	="- Alle Rechte vorbehalten 2018";
 #
 **/
 
-	$de_main['deine_address']='IHRE ADRESSE';
+	$de_main['deine_address']='Ihre Straße, Hausnummer & PLZ';
 	$de_main['btn_submit']='Abschließen';
 	$de_main['haccount']='Sie haben doch ein Konto?';
 	$de_main['lginnow']='Login jetzt!';
