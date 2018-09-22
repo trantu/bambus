@@ -91,7 +91,7 @@ if(isset($_SESSION['Email']))
 else{
 	$address_notlogin=$_SESSION['addresold'];
 	$url_enc=urlencode($address_notlogin);
-	$arr_google_address=json_decode(file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?address=".$url_enc));
+	$arr_google_address=json_decode(file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?key='.API_KEY.'&address=".$url_enc));
 	// echo "<pre>";
 	// print_r($arr_google_address);
 
