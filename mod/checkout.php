@@ -92,20 +92,20 @@ else{
 	$address_notlogin=$_SESSION['addresold'];
 	echo $_SESSION['addresold'];
 	$url_enc=urlencode($address_notlogin);
-	$arr_google_address=json_decode(file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?key='.API_KEY.'&address=".$url_enc));
-	// echo "<pre>";
-	// print_r($arr_google_address);
+	$arr_google_address=json_decode(file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyC-9HolDamgctQwZ0ix8AugWkkollRi4CE&address=".$url_enc));
+	echo "<pre>";
+	print_r($arr_google_address);
 
-	// echo "</pre>";
+	echo "</pre>";
 	// Gán gtri NULL cho địa chỉ
 	$number_house_notlogin = "";
 	$stress_notlogin = "";
 	$region_notlogin = "";
 	$postal_code_notlogin = "";
 	if(isset($arr_google_address->results[0]->address_components)){
-		// echo "<pre>";
-		// print_r($arr_google_address->results[0]->address_components);
-		// echo "</pre>";
+		echo "<pre>";
+		print_r($arr_google_address->results[0]->address_components);
+		echo "</pre>";
 		$arr_google_address_cp=$arr_google_address->results[0]->address_components;
 		foreach ($arr_google_address_cp as  $value) {
 			if( in_array('postal_code',$value->types) ){
