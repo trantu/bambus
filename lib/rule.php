@@ -193,7 +193,7 @@ Class Rule{
 	function getPrice($start,$config_price,$address_temp=false){
 		if(isset($_POST['address'])==true || $address_temp!=false){
 			$address=(isset($_POST['address']))?$_POST['address']:$address_temp;
-			$xml =simplexml_load_file("http://maps.googleapis.com/maps/api/distancematrix/xml?origins=$start&destinations=$address&mode=walking&language=de&sensor=true");
+			$xml =simplexml_load_file("http://maps.googleapis.com/maps/api/distancematrix/xml?key='.API_KEY.'&origins=$start&destinations=$address&mode=walking&language=de&sensor=true");
 			$result = $xml->xpath('//distance');
 			foreach($result as $item){
 				$distance=$item->value/1000;
