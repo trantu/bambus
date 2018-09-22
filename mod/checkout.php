@@ -84,7 +84,7 @@ if(isset($_SESSION['Email']))
 
 		if(isset($_SESSION['price_distance'])){
 			$xtpl->assign("PRICEMIN",$_SESSION['price_distance']);
-		}*/F
+		}*/
 	}
 }
 // Chưa login
