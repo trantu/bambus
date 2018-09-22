@@ -24,6 +24,7 @@ $(document).ready(function(){
             url:'index.php?mod=j_save_session_min_order',
             data:datas,
             success:function(sms){
+                console.log(sms);
                 if(sms=='1' || sms==1 ) { // TODO:
                     location.reload();
                     $('.form-box-overlay').fadeOut(600);

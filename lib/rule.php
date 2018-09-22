@@ -216,7 +216,7 @@ Class Rule{
 
 				$_SESSION['price_distance']=$price;
 			}
-			
+			echo $price;
 			return $price;
 		}
 				
