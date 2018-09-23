@@ -30,7 +30,7 @@ $(document).ready(function(){
                     $('.form-box-overlay').fadeOut(600);
                     $('.form-box.enterstress').fadeOut(600);
                 }
-                else {alert(message_adress_false);}
+                //else {alert(message_adress_false);}
             }
             
         })
