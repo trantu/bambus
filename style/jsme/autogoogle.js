@@ -25,12 +25,12 @@ $(document).ready(function(){
             data:datas,
             success:function(sms){
                 console.log(sms);
-                if(sms=='1' || sms==1 || sms=='0' || sms==0 ) { // TODO:
+                if(sms=='1' || sms==1 ) { // TODO:
                     location.reload();
                     $('.form-box-overlay').fadeOut(600);
                     $('.form-box.enterstress').fadeOut(600);
                 }
-                //else {alert(message_adress_false);}
+                else {alert(message_adress_false);}
             }
             
         })
