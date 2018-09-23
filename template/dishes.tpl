@@ -82,7 +82,7 @@
 
                 </ul>
                 <!-- END:beilage -->
-                <div class="button_beilage" style="clear:both;display:block;height:33px;margin-top:10px;margin-bottom:15px;">
+                <div class="button_beilage" style="clear:both;display:block;height:100%;margin-top:10px;margin-bottom:15px;">
                     <a href="#" class="button green close backds"><!-- <img src="style/images/tick.png"> -->{LANGUAGEMAIN.btn_back}</a>
                     <a href="#" class="button green close boquads"><!-- <img src="style/images/tick.png" > -->{LANGUAGEMAIN.btn_next}</a>
                     <a href="#" class="button green close quitds"><!-- <img src="style/images/cross.png"> -->{LANGUAGEMAIN.btn_quit}</a>
