@@ -41,7 +41,7 @@ if(!defined('SECURITY')) exit('404 - Not Access');
 **/
 
 $de_footer['the_samurai']	="BAMBUSSTÄBCHEN";
-$de_footer['all_right'] 	="- Alle Rechte vorbehalten 2018";
+$de_footer['all_right'] 	="- Alle Rechte vorbehalten 2019";
 
 /**
 #
@@ -113,7 +113,7 @@ $de_footer['all_right'] 	="- Alle Rechte vorbehalten 2018";
 	$de_main['btn_next']='in den Warenkorb';
 	$de_main['btn_quit']='Abbrechen';
 	$de_main['enter_address_hover']='BRODOWINER RING 16, 12679 Berlin';
-	$de_main['timeout']['timeout_title']="Zurzeit keine Bestellannahme! <br>Unsere Öffnungszeiten: <br> Montag-Sonntag 11 bis 22 Uhr <br> Mittwoch ist Ruhetag. <br> Vielen Dank für Ihren Besuch <br> Ihr Bambusstäbchen Team.";//tieu de thoi gian het gio
+	$de_main['timeout']['timeout_title']="Zurzeit keine Bestellannahme! <br>Unsere Öffnungszeiten: <br> Montag-Sonntag 11 bis 22 Uhr Vielen Dank für Ihren Besuch <br> Ihr Bambusstäbchen Team.";//tieu de thoi gian het gio
 	$de_main['timeout']['order']="Vorbestellung";//button chon order truoc
 	$de_main['timeout']['see']="Menü anschauen";//button chon xem truoc
 	$de_main['priceorder_title']="Sie sollen mindesten bestellen";// tieu de khi order chua du tien
