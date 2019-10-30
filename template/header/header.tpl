@@ -23,7 +23,7 @@
 					</figure>
 				</a>
 				<ul>
-					<li class="menu_hide_shows"><a href="index.php" class="{MODMENU.home} ">{LANGUAGEMENU.home}</a></li>
+					<li><a href="index.php" class="{MODMENU.home} ">{LANGUAGEMENU.home}</a></li>
 					<li class="menu_hide_shows"><a href="index.php?mod=about" class="{MODMENU.about} ">{LANGUAGEMENU.about}</a></li>
 					<li><a href="index.php?mod=main" class="{MODMENU.main}">{LANGUAGEMENU.shop}</a></li>
 					<li class="checkout-desktop"><a  href="index.php?mod=checkout">{LANGUAGEMENU.cart}<span class="cart total_dishis">{TOTALDISHISCART}</span></a></li>
@@ -57,16 +57,17 @@
           <img class="mySlides w3-animate-right" src="upload/slideshow/Reisbandnudeln-Kategorie.jpg" style="width:100%">
           <img class="mySlides w3-animate-right" src="upload/slideshow/unagi-io.jpg" style="width:100%">
         </div>
-        //-->
-
+        -->
+            <!--
 			<section id="header-bottom">
 				<h1 class="wow fadeInLeft">{LANGUAGEHOME.the_best}
 					<span class="remarked">{LANGUAGEHOME.asian_cuise}</span>
 					<span class="right">{LANGUAGEHOME.in_all}</span>
 				</h1>
-				<!--<a href="index.php?mod=main" class="order wow bounceInDown" data-wow-delay=".5s">{LANGUAGEHOME.start_you}</a> -->
-				<img src="style/images/rabatt-text.png" style="width:50%;height:15%;" alt="rabatt-text" class="wow fadeInRight">
+				<!-- <a href="index.php?mod=main" class="order wow bounceInDown" data-wow-delay=".5s">{LANGUAGEHOME.start_you}</a> -->
+				<!-- <img src="style/images/rabatt-text.png" style="width:50%;height:15%;" alt="rabatt-text" class="wow fadeInRight"> -->
 			</section>
+			-->
 		</div>
 		<!--/HEADER-BOTTOM-->
 		<style>

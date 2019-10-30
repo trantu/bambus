@@ -283,6 +283,7 @@ if(!defined('SECURITY')) exit('404 - Not Access');
 	$xtpl->assign_file("TEMPLATEFOOTER",TEMPLATE.'footer/footer.tpl');
 	$xtpl->assign_file("TEMPLATELOGIN",TEMPLATE.'login/login.tpl');
 	$xtpl->assign("ICONPRICE",$config['iconprice']);
+	$xtpl->assign("DISCOUNTTEXT",$config['discount_text']);
 	$xtpl->parse("main");
 	$xtpl->out("main");
 

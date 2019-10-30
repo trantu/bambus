@@ -9,7 +9,7 @@ $xtpl = new XTemplate(TEMPLATE.'home.tpl');
 //unset($_SESSION['price_distance']);
 $xtpl->assign('LANGUAGEMAIN',$de_main);
 
-include('inc/header.php');	
+include('inc/header.php');
 if(isset($_SESSION['addresold'])){
 	$address_old=$_SESSION['addresold'];
 	$xtpl->assign("ADDRESSOLD",$address_old);
@@ -38,6 +38,7 @@ $xtpl->assign('LANGUAGEFOOTER',$de_footer);
 $xtpl->assign('LANGUAGELOGIN',$de_login);
 //load template
 $xtpl->assign("ICONPRICE",$config['iconprice']);
+$xtpl->assign("DISCOUNTTEXT",$config['discount_text']);
 $xtpl->assign_file("TEMPLATEHEADER",TEMPLATE.'header/header.tpl');
 $xtpl->assign_file("TEMPLATEFOOTER",TEMPLATE.'footer/footer.tpl');
 $xtpl->assign_file("TEMPLATELOGIN",TEMPLATE.'login/login.tpl');

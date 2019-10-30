@@ -96,6 +96,12 @@ foreach ($data as $da){
         case "info_board":
             $config['info_board']   =$da['Value'];
             break;
+        case "show_menu_huk":
+            $config['show_menu_huk']   =$da['Value'];
+            break;
+        case "discount_text":
+            $config['discount_text']   =$da['Value'];
+            break;
         case "area":
             $config['area']=array_merge($config['area'],array($da['Key']=>$da['Value']));
             break;

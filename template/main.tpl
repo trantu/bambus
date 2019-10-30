@@ -75,7 +75,6 @@ a = document.cookie;while(a != ''){while(a.substr(0,1) == ' '){a = a.substr(1,a.
 			<!--CATEGORIES-->
 			<article>
 				<h2 style="color:{HEADER_COLOR};"><span>{LANGUAGEMAIN.categories}</span></h2>
-				<hr><hr>
 				<ul class="cat-menu">
 					<!-- BEGIN:menu -->
 					<li {id_default}><a href="#"  NameGruppe="{GRUPPEID}" class="class{GRUPPEID}" height="200" img="upload/groups/{GRUPPEBILD}" style="color:#{GRUPPEFARBE}">{NAMEGRUPPE}</a></li>
@@ -87,7 +86,6 @@ a = document.cookie;while(a != ''){while(a.substr(0,1) == ' '){a = a.substr(1,a.
 
 		<aside class="right"  id='mobile_cart'>
 				<h2 style="color: {HEADER_COLOR}"><span>{LANGUAGEMAIN.total}</span></h2>
-				<hr><hr>
 				<article class="ticket" style="background-color: {HEADER_COLOR}">
 					<!--<img src="style/images/ticket-serrated-border.png" alt="serrated-border" width="100%">-->
 					<h6>{LANGUAGEMAIN.yoderticket}</h6>
@@ -211,7 +209,6 @@ a = document.cookie;while(a != ''){while(a.substr(0,1) == ' '){a = a.substr(1,a.
 				<input class="typeahead" type="text" placeholder="SUCHE NACH GERICHTEN..." style="border-style: solid;">
 			</h2>
 
-			<hr>
 			<article id="views">
 				<ul class="views">
 					<li ><a href="#" class="grid tooltip" title="Grid View"></a></li>
@@ -222,7 +219,7 @@ a = document.cookie;while(a != ''){while(a.substr(0,1) == ' '){a = a.substr(1,a.
 			<p class='image_group_top'> <img src="upload/groups/{GRUPPEBILDMAIN}" alt="Error" width="100%" height="200px"> </p> <br>
 			<ul class="dishes list" style="width:100%">
 				<!-- BEGIN:name -->
-				<li class='root_append root_append_notbeilage'  idsp="{IDSP}" style="margin: 0 12px 30px 0;">
+				<li class='root_append root_append_notbeilage'  idsp="{IDSP}" style="margin: 0 12px 30px 0; border-style: ridge;">
 					<div class="circle tiny appendsall">
 						<figure class="imgLiquidFill img_dishis_dp">
 							<img src="upload/products/{ONLINEBILD}" alt="dish" class="img_dishis_dp">
@@ -236,7 +233,6 @@ a = document.cookie;while(a != ''){while(a.substr(0,1) == ' '){a = a.substr(1,a.
 					</div>
 					<article>
 						<a href="#" ><h6 style="color:#{ONLINEFARBE}">(NR. {IDSP}) {NAME}</h6></a>
-						<hr>
 						<p>{NAMEONLINE}</p>
 					</article>
 					<div class="price">

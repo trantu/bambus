@@ -82,10 +82,10 @@ $de_footer['all_right'] 	="- Alle Rechte vorbehalten 2019";
 #
 **/
 
-	$de_home['the_best']="Probieren Sie";
-	$de_home['asian_cuise']="Uns";
+	$de_home['the_best']="Herzlich Willkommen bei";
+	$de_home['asian_cuise']="Bambusstäbchen";
 	$de_home['in_all']="";
-	$de_home['start_you']="Sofort Online Bestellen!";
+	$de_home['start_you']="Jetzt Online Bestellen!";
 
 
 /**
@@ -96,7 +96,7 @@ $de_footer['all_right'] 	="- Alle Rechte vorbehalten 2019";
 
 	$de_main['deine_address']='Ihre Straße, Hausnummer & PLZ';
 	$de_main['btn_submit']='Abschließen';
-	$de_main['haccount']='Sie haben doch ein Konto?';
+	$de_main['haccount']='Sie haben ein Konto?';
 	$de_main['lginnow']='Login jetzt!';
 	$de_main['categories']='Menü';
 	$de_main['total']='Summe';

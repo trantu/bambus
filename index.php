@@ -26,7 +26,8 @@ if ((!isset($_GET['mod']))||$_GET['mod']=='home') {
 		include SYSDIR.'/mod/home.php';
 	}else{
 		//include SYSDIR.'/mod/main.php'; 
-		header('location:index.php?mod=main');
+		//header('location:index.php?mod=main');
+		include SYSDIR.'/mod/home.php';
 	}
 } else {
 	include SYSDIR.'/mod/'.$_GET['mod'].'.php';

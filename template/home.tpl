@@ -21,12 +21,14 @@
 		<!--HEADER-BOTTOM-->
 		<div id="header-bottom-wrap">
 			<section id="header-bottom">
-				<h1 class="wow fadeInLeft">{LANGUAGEHOME.the_best} 
-					<span class="remarked">{LANGUAGEHOME.asian_cuise}</span>
+				<h1 class="wow fadeInLeft">{LANGUAGEHOME.the_best}
+					<span class=""><font color="green">{LANGUAGEHOME.asian_cuise}</font></span>
 					<span class="right">{LANGUAGEHOME.in_all}</span>
 				</h1>
 				<a href="index.php?mod=main" class="order wow bounceInDown" data-wow-delay=".5s">{LANGUAGEHOME.start_you}</a>
-				<img src="style/images/asian-girl.png" alt="asian-girl" class="wow fadeInRight">
+				<!-- <img src="style/images/rabatt-text.png" style="width:50%;height:15%;" alt="rabatt-text" class="wow fadeInRight"> -->
+				<!-- <img src="style/images/asian-girl.png" alt="asian-girl" class="wow fadeInRight"> -->
+				<p class="wow fadeInRight right" style="text-align: -webkit-right; bottom: 0px; position: absolute;" ><font size="5pt" color="white">{DISCOUNTTEXT}</font></p>
 			</section>	
 		</div>
 		<!--/HEADER-BOTTOM-->

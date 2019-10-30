@@ -73,6 +73,7 @@ if(!defined('SECURITY')) exit('404 - Not Access');
 	$xtpl->assign('LANGUAGEFOOTER',$de_footer);
 	$xtpl->assign('LANGUAGELOGIN',$de_login);
 	$xtpl->assign("ICONPRICE",$config['iconprice']);
+	$xtpl->assign("DISCOUNTTEXT",$config['discount_text']);
 	$xtpl->assign_file("TEMPLATEHEADER",TEMPLATE.'header/header.tpl');
 	$xtpl->assign_file("TEMPLATEFOOTER",TEMPLATE.'footer/footer.tpl');
 	$xtpl->assign_file("TEMPLATELOGIN",TEMPLATE.'login/login.tpl');		

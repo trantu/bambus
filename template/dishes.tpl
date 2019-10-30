@@ -1,6 +1,6 @@
 
    <!-- BEGIN:name -->
-        <li class='root_append root_append_notbeilage' idsp="{IDSP}" style="margin: 0 12px 30px 0;">
+        <li class='root_append root_append_notbeilage' idsp="{IDSP}" style="margin: 0 12px 30px 0; border-style: ridge;">
             <div class="circle tiny appendsall">
                 <figure class="imgLiquidFill">
                     <img src="upload/products/{ONLINEBILD}" alt="dish">
@@ -16,7 +16,6 @@
                 <a href="springtime-sushi.html"><h6 style="color:#{ONLINEFARBE}">(NR. {IDSP}) {NAME}</h6></a>
                  <ul class="rate stars">
                 </ul>
-                <hr>
                 <p>{NAMEONLINE}</p>
             </article>
             <div class="price">
@@ -31,7 +30,7 @@
         </li>
         <!-- END:name -->
         <!-- BEGIN:names -->
-        <li class='root_append root_append_beilage' style="margin: 0 12px 30px 0;">
+        <li class='root_append root_append_beilage' style="margin: 0 12px 30px 0; border-style: ridge;">
             <div class="circle tiny appends-beilage" item="{COUNT_DISHIS}">
                 <figure class="imgLiquidFill">
                     <img src="upload/products/{ONLINEBILD}" alt="dish">
@@ -46,7 +45,6 @@
             <article class="appends-beilage" item="{COUNT_DISHIS}">
                 <a href="#"><h6 style="color:#{ONLINEFARBE}">(NR. {IDSP}) {NAME}</h6></a>
                 <ul></ul>
-                <hr>
                 <p>{NAMEONLINE}</p>
             </article>
             <div class="price">
