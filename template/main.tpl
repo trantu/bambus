@@ -55,18 +55,6 @@
 <header>
 	{FILE {TEMPLATEHEADER}}
 </header>
-<div id="mbmcookie" style="display: none;">
-	<div>
-	<span class="cookiemessage">Diese Website verwendet Cookies. Durch die Nutzung dieser Webseite erklären Sie sich damit einverstanden, dass Cookies gesetzt werden.</span>
-  <a href="https://www.thaihuong.de/index.php?mod=datenschutz">Hier erfahren Sie alles zum Datenschutz </a>
-
-<span id="mbmcookieCloser" onclick="var datum = new Date(); datum = new Date(datum.getTime() +1000*60*60*24*30); document.cookie = 'mbmcookie=1; expires='+ datum.toGMTString() + ';'; jQuery('#mbmcookie').slideUp()" class="button">Akzeptieren</span>
-</div>
-<script>
-
-a = document.cookie;while(a != ''){while(a.substr(0,1) == ' '){a = a.substr(1,a.length);}cn = a.substring(0,a.indexOf('='));if(a.indexOf(';') != -1){cw = a.substring(a.indexOf('=')+1,a.indexOf(';'));}else{cw = a.substr(a.indexOf('=')+1,a.length);}if(cn == 'mbmcookie'){r = cw;}i = a.indexOf(';')+1;if(i == 0){i = a.length}a = a.substring(i,a.length);}if(r == '1') document.getElementById('mbmcookie').style.display = 'none';
-</script>
-</div>
 <!--SHOP-->
 <div id="shop-wrap">
 	<section id="shop">

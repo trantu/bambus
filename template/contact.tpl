@@ -37,7 +37,7 @@
 
     <tr style="height:80px">
         <td style="vertical-align: text-top;padding-top: 10px;"><b>Lieferzeiten</b></td>
-        <td>Lieferzeit: 11:00-22.00, Mittwoch ist Ruhetag</td>
+        <td>Öffnungszeit: 11:00-22.00 </td>
     </tr>
     <tr><td><hr></td></tr>
 
