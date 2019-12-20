@@ -387,16 +387,25 @@ Class j_all extends  db{
 		if($config['server_sendmail']!=5){
 			$mail = new PHPMailer();
 			//$mail->IsSMTP();
-            $mail->isMail();
-			$mail->CharSet="utf-8";
-			$mail->Host =$config['SMTP_SERVER'];
-			$mail->Username =$config['SMTP_USER'] ;
-			$mail->Password = $config['SMTP_PASSWORD'];
-			$mail->SMTPSecure = $config['SMTPSecure']; // Giao thức SSL
-			$mail->Port = $config['SMTP_SERVER_PORT']; // cổng SMTP
-			$mail->From = $config['SMTP_USER']; // mail người gửi
-			$mail->SMTPAuth = $config['SMTPAuth_sv'];
-
+			if($config['server_sendmail']==6){
+                $mail->isSendmail();
+                $mail->CharSet="utf-8";
+                $mail->From = "bambustran@hanhantran.de";
+            }
+			if($config['server_sendmail']==1 ||
+			$config['server_sendmail']==3 ||
+			 $config['server_sendmail']==2 ||
+			 $config['server_sendmail']==4){
+                $mail->isMail();
+                $mail->CharSet="utf-8";
+                $mail->Host =$config['SMTP_SERVER'];
+                $mail->Username =$config['SMTP_USER'] ;
+                $mail->Password = $config['SMTP_PASSWORD'];
+                $mail->SMTPSecure = $config['SMTPSecure']; // Giao thức SSL
+                $mail->Port = $config['SMTP_SERVER_PORT']; // cổng SMTP
+                $mail->From = $config['SMTP_USER']; // mail người gửi
+                $mail->SMTPAuth = $config['SMTPAuth_sv'];
+            }
 			if($config['server_sendmail']==1 || $config['server_sendmail']==3){
 				$mail->Host =$config['SMTP_SERVER_sv'];
 				$mail->Username =$config['SMTP_USER_sv'] ;
