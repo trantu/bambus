@@ -56,4 +56,4 @@ defined('APIKEYARRAY') or define('APIKEYARRAY',2);// giá trị của key cách 
 defined('PRIVATE_KEY') or define('PRIVATE_KEY','luckyteo12131415');//mật khẩu api cho app   
 defined('API_LINK_IMG') OR define('API_LINK_IMG','http://localhost/pizza/style/images/');//thay doi khi chuyen code
 //DEFINE KEY_API
-defined('API_KEY') OR define('API_KEY', 'AIzaSyAJtj702YJyv-iq_atu11d2_5ENpezHLqI');
+defined('API_KEY') OR define('API_KEY', 'AIzaSyAuc7BnK35hfQdv2hNXlSLqxDDRL6hD6P4');

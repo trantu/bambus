@@ -92,9 +92,9 @@ else{
 	$address_notlogin=$_SESSION['addresold'];
 	// echo $_SESSION['addresold'];
 	$url_enc=urlencode($address_notlogin);
-	$arr_google_address=json_decode(file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyAJtj702YJyv-iq_atu11d2_5ENpezHLqI&address=".$url_enc));
+	$arr_google_address=json_decode(file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyAuc7BnK35hfQdv2hNXlSLqxDDRL6hD6P4&address=".$url_enc));
 	// echo "<pre>";
-	// print_r($arr_google_address);
+	// print_r($arr_google_address); AIzaSyAuc7BnK35hfQdv2hNXlSLqxDDRL6hD6P4
 
 	// echo "</pre>";
 	// Gán gtri NULL cho địa chỉ
