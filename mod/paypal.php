@@ -114,8 +114,8 @@ if(isset($_POST['type_payment_order'])){
 	$order_info[] = "Firma : " . $info['company'] . "\n";
 	$order_info[] = "Abteilung : " . $info['office'] . "\n";
 	$order_info[] = "Anrede : " . $info['sex'] . "\n";
-	$order_info[] = "VORNAHME : " " . $info['firstname'] . "\n";
-	$order_info[] = "NACHNAME : . $info['lastname'] . "\n";
+	$order_info[] = "VORNAHME : " . $info['firstname'] . "\n";
+	$order_info[] = "NACHNAME : " . $info['lastname'] . "\n";
 	$order_info[] = "PLZ : " . $info['postalcode'] . "\n";
 	$order_info[] = "STRAßE : " . $info['stress'] . "\n";
 	$order_info[] = "ORT : " . $info['region'] . "\n";
