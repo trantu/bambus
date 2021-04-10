@@ -112,18 +112,18 @@ if(isset($_POST['type_payment_order'])){
 	}
 
 	$order_info[] = "Firma : " . $info['company'] . "\n";
-	$order_info[] = "Abteilung : " . $info['office'] . "\n";
-	$order_info[] = "Anrede : " . $info['sex'] . "\n";
+	//$order_info[] = "Abteilung : " . $info['office'] . "\n";
+	//$order_info[] = "Anrede : " . $info['sex'] . "\n";
 	$order_info[] = "VORNAHME : " . $info['firstname'] . "\n";
 	$order_info[] = "NACHNAME : " . $info['lastname'] . "\n";
 	$order_info[] = "PLZ : " . $info['postalcode'] . "\n";
 	$order_info[] = "STRAßE : " . $info['stress'] . "\n";
 	$order_info[] = "ORT : " . $info['region'] . "\n";
 	$order_info[] = "HAUSNUMMER : " . $info['numberhouse'] . "\n";
-	$order_info[] = "Vorwahl : " . $info['first_number'] . "\n";
+	//$order_info[] = "Vorwahl : " . $info['first_number'] . "\n";
       $trimed_phone = preg_replace('/\D/', '', $info['phone']);
   $order_info[] = "TELEPHONE : " . $trimed_phone . "\n";
-  $order_info[] = "Email : " . $info['email'] . "\n";
+  //$order_info[] = "Email : " . $info['email'] . "\n";
 	$info['note']=preg_replace('/\n++/', '. ', $info['note']);
 	$info['note']=preg_replace('/\r++/', '. ', $info['note']);
 
@@ -133,7 +133,7 @@ if(isset($_POST['type_payment_order'])){
 
 	$order_info[] = "Hinterhof/Etage : " . $info['noteposition'] . "\n";
 
-	$order_info[] = "Entfernung : " . $info['distance_deliver'] . "\n";
+	//$order_info[] = "Entfernung : " . $info['distance_deliver'] . "\n";
 
 
 	$order_info[] = "##########################################################\n";
@@ -148,7 +148,7 @@ if(isset($_POST['type_payment_order'])){
           $food['note']=preg_replace('/\r++/', '. ', $food['note']);
 
           //$order_info[] = "¶¶¶*¶¶¶" . $food['plu'] . "¶¶¶*¶¶¶" . $food['qty'] . "¶¶¶*¶¶¶" . $price_food. "¶¶¶*¶¶¶" .$beilage_food."¶¶¶*¶¶¶".$food['note']. "\n";
-					$order_info[] = $food['qty']." x " . $food['plu'] . " ".$food['name']." (". $price_food. "/Stk".") " .$beilage_food." : ".$food['note']. "\n";
+					$order_info[] = $food['qty']." x " . $food['plu'] . " ".$food['name']." (". $price_food. "/Stk".") " .$beilage_food." : ".$food['note']. "\n\n\n";
 	}
       $order_info[] = "+++++++ SUMME = ".$_SESSION['total_PP']." Euro ++++++++ \n";
 
