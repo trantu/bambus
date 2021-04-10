@@ -96,8 +96,8 @@ $infopaypal='';
 	//$order_info[] = "Anrede : " . $info['sex'] . "\n";
 	$order_info[] = "VORNAHME : " . $info['firstname'] . "\n";
 	$order_info[] = "NACHNAME : " . $info['lastname'] . "\n";
-	$order_info[] = "ADRESSE : " . $info['stress'] . $info['numberhouse'] . "\n";
-	$order_info[] = "ORT : " . $info['postalcode'] . $info['region'] . "\n";
+	$order_info[] = "ADRESSE : " . $info['stress'] . " " . $info['numberhouse'] . "\n";
+	$order_info[] = "ORT : " . $info['postalcode'] . " " . $info['region'] . "\n";
 	//$order_info[] = "Vorwahl : " . $info['first_number'] . "\n";
       $trimed_phone = preg_replace('/\D/', '', $info['phone']);
   $order_info[] = "TELEPHONE : " . $trimed_phone . "\n";
@@ -128,7 +128,7 @@ $infopaypal='';
           //$order_info[] = "¶¶¶*¶¶¶" . $food['plu'] . "¶¶¶*¶¶¶" . $food['qty'] . "¶¶¶*¶¶¶" . $price_food. "¶¶¶*¶¶¶" .$beilage_food."¶¶¶*¶¶¶".$food['note']. "\n";
 					$order_info[] = $food['qty']." x " . $food['plu'] . " ".$food['name']." (". $price_food. "/Stk".") " .$beilage_food." : ".$food['note']. "\n\n";
 	}
-      $order_info[] = "<h3> SUMME = ".$_SESSION['total_PP']." Euro </h3> \n\n";
+      $order_info[] = " SUMME = ".$_SESSION['total_PP']." Euro \n\n";
 
     $order_info[] = "NOTIZEN : " . $info['note'] . "\n";
 
