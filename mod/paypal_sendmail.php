@@ -92,47 +92,47 @@ $infopaypal='';
 		//$order_info[] = "Benutzername : " . $info['email_login'] . "\n";
 
 		$order_info[] = "Firma : " . $info['company'] . "\n";
-		//$order_info[] = "Abteilung : " . $info['office'] . "\n";
-		//$order_info[] = "Anrede : " . $info['sex'] . "\n";
-		$order_info[] = "VORNAHME : " . $info['firstname'] . "\n";
-		$order_info[] = "NACHNAME : " . $info['lastname'] . "\n";
-		$order_info[] = "PLZ : " . $info['postalcode'] . "\n";
-		$order_info[] = "STRAßE : " . $info['stress'] . "\n";
-		$order_info[] = "ORT : " . $info['region'] . "\n";
-		$order_info[] = "HAUSNUMMER : " . $info['numberhouse'] . "\n";
-		//$order_info[] = "Vorwahl : " . $info['first_number'] . "\n";
-        $trimed_phone = preg_replace('/\D/', '', $info['phone']);
-    $order_info[] = "TELEPHONE : " . $trimed_phone . "\n";
-    //$order_info[] = "Email : " . $info['email'] . "\n";
-		$info['note']=preg_replace('/\n++/', '. ', $info['note']);
-		$info['note']=preg_replace('/\r++/', '. ', $info['note']);
+	//$order_info[] = "Abteilung : " . $info['office'] . "\n";
+	//$order_info[] = "Anrede : " . $info['sex'] . "\n";
+	$order_info[] = "VORNAHME : " . $info['firstname'] . "\n";
+	$order_info[] = "NACHNAME : " . $info['lastname'] . "\n";
+	$order_info[] = "ADRESSE : " . $info['stress'] . $info['numberhouse'] . "\n";
+	$order_info[] = "ORT : " . $info['postalcode'] . $info['region'] . "\n";
+	//$order_info[] = "Vorwahl : " . $info['first_number'] . "\n";
+      $trimed_phone = preg_replace('/\D/', '', $info['phone']);
+  $order_info[] = "TELEPHONE : " . $trimed_phone . "\n";
+  //$order_info[] = "Email : " . $info['email'] . "\n";
+	$info['note']=preg_replace('/\n++/', '. ', $info['note']);
+	$info['note']=preg_replace('/\r++/', '. ', $info['note']);
 
 
-        $info['noteposition']=preg_replace('/\n++/', '. ', $info['noteposition']);
-        $info['noteposition']=preg_replace('/\r++/', '. ', $info['noteposition']);
+      $info['noteposition']=preg_replace('/\n++/', '. ', $info['noteposition']);
+      $info['noteposition']=preg_replace('/\r++/', '. ', $info['noteposition']);
 
-		$order_info[] = "Hinterhof/Etage : " . $info['noteposition'] . "\n";
+	$order_info[] = "Hinterhof/Etage : " . $info['noteposition'] . "\n";
 
-		//$order_info[] = "Entfernung : " . $info['distance_deliver'] . "\n";
+	//$order_info[] = "Entfernung : " . $info['distance_deliver'] . "\n";
 
 
-		$order_info[] = "##########################################################\n";
+	$order_info[] = "\n";
 
-		foreach($ar as $food)
-		{
-            $price_food=(isset($food['price_notbei']))? $food['price_notbei']:$food['price'];
-						$beilage_food=(isset($food['stt_bei']))? $food['stt_bei']:'';
-						$beilage_food=str_replace("█",'#', $beilage_food);
+	foreach($ar as $food)
+	{
+          $price_food=(isset($food['price_notbei']))? $food['price_notbei']:$food['price'];
+					$beilage_food=(isset($food['stt_bei']))? $food['stt_bei']:'';
+					$beilage_food=str_replace("█",'#', $beilage_food);
 
-            $food['note']=preg_replace('/\n++/', '. ', $food['note']);
-            $food['note']=preg_replace('/\r++/', '. ', $food['note']);
+          $food['note']=preg_replace('/\n++/', '. ', $food['note']);
+          $food['note']=preg_replace('/\r++/', '. ', $food['note']);
 
-            //$order_info[] = "¶¶¶*¶¶¶" . $food['plu'] . "¶¶¶*¶¶¶" . $food['qty'] . "¶¶¶*¶¶¶" . $price_food. "¶¶¶*¶¶¶" .$beilage_food."¶¶¶*¶¶¶".$food['note']. "\n\n\n";
-						$order_info[] = $food['qty']." x " . $food['plu'] . " ".$food['name']." (". $price_food. "/Stk".") " .$beilage_food." : ".$food['note']. "\n\n\n";
-		}
-        $order_info[] = "+++++++ SUMME = ".$_SESSION['total_PP']." Euro ++++++++ \n";
-        $order_info[] = "KOMMENTAR : " . $info['note'] . "\n";
-		//$url_order_admin="http://".site_url."?mod=mail_order";
+          //$order_info[] = "¶¶¶*¶¶¶" . $food['plu'] . "¶¶¶*¶¶¶" . $food['qty'] . "¶¶¶*¶¶¶" . $price_food. "¶¶¶*¶¶¶" .$beilage_food."¶¶¶*¶¶¶".$food['note']. "\n";
+					$order_info[] = $food['qty']." x " . $food['plu'] . " ".$food['name']." (". $price_food. "/Stk".") " .$beilage_food." : ".$food['note']. "\n\n";
+	}
+      $order_info[] = "<h3> SUMME = ".$_SESSION['total_PP']." Euro </h3> \n\n";
+
+    $order_info[] = "NOTIZEN : " . $info['note'] . "\n";
+
+    //$url_order_admin="http://".site_url."?mod=mail_order";
 		//$url_address_admin="http://".site_url."?mod=mail_address";
 		//$file_contents_admin =$j_all->curl_url($url_order_admin,$field_string);
 		//$file_contents2_admin =$j_all->curl_url($url_address_admin,$field_string2);
