@@ -71,7 +71,7 @@ EOF;
     // Lay tat ca mon
     function api_getAllDishes(){
         $sql=<<<EOF
-		SELECT PLU as id,Name as name from Artikel_Online ORDER BY PLU ASC
+		SELECT PLU as id, Artikel_Name as name from Artikel_Online ORDER BY PLU ASC
 EOF;
         $ar=array();
         $result=$this->query($sql);
