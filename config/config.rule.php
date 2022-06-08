@@ -192,12 +192,12 @@ $config['email_admin']='onlinebestellungs@hanhantran.de'; // Email của admin �
 
 ## 1. Phuong an dung smtp cua server
 
-$config['email_sv']="bambustran456@gmail.com";	//email gửi mail khi khach hàng order server
-$config['password_sv']="Abcdefghi-1";	//Mật khẩu email gửi mail
+$config['email_sv']="bamboosticks.shop@topbowls.de";	//email gửi mail khi khach hàng order server
+$config['password_sv']="Anhyeuem-1";	//Mật khẩu email gửi mail
 //$config['email_sv']="test@thaihuong.de";//email gửi mail khi khach hàng order server
 //$config['password_sv']="P@ssw0rd";//Mật khẩu email gửi mail
 
-$config['SMTP_SERVER_sv']='smtp.gmail.com';	//server 1&1
+$config['SMTP_SERVER_sv']='mail.your-server.de';	//server 1&1
 $config['SMTP_SERVER_PORT_sv']=465; //port mail 1&1---- 465: ssl ----- 587(hoặc 25): none
 $config['SMTPSecure_sv']="ssl";	//giao thuc: ssl --- none: khong co ssl - tls
 $config['SMTP_USER_sv']=$config['email_sv'];	//email gui BIẾN Ở TRÊN
@@ -206,10 +206,10 @@ $config['SMTPAuth_sv']=true;
 
 ## 2. Phuong an dung smtp google
 
-$config['email']="bambustran456@gmail.com";//email gửi mail khi khach hàng order google
-$config['password']="Abcdefghi-1";//Mật khẩu email gửi mail
+$config['email']="bamboosticks.shop@topbowls.de";//email gửi mail khi khach hàng order google
+$config['password']="Anhyeuem-1";//Mật khẩu email gửi mail
 
-$config['SMTP_SERVER']='smtp.gmail.com';//server google
+$config['SMTP_SERVER']='mail.your-server.de';//server google
 $config['SMTP_SERVER_PORT']=465; //port mail
 $config['SMTPSecure']="ssl";//giao thuc ssl
 $config['SMTP_USER']=$config['email'];//email gui BIẾN Ở TRÊN
